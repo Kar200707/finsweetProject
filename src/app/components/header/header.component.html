@@ -1,0 +1,29 @@
+<header>
+  <div class="header_block">
+    <div class="header_container">
+      <img routerLink="" class="header_logo" src="assets/Images/logos/logo.png" alt="this is header logo">
+      <nav>
+        <div class="nav_block">
+          <a [routerLinkActiveOptions]="{exact: true}" routerLink="" routerLinkActive="router-active" class="nav_links">Home</a>
+          <a routerLink="blog" routerLinkActive="router-active" style="margin-left: 24px;" class="nav_links">Blog</a>
+          <a routerLink="about-us" routerLinkActive="router-active" style="margin-left: 24px;" class="nav_links">About Us</a>
+          <a routerLink="contact" routerLinkActive="router-active" style="margin-right: 32px; margin-left: 24px;" class="nav_links">Contact us</a>
+          <a class="btn_sub_header">Subscribe</a>
+        </div>
+        <div class="mobile-nav_block">
+          <label>
+            <img class="header-mobile-menu" src="assets/Images/icons/header-mobile-menu.png" alt="this icon mobile menu">
+            <input class="mobile_menu_checkbox" type="checkbox">
+            <div class="mobile_menu">
+              <a routerLink="" [routerLinkActiveOptions]="{exact: true}" routerLinkActive="router-active" class="nav_links">Home</a>
+              <a routerLink="blog" routerLinkActive="router-active" class="nav_links">Blog</a>
+              <a routerLink="about-us" routerLinkActive="router-active" class="nav_links">About Us</a>
+              <a routerLink="contact" routerLinkActive="router-active" class="nav_links">Contact us</a>
+              <a class="btn_sub_header-mobile">Subscribe</a>
+            </div>
+          </label>
+        </div>
+      </nav>
+    </div>
+  </div>
+</header>

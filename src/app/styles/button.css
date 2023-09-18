@@ -1,0 +1,21 @@
+.global_button {
+   padding: 16px 48px;
+   background: var(--yellow, #FFD050);
+   display: inline-block;
+   text-decoration: none;
+   color: var(--black, #232536);
+   font-family: Sen;
+   font-size: 18px;
+   font-style: normal;
+   font-weight: 700;
+   line-height: 24px;
+   transition: .2s scale cubic-bezier(.5 ,-1, .5, 2);
+}
+
+.global_button:active {
+   scale: .92;
+}
+
+.global_button:hover {
+   background: #fff8b7;
+}

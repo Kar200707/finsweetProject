@@ -1,0 +1,143 @@
+.catagory_block {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.business_box,
+.economy_box,
+.technology_box {
+  padding: 32px;
+  border: 1px solid rgba(109,	110,	118, .3);
+}
+
+.startup_box {
+  background: #FFD050;
+  padding: 32px;
+}
+
+.business_box,
+.startup_box,
+.economy_box,
+.technology_box {
+  display: flex;
+  flex-direction: column;
+  transition: .2s scale;
+}
+
+.business_box:hover,
+.startup_box:hover,
+.economy_box:hover,
+.technology_box:hover {
+  background-color: #ffdd81;
+}
+
+.business_box:active,
+.startup_box:active,
+.economy_box:active,
+.technology_box:active {
+  scale: .95;
+}
+
+.business_box > div,
+.startup_box > div,
+.economy_box > div,
+.technology_box > div {
+  width: 48px;
+  height: 48px;
+  background-color: #FBF6EA;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.business_box > h3,
+.startup_box > h3,
+.economy_box > h3,
+.technology_box > h3 {
+  color: #232536;
+  font-family: Sen;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 40px;
+  letter-spacing: -1px;
+  margin-top: 16px;
+}
+
+.business_box > p,
+.startup_box > p,
+.economy_box > p,
+.technology_box > p {
+  width: 232px;
+  color: #6D6E76;
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 28px;
+}
+
+@media screen and (max-width: 1326px) {
+  .catagory_block {
+    flex-wrap: wrap;
+  }
+
+  .technology_box {
+    margin-top: 20px;
+  }
+}
+
+@media screen and (max-width: 1110px) {
+  .startup_box,
+  .economy_box {
+    margin-left: 20px;
+  }
+}
+
+@media screen and (max-width: 1047px) {
+  .technology_box,
+  .economy_box {
+    margin-top: 20px;
+  }
+
+  /* .economy_box {
+     margin-left: 0;
+  } */
+
+  .technology_box {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  .catagory_block {
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 743px) {
+  .startup_box,
+  .economy_box {
+    margin-left: 0;
+  }
+
+  .technology_box {
+    margin: 20px 0 0 0;
+  }
+
+  .startup_box {
+    margin-top: 20px;
+  }
+
+  .catagory_block {
+    flex-direction: column;
+  }
+
+  .business_box,
+  .startup_box,
+  .economy_box,
+  .technology_box {
+    padding: 20px;
+  }
+}
