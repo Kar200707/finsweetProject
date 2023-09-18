@@ -69,6 +69,7 @@
   text-decoration: none;
   transition: .2s;
   display: inline-block;
+  border-radius: 15px;
 }
 
 .nav_links:active {
@@ -159,8 +160,10 @@
 }
 
 .router-active {
-  color: #0058ff;
+  color: #3f3f3f;
   scale: 1.2;
+  background-color: #ffbc00;
+  padding: 3px 10px;
+  border-radius: 15px;
   font-weight: bolder;
-  text-shadow: 0 0 10px;
 }

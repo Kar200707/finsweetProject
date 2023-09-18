@@ -28,6 +28,10 @@
   margin-top: 16px;
 }
 
+.Join_our_team {
+  padding: 128px 0;
+}
+
 @media screen and (max-width: 472px) {
   .Join_our_team_block {
     width: 100%;
