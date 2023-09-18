@@ -17,6 +17,7 @@ import { ContactComponent } from './pages/contact/contact.component';
 import { PrivacyPolicyComponent } from './pages/privacy-policy/privacy-policy.component';
 import {CategoryblockComponent} from "./components/category-block/categoryblock.component";
 import { CategoryComponent } from './pages/category/category.component';
+import { NotfoundComponent } from './pages/notfound/notfound.component';
 
 const routes: Routes = [
   {
@@ -63,6 +64,11 @@ const routes: Routes = [
     path: 'category',
     component: CategoryComponent,
     title: 'Category'
+  },
+  {
+    path: '**',
+    component: NotfoundComponent,
+    title: '404 page not found'
   }
 ]
 
@@ -81,7 +87,8 @@ const routes: Routes = [
     ContactComponent,
     PrivacyPolicyComponent,
     CategoryblockComponent,
-    CategoryComponent
+    CategoryComponent,
+    NotfoundComponent
   ],
     imports: [
         BrowserModule,
