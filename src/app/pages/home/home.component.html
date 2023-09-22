@@ -10,7 +10,7 @@
           cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
           cupidatat non proident.
         </p>
-        <a style="margin-top: 48px;" class="global_button" href="#">Read More ></a>
+        <a style="margin-top: 48px;" class="global_button" routerLink="/blog-post">Read More ></a>
       </div>
     </div>
   </div>
@@ -21,7 +21,7 @@
       <p>Featured Post</p>
       <div class="text_box_featured_post">
         <p>All Posts</p>
-        <a>View All</a>
+        <a routerLink="/blog-post">View All</a>
       </div>
     </div>
     <div class="featured_post_box">
@@ -36,24 +36,24 @@
           Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore <br>
           eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.
         </span>
-        <a style="margin-top: 32px;" class="global_button" href="#">Read More ></a>
+        <a style="margin-top: 32px;" class="global_button" routerLink="/blog-post">Read More ></a>
       </div>
       <div class="featured_post_lists_block">
         <div style="margin-top: 32px;" class="list_box">
           <p>By <span>John Doe</span>  &nbsp;l&nbsp;  May 23, 2022</p>
-          <p>8 Figma design systems that <br> you can download for free <br> today.</p>
+          <a routerLink="/blog-post">8 Figma design systems that <br> you can download for free <br> today.</a>
         </div>
         <div class="list_box">
           <p>By <span>John Doe</span>  &nbsp;l&nbsp;  May 23, 2022</p>
-          <p>8 Figma design systems that <br> you can download for free <br> today.</p>
+          <a routerLink="/blog-post">8 Figma design systems that <br> you can download for free <br> today.</a>
         </div>
         <div class="list_box">
           <p>By <span>John Doe</span>  &nbsp;l&nbsp;  May 23, 2022</p>
-          <p>8 Figma design systems that <br> you can download for free <br> today.</p>
+          <a routerLink="/blog-post">8 Figma design systems that <br> you can download for free <br> today.</a>
         </div>
         <div class="list_box">
           <p>By <span>John Doe</span>  &nbsp;l&nbsp;  May 23, 2022</p>
-          <p>8 Figma design systems that <br> you can download for free <br> today.</p>
+          <a routerLink="/blog-post">8 Figma design systems that <br> you can download for free <br> today.</a>
         </div>
       </div>
     </div>
@@ -71,7 +71,7 @@
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do <br>
           eiusmod tempor incididunt ut labore et dolore magna aliqua.
         </p>
-        <a>Read More ></a>
+        <a routerLink="/about-us">Read More ></a>
       </div>
       <div class="block_our_mision">
         <h3>Our mision</h3>
@@ -89,7 +89,15 @@
   </div>
 </div>
 <div class="container"><h2 class="choose-a-category-text">Choose A Catagory</h2></div>
-<app-category-block></app-category-block>
+<div class="choose_catagory_block">
+  <div class="container">
+    <div style="margin-top: 48px;" class="catagory_block">
+      <div *ngFor="let data of dataCategory">
+        <app-category-block [dataCategory]="data"></app-category-block>
+      </div>
+    </div>
+  </div>
+</div>
 <div class="why_we_started_block">
   <div style="position: relative;" class="container">
     <div class="why_we_started_box">
@@ -102,23 +110,28 @@
         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
         quis nostrud exercitation ullamco laboris nisi ut aliquip.
       </p>
-      <a style="margin-top: 32px;" class="global_button" >Discover our story ></a>
+      <a routerLink="/blog-post" style="margin-top: 32px;" class="global_button" >Discover our story ></a>
     </div>
     <img src="assets/Images/why-we-started-image.png" alt="this is image why we started">
   </div>
 </div>
-<app-list-outhors></app-list-outhors>
+<div class="list_of_authors_block">
+  <div class="container">
+    <h2>List of Authors</h2>
+    <div style="margin-top: 48px;" class="list-authors_block">
+      <div *ngFor="let data of dataAuthors">
+        <app-list-outhors [dataAuthors]="data" style="width: 100%"></app-list-outhors>
+      </div>
+    </div>
+  </div>
+</div>
 <div class="container">
   <div class="featured_in_block">
     <div class="featured_in_text_box">
       <p>We are</p>
       <h4>Featured in</h4>
     </div>
-    <img src="assets/Images/logos/logos ipsum/Logo 1.png" alt="this is logog">
-    <img src="assets/Images/logos/logos ipsum/Logo 2.png" alt="this is logog">
-    <img src="assets/Images/logos/logos ipsum/Logo 3.png" alt="this is logog">
-    <img src="assets/Images/logos/logos ipsum/Logo 4.png" alt="this is logog">
-    <img src="assets/Images/logos/logos ipsum/Logo 5.png" alt="this is logog">
+    <img *ngFor="let item of logos" [src]="item" alt="this is logog">
   </div>
   <div class="testimonials_block">
     <div class="title_and_text_blocks">

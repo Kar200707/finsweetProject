@@ -18,52 +18,113 @@ import { PrivacyPolicyComponent } from './pages/privacy-policy/privacy-policy.co
 import {CategoryblockComponent} from "./components/category-block/categoryblock.component";
 import { CategoryComponent } from './pages/category/category.component';
 import { NotfoundComponent } from './pages/notfound/notfound.component';
+import { LayoutComponent } from './layout/layout.component';
+import { PostsComponent } from './components/posts/posts.component';
+
+// const routes: Routes = [
+//   {
+//     path: '',
+//     component: HomeComponent,
+//     title: 'Home'
+//   },
+//   {
+//     path: 'blog',
+//     component: BlogComponent,
+//     title: 'Blog'
+//   },
+//   {
+//     path: 'blog-post',
+//     component: BlogPostComponent,
+//     title: 'Blog Post'
+//   },
+//   {
+//     path: 'about-us',
+//     component: AboutUsComponent,
+//     title: 'About Us'
+//   },
+//   {
+//     path: 'category-block',
+//     component: CategoryComponent,
+//     title: 'Category'
+//   },
+//   {
+//     path: 'author',
+//     component: AuthorComponent,
+//     title: 'Author'
+//   },
+//   {
+//     path: 'contact',
+//     component: ContactComponent,
+//     title: 'Contact'
+//   },
+//   {
+//     path: 'privacy-policy',
+//     component: PrivacyPolicyComponent,
+//     title: 'Privacy Policy'
+//   },
+//   {
+//     path: 'category',
+//     component: CategoryComponent,
+//     title: 'Category'
+//   },
+//   {
+//     path: '**',
+//     component: NotfoundComponent,
+//     title: '404 page not found'
+//   }
+// ]
 
 const routes: Routes = [
   {
     path: '',
-    component: HomeComponent,
-    title: 'Home'
-  },
-  {
-    path: 'blog',
-    component: BlogComponent,
-    title: 'Blog'
-  },
-  {
-    path: 'blog-post',
-    component: BlogPostComponent,
-    title: 'Blog Post'
-  },
-  {
-    path: 'about-us',
-    component: AboutUsComponent,
-    title: 'About Us'
-  },
-  {
-    path: 'category-block',
-    component: CategoryComponent,
-    title: 'Category'
-  },
-  {
-    path: 'author',
-    component: AuthorComponent,
-    title: 'Author'
-  },
-  {
-    path: 'contact',
-    component: ContactComponent,
-    title: 'Contact'
-  },
-  {
-    path: 'privacy-policy',
-    component: PrivacyPolicyComponent,
-    title: 'Privacy Policy'
-  },
-  {
-    path: 'category',
-    component: CategoryComponent,
-    title: 'Category'
+    component: LayoutComponent,
+    children: [
+      {
+        path: '',
+        component: HomeComponent,
+        title: 'Home'
+      },
+      {
+        path: 'blog',
+        component: BlogComponent,
+        title: 'Blog'
+      },
+      {
+        path: 'blog-post',
+        component: BlogPostComponent,
+        title: 'Blog Post'
+      },
+      {
+        path: 'about-us',
+        component: AboutUsComponent,
+        title: 'About Us'
+      },
+      {
+        path: 'category-block',
+        component: CategoryComponent,
+        title: 'Category'
+      },
+      {
+        path: 'author',
+        component: AuthorComponent,
+        title: 'Author'
+      },
+      {
+        path: 'contact',
+        component: ContactComponent,
+        title: 'Contact'
+      },
+      {
+        path: 'privacy-policy',
+        component: PrivacyPolicyComponent,
+        title: 'Privacy Policy'
+      },
+      {
+        path: 'category',
+        component: CategoryComponent,
+        title: 'Category'
+      }
+    ]
   },
   {
     path: '**',
@@ -88,12 +149,14 @@ const routes: Routes = [
     PrivacyPolicyComponent,
     CategoryblockComponent,
     CategoryComponent,
-    NotfoundComponent
+    NotfoundComponent,
+    LayoutComponent,
+    PostsComponent
   ],
     imports: [
         BrowserModule,
         NgOptimizedImage,
-        RouterModule.forRoot(routes)
+        RouterModule.forRoot(routes, {scrollPositionRestoration: 'top'})
     ],
   providers: [],
   bootstrap: [AppComponent]

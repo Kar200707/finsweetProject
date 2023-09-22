@@ -119,6 +119,16 @@
   align-items: center;
   border: 1.5px solid #C1C1C3;
   padding: 24px 0 24px 24px;
+  transition: .3s scale;
+}
+
+.informations_block_categories_page >
+.container > .categories_block > .category:hover {
+  background-color: #FFD050;
+  border: none;
+  margin-top: 41px;
+  margin-bottom: 1px;
+  scale: 1.05;
 }
 
 .informations_block_categories_page > .container > .categories_block

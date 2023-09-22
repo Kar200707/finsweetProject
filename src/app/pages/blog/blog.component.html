@@ -19,76 +19,79 @@
   <div class="container">
     <h1>All posts</h1>
     <div class="line_gray_all_posts_blog"></div>
-    <div class="business_category_block_blog">
-      <img src="assets/Images/business_category_block_blog_img.png" alt="this is image">
-      <div class="text_block">
-        <span>Startup</span>
-        <h2>
-          Design tips for designers that cover everything you need
-        </h2>
-        <p>
-          Duis aute irure dolor in reprehenderit in voluptate velit
-          esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-          occaecat cupidatat non proident.
-        </p>
-      </div>
+    <div *ngFor="let data of dataPosts">
+      <app-posts [dataPosts]="data"></app-posts>
     </div>
-    <div class="business_category_block_blog">
-      <img src="assets/Images/business_category_block_block_img(2).png" alt="this is image">
-      <div class="text_block">
-        <span>BUSINESS</span>
-        <h2>
-          How to build rapport with your web design clients
-        </h2>
-        <p>
-          Duis aute irure dolor in reprehenderit in voluptate velit
-          esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-          occaecat cupidatat non proident.
-        </p>
-      </div>
-    </div>
-    <div class="business_category_block_blog">
-      <img src="assets/Images/business_category_block_block_img(3).png" alt="this is image">
-      <div class="text_block">
-        <span>Startup</span>
-        <h2>
-          Logo design trends to avoid in 2022
-        </h2>
-        <p>
-          Duis aute irure dolor in reprehenderit in voluptate velit
-          esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-          occaecat cupidatat non proident.
-        </p>
-      </div>
-    </div>
-    <div class="business_category_block_blog">
-      <img src="assets/Images/business_category_block_block_img(4).png" alt="this is image">
-      <div class="text_block">
-        <span>TECHNOLOGY</span>
-        <h2>
-          8 Figma design systems you can download for free today
-        </h2>
-        <p>
-          Duis aute irure dolor in reprehenderit in voluptate velit
-          esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-          occaecat cupidatat non proident.
-        </p>
-      </div>
-    </div>
-    <div class="business_category_block_blog">
-      <img src="assets/Images/business_category_block_blog_img.png" alt="this is image">
-      <div class="text_block">
-        <span>ECONOMY</span>
-        <h2>
-          Font sizes in UI design: The complete guide to follow
-        </h2>
-        <p>
-          Duis aute irure dolor in reprehenderit in voluptate velit
-          esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-          occaecat cupidatat non proident.
-        </p>
-      </div>
-    </div>
+<!--    <div class="business_category_block_blog">-->
+<!--      <img src="assets/Images/business_category_block_blog_img.png" alt="this is image">-->
+<!--      <div class="text_block">-->
+<!--        <span>Startup</span>-->
+<!--        <h2>-->
+<!--          Design tips for designers that cover everything you need-->
+<!--        </h2>-->
+<!--        <p>-->
+<!--          Duis aute irure dolor in reprehenderit in voluptate velit-->
+<!--          esse cillum dolore eu fugiat nulla pariatur. Excepteur sint-->
+<!--          occaecat cupidatat non proident.-->
+<!--        </p>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--    <div class="business_category_block_blog">-->
+<!--      <img src="assets/Images/business_category_block_block_img(2).png" alt="this is image">-->
+<!--      <div class="text_block">-->
+<!--        <span>BUSINESS</span>-->
+<!--        <h2>-->
+<!--          How to build rapport with your web design clients-->
+<!--        </h2>-->
+<!--        <p>-->
+<!--          Duis aute irure dolor in reprehenderit in voluptate velit-->
+<!--          esse cillum dolore eu fugiat nulla pariatur. Excepteur sint-->
+<!--          occaecat cupidatat non proident.-->
+<!--        </p>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--    <div class="business_category_block_blog">-->
+<!--      <img src="assets/Images/business_category_block_block_img(3).png" alt="this is image">-->
+<!--      <div class="text_block">-->
+<!--        <span>Startup</span>-->
+<!--        <h2>-->
+<!--          Logo design trends to avoid in 2022-->
+<!--        </h2>-->
+<!--        <p>-->
+<!--          Duis aute irure dolor in reprehenderit in voluptate velit-->
+<!--          esse cillum dolore eu fugiat nulla pariatur. Excepteur sint-->
+<!--          occaecat cupidatat non proident.-->
+<!--        </p>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--    <div class="business_category_block_blog">-->
+<!--      <img src="assets/Images/business_category_block_block_img(4).png" alt="this is image">-->
+<!--      <div class="text_block">-->
+<!--        <span>TECHNOLOGY</span>-->
+<!--        <h2>-->
+<!--          8 Figma design systems you can download for free today-->
+<!--        </h2>-->
+<!--        <p>-->
+<!--          Duis aute irure dolor in reprehenderit in voluptate velit-->
+<!--          esse cillum dolore eu fugiat nulla pariatur. Excepteur sint-->
+<!--          occaecat cupidatat non proident.-->
+<!--        </p>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--    <div class="business_category_block_blog">-->
+<!--      <img src="assets/Images/business_category_block_blog_img.png" alt="this is image">-->
+<!--      <div class="text_block">-->
+<!--        <span>ECONOMY</span>-->
+<!--        <h2>-->
+<!--          Font sizes in UI design: The complete guide to follow-->
+<!--        </h2>-->
+<!--        <p>-->
+<!--          Duis aute irure dolor in reprehenderit in voluptate velit-->
+<!--          esse cillum dolore eu fugiat nulla pariatur. Excepteur sint-->
+<!--          occaecat cupidatat non proident.-->
+<!--        </p>-->
+<!--      </div>-->
+<!--    </div>-->
     <div class="next_prew_buttons">
       <a class="prev" href="#">< Prev</a>
       <a class="next" href="#">Next ></a>
@@ -96,5 +99,13 @@
   </div>
 </div>
 <div class="container"><h2 class="all-categories-text">All Categories</h2></div>
-<app-category-block></app-category-block>
+<div class="choose_catagory_block">
+  <div class="container">
+    <div style="margin-top: 48px;" class="catagory_block">
+      <div *ngFor="let data of dataCategory">
+        <app-category-block [dataCategory]="data"></app-category-block>
+      </div>
+    </div>
+  </div>
+</div>
 <app-join-our-team></app-join-our-team>

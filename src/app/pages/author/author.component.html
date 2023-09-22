@@ -26,31 +26,8 @@
 <div class="my_posts_block_author">
   <div class="container_author">
     <h2>My Posts</h2>
-    <div class="info_block">
-      <img src="assets/Images/stained-glass.png" alt="this is image">
-      <div class="text_block">
-        <span>BUSINESS</span>
-        <h2>
-          Font sizes in UI design: The complete guide to follow
-        </h2>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        </p>
-      </div>
-    </div>
-    <div style="margin-top: 64px;" class="info_block">
-      <img src="assets/Images/man-in-black-crew.png" alt="this is image">
-      <div class="text_block">
-        <span>ECONOMY</span>
-        <h2>
-          How to build rapport with your web design clients
-        </h2>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        </p>
-      </div>
+    <div *ngFor="let data of dataPosts">
+      <app-posts [dataPosts]="data"></app-posts>
     </div>
   </div>
 </div>

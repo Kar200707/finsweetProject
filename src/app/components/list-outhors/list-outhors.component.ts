@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import {Component, Input} from '@angular/core';
+import {Authors} from "../../models/authors";
 
 @Component({
   selector: 'app-list-outhors',
@@ -9,5 +10,5 @@ import { Component } from '@angular/core';
   ]
 })
 export class ListOuthorsComponent {
-
+  @Input() dataAuthors!: Authors
 }

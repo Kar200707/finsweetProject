@@ -9,50 +9,13 @@
 <div class="informations_block_categories_page">
   <div class="container">
     <div class="infromations_block">
-      <div class="info_box">
-        <img style="display: block;" src="assets/Images/two-women-img-category-page.png" alt="this is image">
-        <div class="text_block">
-          <span>Business</span>
-          <h2>Top 6 free website mockup tools 2022</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-            tempor incididunt ut labore et dolore magna aliqua. Non blandit massa enim nec.
-          </p>
-        </div>
-      </div>
-      <div style="margin-top: 32px;" class="info_box">
-        <img style="display: block;" src="assets/Images/two-women-img-category-page.png" alt="this is image">
-        <div class="text_block">
-          <span>Business</span>
-          <h2>Top 6 free website mockup tools 2022</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-            tempor incididunt ut labore et dolore magna aliqua. Non blandit massa enim nec.
-          </p>
-        </div>
-      </div>
-      <div style="margin-top: 32px;" class="info_box">
-        <img style="display: block;" src="assets/Images/two-women-img-category-page.png" alt="this is image">
-        <div class="text_block">
-          <span>Business</span>
-          <h2>Top 6 free website mockup tools 2022</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-            tempor incididunt ut labore et dolore magna aliqua. Non blandit massa enim nec.
-          </p>
-        </div>
-      </div>
-      <div style="margin-top: 32px;" class="info_box">
-        <img style="display: block;" src="assets/Images/two-women-img-category-page.png" alt="this is image">
-        <div class="text_block">
-          <span>Business</span>
-          <h2>Top 6 free website mockup tools 2022</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-            tempor incididunt ut labore et dolore magna aliqua. Non blandit massa enim nec.
-          </p>
-        </div>
+      <div *ngFor="let data of dataPosts">
+        <app-posts [dataPosts]="data"></app-posts>
       </div>
     </div>
     <div class="categories_block">
       <h2>Categories</h2>
-      <div style="margin-top: 40px; border: none; background-color: #FFD050;" class="category">
+      <div style="margin-top: 40px;" class="category">
         <div class="category_icon">
           <img src="assets/Images/icons/startup.png" alt="this is icon">
         </div>

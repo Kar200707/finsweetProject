@@ -403,8 +403,6 @@
    }
 }
 
-
-
  /* media blog page | featured post */
 
 
@@ -441,48 +439,6 @@
      text-align: center;
    }
 }
-
-
-   /* media all post block blog */
-
-@media screen and (max-width: 980px) {
-   .business_category_block_blog {
-      flex-direction: column;
-      align-items: center;
-   }
-
-   .business_category_block_blog > .text_block > span,
-   .business_category_block_blog > .text_block > h2,
-   .business_category_block_blog > .text_block > p {
-      text-align: start;
-      display: block;
-   }
-
-   .business_category_block_blog > .text_block {
-      align-items: center;
-      padding-top: 20px;
-   }
-}
-
-@media screen and (max-width: 708px) {
-   .business_category_block_blog > .text_block {
-      width: 90%;
-      margin: auto
-   }
-
-   .featured_post_block_blog {
-      flex-direction: column;
-      align-items: center;
-   }
-}
-
-@media screen and (max-width: 544px) {
-   .business_category_block_blog > img {
-      object-fit: cover;
-      width: 100%;
-   }
-}
-
 
  /* media blog post page*/
 
@@ -870,12 +826,11 @@
       margin-left: 0;
    }
 
-   .informations_block_categories_page > .container > .categories_block > .category {
+   .informations_block_categories_page >
+   .container > .categories_block > .category {
       width: 100%;
    }
 }
-
-
 
    /* media aurhor page */
 

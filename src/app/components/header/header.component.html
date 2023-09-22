@@ -13,13 +13,16 @@
         <div class="mobile-nav_block">
           <label>
             <img class="header-mobile-menu" src="assets/Images/icons/header-mobile-menu.png" alt="this icon mobile menu">
-            <input class="mobile_menu_checkbox" type="checkbox">
+            <input id="chackbox" class="mobile_menu_checkbox" type="checkbox">
             <div class="mobile_menu">
               <a routerLink="" [routerLinkActiveOptions]="{exact: true}" routerLinkActive="router-active" class="nav_links">Home</a>
               <a routerLink="blog" routerLinkActive="router-active" class="nav_links">Blog</a>
               <a routerLink="about-us" routerLinkActive="router-active" class="nav_links">About Us</a>
               <a routerLink="contact" routerLinkActive="router-active" class="nav_links">Contact us</a>
               <a class="btn_sub_header-mobile">Subscribe</a>
+              <label for="chackbox">
+                <p>&times;</p>
+              </label>
             </div>
           </label>
         </div>

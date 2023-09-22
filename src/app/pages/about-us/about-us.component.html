@@ -100,7 +100,21 @@
       </div>
       <div class="shape_why_we_started_this_blog_block"></div>
     </div>
-    <app-list-outhors></app-list-outhors>
+    <div class="list_of_authors_block">
+    <div class="container">
+      <h2>List of Authors</h2>
+      <div style="margin-top: 48px;" class="list-authors_block">
+        <div *ngFor="let data of dataAuthors">
+          <app-list-outhors [dataAuthors]="data" style="width: 100%"></app-list-outhors>
+        </div>
+      </div>
+      <div style="margin-top: 48px;" class="list-authors_block">
+        <div *ngFor="let data of dataAuthors">
+          <app-list-outhors [dataAuthors]="data" style="width: 100%"></app-list-outhors>
+        </div>
+      </div>
+    </div>
+    </div>
     <app-join-our-team></app-join-our-team>
   </div>
 </div>
