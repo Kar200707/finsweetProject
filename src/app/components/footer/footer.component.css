@@ -109,6 +109,10 @@
   margin-left: 24px;
 }
 
+.footer_enter_email > form > .global_button:disabled {
+  opacity: .4;
+}
+
 .about_block_footer > div > a {
   margin-left: 24px;
 }

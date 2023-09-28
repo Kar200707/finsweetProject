@@ -11,6 +11,7 @@ import {Authors} from "../../models/authors";
   ]
 })
 export class HomeComponent {
+
   dataCategory: Category[] = [
     {
       image: 'assets/Images/icons/business.png',

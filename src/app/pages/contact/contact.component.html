@@ -23,9 +23,9 @@
         </div>
       </div>
       <div class="inputs_box">
-        <form>
-          <input placeholder="Full Name" type="text">
-          <input style="margin-top: 16px;" placeholder="Your Email" type="email">
+        <form [formGroup]="form" (ngSubmit)="fName.value = ''">
+          <input #fName formControlName="f_name" name="f_name" placeholder="Full Name" type="text">
+          <input #inputEmail formControlName="email" name="email" style="margin-top: 16px;" placeholder="Your Email" type="email">
           <div class="select_block">
             <select name="query-related">
               <option>Query Related</option>
@@ -35,8 +35,8 @@
               <option>test</option>
             </select>
           </div>
-          <textarea placeholder="Message"></textarea>
-          <button>Send Message</button>
+          <textarea name="message" placeholder="Message"></textarea>
+          <button [disabled]="form.invalid">Send Message</button>
         </form>
       </div>
     </div>

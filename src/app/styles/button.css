@@ -1,9 +1,9 @@
 .global_button {
    padding: 16px 48px;
-   background: var(--yellow, #FFD050);
+   background: #FFD050;
    display: inline-block;
    text-decoration: none;
-   color: var(--black, #232536);
+   color: #232536;
    font-family: Sen;
    font-size: 18px;
    font-style: normal;
@@ -17,5 +17,5 @@
 }
 
 .global_button:hover {
-   background: #fff8b7;
+   background: #a9a9a9;
 }

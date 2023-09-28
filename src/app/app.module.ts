@@ -20,6 +20,7 @@ import { CategoryComponent } from './pages/category/category.component';
 import { NotfoundComponent } from './pages/notfound/notfound.component';
 import { LayoutComponent } from './layout/layout.component';
 import { PostsComponent } from './components/posts/posts.component';
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 
 // const routes: Routes = [
 //   {
@@ -153,11 +154,13 @@ const routes: Routes = [
     LayoutComponent,
     PostsComponent
   ],
-    imports: [
-        BrowserModule,
-        NgOptimizedImage,
-        RouterModule.forRoot(routes, {scrollPositionRestoration: 'top'})
-    ],
+  imports: [
+    BrowserModule,
+    NgOptimizedImage,
+    RouterModule.forRoot(routes, {scrollPositionRestoration: 'top'}),
+    FormsModule,
+    ReactiveFormsModule
+  ],
   providers: [],
   bootstrap: [AppComponent]
 })

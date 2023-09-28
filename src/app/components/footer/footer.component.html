@@ -17,9 +17,9 @@
           get latest updates and news
         </h2>
         <div class="footer_enter_email">
-          <form>
-            <input placeholder="Enter Your Email" type="email">
-            <button style="border: none;" class="global_button">Subscribe</button>
+          <form [formGroup]="form" (ngSubmit)="inputEmail.value = ''">
+            <input #inputEmail formControlName="email" name="email" placeholder="Enter Your Email" type="email">
+            <button [disabled]="form.invalid" style="border: none;" class="global_button">Subscribe</button>
           </form>
         </div>
       </div>
