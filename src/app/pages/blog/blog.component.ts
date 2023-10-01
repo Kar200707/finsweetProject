@@ -1,6 +1,11 @@
 import { Component } from '@angular/core';
 import {Category} from "../../models/category";
 import {Posts} from "../../models/posts";
+import {NgFor} from "@angular/common";
+import {RouterModule} from "@angular/router";
+import {CategoryblockComponent} from "../../components/category-block/categoryblock.component";
+import {JoinOurTeamComponent} from "../../components/join-our-team/join-our-team.component";
+import {PostsComponent} from "../../components/posts/posts.component";
 
 @Component({
   selector: 'app-blog',
@@ -8,6 +13,14 @@ import {Posts} from "../../models/posts";
   styleUrls: [
     './blog.component.css',
     '../../styles/media.css'
+  ],
+  standalone: true,
+  imports: [
+    NgFor,
+    RouterModule,
+    CategoryblockComponent,
+    JoinOurTeamComponent,
+    PostsComponent
   ]
 })
 export class BlogComponent {

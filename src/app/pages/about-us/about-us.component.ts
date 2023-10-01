@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
 import {Authors} from "../../models/authors";
+import {NgFor} from "@angular/common";
+import {JoinOurTeamComponent} from "../../components/join-our-team/join-our-team.component";
+import {ListOuthorsComponent} from "../../components/list-outhors/list-outhors.component";
 
 @Component({
   selector: 'app-about-us',
@@ -7,6 +10,12 @@ import {Authors} from "../../models/authors";
   styleUrls: [
     './about-us.component.css',
     '../../styles/media.css'
+  ],
+  standalone: true,
+  imports: [
+    NgFor,
+    JoinOurTeamComponent,
+    ListOuthorsComponent
   ]
 })
 export class AboutUsComponent {

@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import {FormControl, FormGroup, Validators} from "@angular/forms";
+import {FormControl, FormGroup, ReactiveFormsModule, Validators} from "@angular/forms";
+import {NgIf} from "@angular/common";
 
 @Component({
   selector: 'app-contact',
@@ -7,6 +8,11 @@ import {FormControl, FormGroup, Validators} from "@angular/forms";
   styleUrls: [
     './contact.component.css',
     '../../styles/media.css'
+  ],
+  standalone: true,
+  imports: [
+    ReactiveFormsModule,
+    NgIf,
   ]
 })
 export class ContactComponent {

@@ -18,7 +18,8 @@
         </h2>
         <div class="footer_enter_email">
           <form [formGroup]="form" (ngSubmit)="inputEmail.value = ''">
-            <input #inputEmail formControlName="email" name="email" placeholder="Enter Your Email" type="email">
+            <input
+              [style.border]="form.invalid && (form.touched || form.dirty) ? '1px solid red' : false" #inputEmail formControlName="email" name="email" placeholder="Enter Your Email" type="email">
             <button [disabled]="form.invalid" style="border: none;" class="global_button">Subscribe</button>
           </form>
         </div>

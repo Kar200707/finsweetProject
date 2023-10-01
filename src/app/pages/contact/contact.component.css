@@ -147,6 +147,11 @@
   margin-top: 32px;
 }
 
+.contact_page_block > .inputs_block > .inputs_box
+> form >  div > span {
+  color: red;
+}
+
 .contact_page_block > .inputs_block > .inputs_box > form {
   display: flex;
   flex-direction: column;

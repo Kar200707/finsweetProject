@@ -23,9 +23,19 @@
         </div>
       </div>
       <div class="inputs_box">
-        <form [formGroup]="form" (ngSubmit)="fName.value = ''">
+        <form [formGroup]="form" (ngSubmit)="form.reset()">
           <input #fName formControlName="f_name" name="f_name" placeholder="Full Name" type="text">
-          <input #inputEmail formControlName="email" name="email" style="margin-top: 16px;" placeholder="Your Email" type="email">
+          <div *ngIf="form.get('f_name')?.touched || form.get('f_name')?.dirty">
+            <span *ngIf="form.get('f_name')?.invalid">
+              *required, minimum 3 symbol
+            </span>
+          </div>
+          <input formControlName="email" name="email" style="margin-top: 16px;" placeholder="Your Email" type="email">
+          <div *ngIf="form.get('email')?.touched || form.get('email')?.dirty">
+            <span *ngIf="form.get('email')?.invalid">
+              *required, in the form of email example@.ex
+            </span>
+          </div>
           <div class="select_block">
             <select name="query-related">
               <option>Query Related</option>

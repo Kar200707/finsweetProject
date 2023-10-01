@@ -1,5 +1,6 @@
 import {Component, Input} from '@angular/core';
 import {Authors} from "../../models/authors";
+import {RouterModule} from "@angular/router";
 
 @Component({
   selector: 'app-list-outhors',
@@ -7,6 +8,10 @@ import {Authors} from "../../models/authors";
   styleUrls: [
     './list-outhors.component.css',
     '../../styles/media.css'
+  ],
+  standalone: true,
+  imports: [
+    RouterModule,
   ]
 })
 export class ListOuthorsComponent {

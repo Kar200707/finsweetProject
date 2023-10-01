@@ -1,6 +1,11 @@
 import { Component } from '@angular/core';
 import {Category} from "../../models/category";
 import {Authors} from "../../models/authors";
+import {NgForOf, NgIf} from "@angular/common";
+import {RouterModule} from "@angular/router";
+import {CategoryblockComponent} from "../../components/category-block/categoryblock.component";
+import {JoinOurTeamComponent} from "../../components/join-our-team/join-our-team.component";
+import {ListOuthorsComponent} from "../../components/list-outhors/list-outhors.component";
 
 @Component({
   selector: 'app-home',
@@ -8,6 +13,15 @@ import {Authors} from "../../models/authors";
   styleUrls: [
     './home.component.css',
     '../../styles/media.css'
+  ],
+  standalone: true,
+  imports: [
+    JoinOurTeamComponent,
+    ListOuthorsComponent,
+    CategoryblockComponent,
+    NgIf,
+    NgForOf,
+    RouterModule
   ]
 })
 export class HomeComponent {

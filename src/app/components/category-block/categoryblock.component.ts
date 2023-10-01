@@ -1,5 +1,6 @@
 import {Component, Input} from '@angular/core';
 import {Category} from "../../models/category";
+import {RouterModule} from "@angular/router";
 
 @Component({
   selector: 'app-category-block',
@@ -7,7 +8,11 @@ import {Category} from "../../models/category";
   styleUrls: [
     './categoryblock.component.css',
     '../../styles/media.css'
-  ]
+  ],
+  standalone: true,
+  imports: [
+    RouterModule
+  ],
 })
 export class CategoryblockComponent {
   @Input() dataCategory!: Category

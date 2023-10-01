@@ -7,73 +7,16 @@ import {NgOptimizedImage} from "@angular/common";
 import { FooterComponent } from './components/footer/footer.component';
 import {RouterModule, Routes} from "@angular/router";
 import { HomeComponent } from './pages/home/home.component';
-import { ListOuthorsComponent } from './components/list-outhors/list-outhors.component';
-import { JoinOurTeamComponent } from './components/join-our-team/join-our-team.component';
 import { BlogComponent } from './pages/blog/blog.component';
 import { BlogPostComponent } from './pages/blog-post/blog-post.component';
 import { AboutUsComponent } from './pages/about-us/about-us.component';
 import { AuthorComponent } from './pages/author/author.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { PrivacyPolicyComponent } from './pages/privacy-policy/privacy-policy.component';
-import {CategoryblockComponent} from "./components/category-block/categoryblock.component";
 import { CategoryComponent } from './pages/category/category.component';
 import { NotfoundComponent } from './pages/notfound/notfound.component';
 import { LayoutComponent } from './layout/layout.component';
-import { PostsComponent } from './components/posts/posts.component';
-import {FormsModule, ReactiveFormsModule} from "@angular/forms";
-
-// const routes: Routes = [
-//   {
-//     path: '',
-//     component: HomeComponent,
-//     title: 'Home'
-//   },
-//   {
-//     path: 'blog',
-//     component: BlogComponent,
-//     title: 'Blog'
-//   },
-//   {
-//     path: 'blog-post',
-//     component: BlogPostComponent,
-//     title: 'Blog Post'
-//   },
-//   {
-//     path: 'about-us',
-//     component: AboutUsComponent,
-//     title: 'About Us'
-//   },
-//   {
-//     path: 'category-block',
-//     component: CategoryComponent,
-//     title: 'Category'
-//   },
-//   {
-//     path: 'author',
-//     component: AuthorComponent,
-//     title: 'Author'
-//   },
-//   {
-//     path: 'contact',
-//     component: ContactComponent,
-//     title: 'Contact'
-//   },
-//   {
-//     path: 'privacy-policy',
-//     component: PrivacyPolicyComponent,
-//     title: 'Privacy Policy'
-//   },
-//   {
-//     path: 'category',
-//     component: CategoryComponent,
-//     title: 'Category'
-//   },
-//   {
-//     path: '**',
-//     component: NotfoundComponent,
-//     title: '404 page not found'
-//   }
-// ]
+import {SharedModule} from "./components/shared/shared.module";
 
 const routes: Routes = [
   {
@@ -135,31 +78,12 @@ const routes: Routes = [
 ]
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    HeaderComponent,
-    FooterComponent,
-    HomeComponent,
-    ListOuthorsComponent,
-    JoinOurTeamComponent,
-    BlogComponent,
-    BlogPostComponent,
-    AboutUsComponent,
-    AuthorComponent,
-    ContactComponent,
-    PrivacyPolicyComponent,
-    CategoryblockComponent,
-    CategoryComponent,
-    NotfoundComponent,
-    LayoutComponent,
-    PostsComponent
-  ],
+  declarations: [ AppComponent ],
   imports: [
     BrowserModule,
     NgOptimizedImage,
     RouterModule.forRoot(routes, {scrollPositionRestoration: 'top'}),
-    FormsModule,
-    ReactiveFormsModule
+    SharedModule
   ],
   providers: [],
   bootstrap: [AppComponent]

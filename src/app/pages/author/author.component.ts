@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import {Posts} from "../../models/posts";
+import {NgFor} from "@angular/common";
+import {PostsComponent} from "../../components/posts/posts.component";
 
 @Component({
   selector: 'app-author',
@@ -7,6 +9,11 @@ import {Posts} from "../../models/posts";
   styleUrls: [
     './author.component.css',
     '../../styles/media.css'
+  ],
+  standalone: true,
+  imports: [
+    NgFor,
+    PostsComponent
   ]
 })
 export class AuthorComponent {
