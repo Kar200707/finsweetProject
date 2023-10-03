@@ -2,9 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './components/header/header.component';
 import {NgOptimizedImage} from "@angular/common";
-import { FooterComponent } from './components/footer/footer.component';
 import {RouterModule, Routes} from "@angular/router";
 import { HomeComponent } from './pages/home/home.component';
 import { BlogComponent } from './pages/blog/blog.component';
@@ -17,6 +15,8 @@ import { CategoryComponent } from './pages/category/category.component';
 import { NotfoundComponent } from './pages/notfound/notfound.component';
 import { LayoutComponent } from './layout/layout.component';
 import {SharedModule} from "./components/shared/shared.module";
+
+import {provideClientHydration} from '@angular/platform-browser';
 
 const routes: Routes = [
   {
@@ -82,10 +82,10 @@ const routes: Routes = [
   imports: [
     BrowserModule,
     NgOptimizedImage,
-    RouterModule.forRoot(routes, {scrollPositionRestoration: 'top'}),
+    RouterModule.forRoot(routes, { scrollPositionRestoration: 'top', initialNavigation: 'enabledBlocking' }),
     SharedModule
   ],
-  providers: [],
+  providers: [ provideClientHydration() ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

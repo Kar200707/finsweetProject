@@ -30,7 +30,6 @@
   user-select: none;
   user-zoom: fixed;
   -webkit-user-drag: none;
-  scroll-behavior: smooth;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
