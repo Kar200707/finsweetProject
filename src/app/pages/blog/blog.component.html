@@ -19,6 +19,11 @@
   <div class="container">
     <h1>All posts</h1>
     <div class="line_gray_all_posts_blog"></div>
+    <app-loader-bar style="width: 100%; margin-top: 64px; display: block" [Height]="'318px'" *ngIf="dataPosts == undefined"></app-loader-bar>
+    <app-loader-bar style="width: 100%; margin-top: 64px; display: block" [Height]="'318px'" *ngIf="dataPosts == undefined"></app-loader-bar>
+    <app-loader-bar style="width: 100%; margin-top: 64px; display: block" [Height]="'318px'" *ngIf="dataPosts == undefined"></app-loader-bar>
+    <app-loader-bar style="width: 100%; margin-top: 64px; display: block" [Height]="'318px'" *ngIf="dataPosts == undefined"></app-loader-bar>
+    <app-loader-bar style="width: 100%; margin-top: 64px; display: block" [Height]="'318px'" *ngIf="dataPosts == undefined"></app-loader-bar>
     <div *ngFor="let data of dataPosts">
       <app-posts [dataPosts]="data"></app-posts>
     </div>
@@ -32,8 +37,11 @@
 <div class="choose_catagory_block">
   <div class="container">
     <div style="margin-top: 48px;" class="catagory_block">
-      <div *ngFor="let data of dataCategory">
-        <app-category-block [dataCategory]="data"></app-category-block>
+      <app-loader-bar style="width: 100%" [Height]="'300px'" *ngIf="dataCategory == undefined"></app-loader-bar>
+      <div *ngFor="let data of dataCategory, let i = index">
+        <ng-container *ngIf="i < 4">
+          <app-category-block [dataCategory]="data"></app-category-block>
+        </ng-container>
       </div>
     </div>
   </div>

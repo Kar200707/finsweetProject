@@ -1,7 +1,10 @@
-import { Component } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {Posts} from "../../models/posts";
-import {NgFor} from "@angular/common";
+import {NgFor, NgIf} from "@angular/common";
 import {PostsComponent} from "../../components/posts/posts.component";
+import {HttpClient, HttpClientModule} from "@angular/common/http";
+import {LoaderBarComponent} from "../../components/loader-bar/loader-bar.component";
+import {FeaturedPostList} from "../../models/featured-post-list";
 
 @Component({
   selector: 'app-category',
@@ -13,54 +16,24 @@ import {PostsComponent} from "../../components/posts/posts.component";
   standalone: true,
   imports: [
     NgFor,
-    PostsComponent
+    PostsComponent,
+    HttpClientModule,
+    LoaderBarComponent,
+    NgIf
   ]
 })
-export class CategoryComponent {
-  dataPosts: Posts[] = [
-    {
-      id: 1,
-      category: 'BUSINESS',
-      title: 'Top 6 free website mockup tools 2022',
-      image: 'assets/Images/two-women-img-category-page.png',
-      description: `
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        Non blandit massa enim nec.
-      `
-    },
-    {
-      id: 2,
-      category: 'BUSINESS',
-      title: 'Step-by-step guide to choosing great font pairs',
-      image: 'assets/Images/two-women-img-category-page.png',
-      description: `
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        Non blandit massa enim nec.
-      `
-    },
-    {
-      id: 3,
-      category: 'BUSINESS',
-      title: 'Ten free foogle fonts that you should use',
-      image: 'assets/Images/two-women-img-category-page.png',
-      description: `
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        Non blandit massa enim nec.
-      `
-    },
-    {
-      id: 4,
-      category: 'BUSINESS',
-      title: 'What did I learn from doing 50+ design sprints?',
-      image: 'assets/Images/two-women-img-category-page.png',
-      description: `
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        Non blandit massa enim nec.
-      `
-    }
-  ]
+export class CategoryComponent implements OnInit{
+  dataPosts!: Posts[];
+
+  constructor(public http: HttpClient) { }
+
+  ngOnInit():void {
+    this.http.get(
+      'http://localhost:3000/category-posts'
+    ).subscribe(
+      (data:any):void => {
+        this.dataPosts = data as Posts[];
+      }
+    )
+  }
 }

@@ -1,7 +1,9 @@
-import { Component } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {Posts} from "../../models/posts";
-import {NgFor} from "@angular/common";
+import {NgFor, NgIf} from "@angular/common";
 import {PostsComponent} from "../../components/posts/posts.component";
+import {HttpClient, HttpClientModule} from "@angular/common/http";
+import {LoaderBarComponent} from "../../components/loader-bar/loader-bar.component";
 
 @Component({
   selector: 'app-author',
@@ -13,31 +15,23 @@ import {PostsComponent} from "../../components/posts/posts.component";
   standalone: true,
   imports: [
     NgFor,
-    PostsComponent
+    PostsComponent,
+    HttpClientModule,
+    LoaderBarComponent,
+    NgIf
   ]
 })
-export class AuthorComponent {
-  dataPosts: Posts[] = [
-    {
-      id: 1,
-      category: 'BUSINESS',
-      title: 'Font sizes in UI design: The complete guide to follow',
-      image: 'assets/Images/stained-glass.png',
-      description: `
-         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-         eiusmod tempor incididunt ut labore et dolore magna aliqua.
-      `
-    },
-    {
-      id: 2,
-      category: 'ECONOMY',
-      title: 'How to build rapport with your web design clients',
-      image: 'assets/Images/man-in-black-crew.png',
-      description: `
-        Duis aute irure dolor in reprehenderit in voluptate velit
-        esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-        occaecat cupidatat non proident.
-      `
-    }
-  ]
+export class AuthorComponent implements OnInit{
+  dataPosts!: Posts[];
+  constructor(public http: HttpClient) { }
+
+  ngOnInit():void {
+    this.http.get(
+      'http://localhost:3000/author-posts'
+    ).subscribe(
+      (data:any):void => {
+        this.dataPosts = data as Posts[];
+      }
+    )
+  }
 }

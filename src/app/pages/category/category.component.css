@@ -53,6 +53,7 @@
 .informations_block_categories_page > .container > .infromations_block {
   display: flex;
   flex-direction: column;
+  width: 100%;
 }
 
 .informations_block_categories_page > .container > .infromations_block

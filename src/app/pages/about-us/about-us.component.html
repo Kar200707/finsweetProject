@@ -104,14 +104,20 @@
     <div class="container">
       <h2>List of Authors</h2>
       <div style="margin-top: 48px;" class="list-authors_block">
-        <div *ngFor="let data of dataAuthors">
-          <app-list-outhors [dataAuthors]="data" style="width: 100%"></app-list-outhors>
-        </div>
+        <app-loader-bar style="width: 100%" [Height]="'350px'" *ngIf="dataAuthors === undefined"></app-loader-bar>
+        <ng-container *ngFor="let data of dataAuthors, let i = index">
+          <div *ngIf="i < 4">
+            <app-list-outhors [dataAuthors]="data" style="width: 100%"></app-list-outhors>
+          </div>
+        </ng-container>
       </div>
       <div style="margin-top: 48px;" class="list-authors_block">
-        <div *ngFor="let data of dataAuthors">
-          <app-list-outhors [dataAuthors]="data" style="width: 100%"></app-list-outhors>
-        </div>
+        <app-loader-bar style="width: 100%" [Height]="'350px'" *ngIf="dataAuthors === undefined"></app-loader-bar>
+        <ng-container *ngFor="let data of dataAuthors, let i = index">
+          <div *ngIf="i >= 4 && i <= 8">
+            <app-list-outhors [dataAuthors]="data" style="width: 100%"></app-list-outhors>
+          </div>
+        </ng-container>
       </div>
     </div>
     </div>

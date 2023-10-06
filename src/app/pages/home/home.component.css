@@ -208,6 +208,7 @@
   display: flex;
   flex-direction: column;
   margin-left: 96px;
+  width: 100%;
 }
 
 .list_box {
@@ -237,7 +238,14 @@
   line-height: 32px;
   margin-top: 8px;
   display: block;
+  width: 369px;
   text-decoration: none;
+}
+
+@media screen and (max-width: 420px) {
+  .list_box > p + a {
+    width: 100%;
+  }
 }
 
 .list_box > p + a:hover {

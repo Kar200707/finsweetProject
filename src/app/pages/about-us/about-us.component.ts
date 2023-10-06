@@ -1,8 +1,10 @@
-import { Component } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {Authors} from "../../models/authors";
-import {NgFor} from "@angular/common";
+import {NgFor, NgIf} from "@angular/common";
 import {JoinOurTeamComponent} from "../../components/join-our-team/join-our-team.component";
 import {ListOuthorsComponent} from "../../components/list-outhors/list-outhors.component";
+import {LoaderBarComponent} from "../../components/loader-bar/loader-bar.component";
+import {HttpClient, HttpClientModule} from "@angular/common/http";
 
 @Component({
   selector: 'app-about-us',
@@ -15,34 +17,24 @@ import {ListOuthorsComponent} from "../../components/list-outhors/list-outhors.c
   imports: [
     NgFor,
     JoinOurTeamComponent,
-    ListOuthorsComponent
+    ListOuthorsComponent,
+    LoaderBarComponent,
+    HttpClientModule,
+    NgIf
   ]
 })
-export class AboutUsComponent {
-  dataAuthors: Authors[] = [
-    {
-      id: 1,
-      image: 'assets/Images/user_img.png',
-      name: 'Floyd Miles',
-      description: 'Content Writer @Company'
-    },
-    {
-      id: 2,
-      image: 'assets/Images/user_img4.png',
-      name: 'Dianne Russell',
-      description: 'Content Writer @Company'
-    },
-    {
-      id: 3,
-      image: 'assets/Images/user_img3.png',
-      name: 'Jenny Wilson',
-      description: 'Content Writer @Company'
-    },
-    {
-      id: 4,
-      image: 'assets/Images/user_img2.png',
-      name: 'Leslie Alexander',
-      description: 'Content Writer @Company'
-    }
-  ]
+export class AboutUsComponent implements OnInit{
+  dataAuthors!: Authors[]
+
+  constructor(public http: HttpClient) { }
+
+  ngOnInit() {
+    this.http.get(
+      'http://localhost:3000/author'
+    ).subscribe(
+      (data:any):void => {
+        this.dataAuthors = data as Authors[];
+      }
+    )
+  }
 }

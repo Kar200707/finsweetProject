@@ -4,75 +4,60 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import {NgOptimizedImage} from "@angular/common";
 import {RouterModule, Routes} from "@angular/router";
-import { HomeComponent } from './pages/home/home.component';
-import { BlogComponent } from './pages/blog/blog.component';
-import { BlogPostComponent } from './pages/blog-post/blog-post.component';
-import { AboutUsComponent } from './pages/about-us/about-us.component';
-import { AuthorComponent } from './pages/author/author.component';
-import { ContactComponent } from './pages/contact/contact.component';
-import { PrivacyPolicyComponent } from './pages/privacy-policy/privacy-policy.component';
-import { CategoryComponent } from './pages/category/category.component';
-import { NotfoundComponent } from './pages/notfound/notfound.component';
 import { LayoutComponent } from './layout/layout.component';
-import {SharedModule} from "./components/shared/shared.module";
 
 import {provideClientHydration} from '@angular/platform-browser';
 
 const routes: Routes = [
   {
     path: '',
-    component: LayoutComponent,
+    loadComponent: () => import('./layout/layout.component').then(m => m.LayoutComponent),
     children: [
       {
         path: '',
-        component: HomeComponent,
+        loadComponent: () => import('./pages/home/home.component').then(m => m.HomeComponent),
         title: 'Home'
       },
       {
         path: 'blog',
-        component: BlogComponent,
+        loadComponent: () => import('./pages/blog/blog.component').then(m => m.BlogComponent),
         title: 'Blog'
       },
       {
         path: 'blog-post',
-        component: BlogPostComponent,
+        loadComponent: () => import('./pages/blog-post/blog-post.component').then(m => m.BlogPostComponent),
         title: 'Blog Post'
       },
       {
         path: 'about-us',
-        component: AboutUsComponent,
+        loadComponent: () => import('./pages/about-us/about-us.component').then(m => m.AboutUsComponent),
         title: 'About Us'
       },
       {
-        path: 'category-block',
-        component: CategoryComponent,
-        title: 'Category'
-      },
-      {
         path: 'author',
-        component: AuthorComponent,
+        loadComponent: () => import('./pages/author/author.component').then(m => m.AuthorComponent),
         title: 'Author'
       },
       {
         path: 'contact',
-        component: ContactComponent,
+        loadComponent: () => import('./pages/contact/contact.component').then(m => m.ContactComponent),
         title: 'Contact'
       },
       {
         path: 'privacy-policy',
-        component: PrivacyPolicyComponent,
+        loadComponent: () => import('./pages/privacy-policy/privacy-policy.component').then(m => m.PrivacyPolicyComponent),
         title: 'Privacy Policy'
       },
       {
         path: 'category',
-        component: CategoryComponent,
+        loadComponent: () => import('./pages/category/category.component').then(m => m.CategoryComponent),
         title: 'Category'
       }
     ]
   },
   {
     path: '**',
-    component: NotfoundComponent,
+    loadComponent: () => import('./pages/notfound/notfound.component').then(m => m.NotfoundComponent),
     title: '404 page not found'
   }
 ]
@@ -83,7 +68,6 @@ const routes: Routes = [
     BrowserModule,
     NgOptimizedImage,
     RouterModule.forRoot(routes, { scrollPositionRestoration: 'top', initialNavigation: 'enabledBlocking' }),
-    SharedModule
   ],
   providers: [ provideClientHydration() ],
   bootstrap: [AppComponent]

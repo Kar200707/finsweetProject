@@ -39,21 +39,13 @@
         <a style="margin-top: 32px;" class="global_button" routerLink="/blog-post">Read More ></a>
       </div>
       <div class="featured_post_lists_block">
-        <div style="margin-top: 32px;" class="list_box">
-          <p>By <span>John Doe</span>  &nbsp;l&nbsp;  May 23, 2022</p>
-          <a routerLink="/blog-post">8 Figma design systems that <br> you can download for free <br> today.</a>
-        </div>
-        <div class="list_box">
-          <p>By <span>John Doe</span>  &nbsp;l&nbsp;  May 23, 2022</p>
-          <a routerLink="/blog-post">8 Figma design systems that <br> you can download for free <br> today.</a>
-        </div>
-        <div class="list_box">
-          <p>By <span>John Doe</span>  &nbsp;l&nbsp;  May 23, 2022</p>
-          <a routerLink="/blog-post">8 Figma design systems that <br> you can download for free <br> today.</a>
-        </div>
-        <div class="list_box">
-          <p>By <span>John Doe</span>  &nbsp;l&nbsp;  May 23, 2022</p>
-          <a routerLink="/blog-post">8 Figma design systems that <br> you can download for free <br> today.</a>
+        <app-loader-bar style="width: 100%; margin-top: 30px" [Height]="'200px'" *ngIf="dataFeaturedPostLists === undefined"></app-loader-bar>
+        <app-loader-bar style="width: 100%; margin-top: 30px" [Height]="'200px'" *ngIf="dataFeaturedPostLists === undefined"></app-loader-bar>
+        <app-loader-bar style="width: 100%; margin-top: 30px" [Height]="'200px'" *ngIf="dataFeaturedPostLists === undefined"></app-loader-bar>
+        <app-loader-bar style="width: 100%; margin-top: 30px" [Height]="'200px'" *ngIf="dataFeaturedPostLists === undefined"></app-loader-bar>
+        <div *ngFor="let items of dataFeaturedPostLists" style="margin-top: 32px;" class="list_box">
+          <p>By <span>{{ items.author }}</span>  &nbsp;l&nbsp;  {{ items.date }}</p>
+          <a routerLink="/blog-post">{{ items.link }}</a>
         </div>
       </div>
     </div>
@@ -92,8 +84,11 @@
 <div class="choose_catagory_block">
   <div class="container">
     <div style="margin-top: 48px;" class="catagory_block">
-      <div *ngFor="let data of dataCategory">
-        <app-category-block [dataCategory]="data"></app-category-block>
+      <app-loader-bar style="width: 100%" [Height]="'300px'" *ngIf="dataCategory === undefined"></app-loader-bar>
+      <div *ngFor="let data of dataCategory, let i = index">
+        <ng-container *ngIf="i < 4">
+          <app-category-block [dataCategory]="data"></app-category-block>
+        </ng-container>
       </div>
     </div>
   </div>
@@ -119,8 +114,11 @@
   <div class="container">
     <h2>List of Authors</h2>
     <div style="margin-top: 48px;" class="list-authors_block">
-      <div *ngFor="let data of dataAuthors">
-        <app-list-outhors [dataAuthors]="data" style="width: 100%"></app-list-outhors>
+      <app-loader-bar style="width: 100%" [Height]="'350px'" *ngIf="dataAuthors === undefined"></app-loader-bar>
+      <div *ngFor="let data of dataAuthors, let i = index">
+        <ng-container *ngIf="i < 4">
+          <app-list-outhors [dataAuthors]="data" style="width: 100%"></app-list-outhors>
+        </ng-container>
       </div>
     </div>
   </div>
@@ -131,7 +129,10 @@
       <p>We are</p>
       <h4>Featured in</h4>
     </div>
-    <img *ngFor="let item of logos" [src]="item" alt="this is logog">
+    <app-loader-bar style="width: 100%" [Height]="'80px'" *ngIf="dataAuthors === undefined"></app-loader-bar>
+    <ng-container *ngFor="let item of dataLogos, let i = index">
+      <img *ngIf="i < 5" [src]="item" alt="this is logog">
+    </ng-container>
   </div>
   <div class="testimonials_block">
     <div class="title_and_text_blocks">

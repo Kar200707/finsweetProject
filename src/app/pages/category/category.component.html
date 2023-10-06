@@ -9,6 +9,26 @@
 <div class="informations_block_categories_page">
   <div class="container">
     <div class="infromations_block">
+      <app-loader-bar
+        *ngIf="dataPosts == undefined"
+        style="display: block; width: 100%; margin-top: 32px; padding-right: 20px"
+        [Height]="'312px'"
+      ></app-loader-bar>
+      <app-loader-bar
+        *ngIf="dataPosts == undefined"
+        style="display: block; width: 100%; margin-top: 32px; padding-right: 20px"
+        [Height]="'312px'"
+      ></app-loader-bar>
+      <app-loader-bar
+        *ngIf="dataPosts == undefined"
+        style="display: block; width: 100%; margin-top: 32px; padding-right: 20px"
+        [Height]="'312px'"
+      ></app-loader-bar>
+      <app-loader-bar
+        *ngIf="dataPosts == undefined"
+        style="display: block; width: 100%; margin-top: 32px; padding-right: 20px"
+        [Height]="'312px'"
+      ></app-loader-bar>
       <div *ngFor="let data of dataPosts">
         <app-posts [dataPosts]="data"></app-posts>
       </div>

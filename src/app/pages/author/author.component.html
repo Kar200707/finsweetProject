@@ -26,6 +26,8 @@
 <div class="my_posts_block_author">
   <div class="container_author">
     <h2>My Posts</h2>
+    <app-loader-bar style="width: 100%; margin-top: 30px; display: block" [Height]="'320px'" *ngIf="dataPosts === undefined"></app-loader-bar>
+    <app-loader-bar style="width: 100%; margin-top: 30px; display: block" [Height]="'320px'" *ngIf="dataPosts === undefined"></app-loader-bar>
     <div *ngFor="let data of dataPosts">
       <app-posts [dataPosts]="data"></app-posts>
     </div>

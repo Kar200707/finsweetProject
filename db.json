@@ -1,0 +1,190 @@
+{
+  "category": [
+    {
+      "id" : "1",
+      "image": "assets/Images/icons/business.png",
+      "title": "Business",
+      "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit."
+    },
+    {
+      "id" : "2",
+      "image": "assets/Images/icons/startup.png",
+      "title": "Startup",
+      "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit."
+    },
+    {
+      "id" : "3",
+      "image": "assets/Images/icons/economy.png",
+      "title": "Economy",
+      "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit."
+    },
+    {
+      "id": "3",
+      "image": "assets/Images/icons/technology.png",
+      "title": "Technology",
+      "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit."
+    }
+  ],
+  "author": [
+    {
+      "id": "1",
+      "image": "assets/Images/user_img.png",
+      "name": "Floyd Miles",
+      "description": "Content Writer @Company"
+    },
+    {
+      "id": "2",
+      "image": "assets/Images/user_img4.png",
+      "name": "Dianne Russell",
+      "description": "Content Writer @Company"
+    },
+    {
+      "id": "3",
+      "image": "assets/Images/user_img3.png",
+      "name": "Jenny Wilson",
+      "description": "Content Writer @Company"
+    },
+    {
+      "id": "4",
+      "image": "assets/Images/user_img2.png",
+      "name": "Leslie Alexander",
+      "description": "Content Writer @Company"
+    },
+    {
+      "id": "5",
+      "image": "assets/Images/user-img5.png",
+      "name": "Guy Hawkins",
+      "description": "Content Writer @Company"
+    },
+    {
+      "id": "6",
+      "image": "assets/Images/user-img6.svg",
+      "name": "Eleanor Pena",
+      "description": "Content Writer @Company"
+    },
+    {
+      "id": "7",
+      "image": "assets/Images/user-img7.png",
+      "name": "Robert Fox",
+      "description": "Content Writer @Company"
+    },
+    {
+      "id": "8",
+      "image": "assets/Images/user-img8.png",
+      "name": "Jacob Jones",
+      "description": "Content Writer @Company"
+    }
+  ],
+  "logos": [
+    "assets/Images/logos/logos ipsum/Logo 1.png",
+    "assets/Images/logos/logos ipsum/Logo 2.png",
+    "assets/Images/logos/logos ipsum/Logo 3.png",
+    "assets/Images/logos/logos ipsum/Logo 4.png",
+    "assets/Images/logos/logos ipsum/Logo 5.png"
+  ],
+  "featuredPostLists": [
+    {
+      "date": "Apr 17, 2023",
+      "author": "Jonh Doe",
+      "link": "2 Figma design systems that you can download for free today."
+    },
+    {
+      "date": "May 23, 2023",
+      "author": "Jonh Doe",
+      "link": "3 Figma design systems that you can download for free today."
+    },
+    {
+      "date": "May 23, 2023",
+      "author": "Jonh Doe",
+      "link": "8 Figma design systems that you can download for free today."
+    },
+    {
+      "date": "May 23, 2023",
+      "author": "Jonh Doe",
+      "link": "3 Figma design systems that you can download for free today."
+    }
+  ],
+  "posts": [
+    {
+      "id": "1",
+      "category": "Startup",
+      "title": "Design tips for designers that cover everything you need",
+      "image": "assets/Images/business_category_block_blog_img.png",
+      "description": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident."
+    },
+    {
+      "id": "2",
+      "category": "BUSINESS",
+      "title": "How to build rapport with your web design clients",
+      "image": "assets/Images/business_category_block_block_img(2).png",
+      "description": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident."
+    },
+    {
+      "id": "3",
+      "category": "Startup",
+      "title": "Logo design trends to avoid in 2022",
+      "image": "assets/Images/business_category_block_block_img(3).png",
+      "description": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident."
+    },
+    {
+      "id": "4",
+      "category": "TECHNOLOGY",
+      "title": "8 Figma design systems you can download for free today",
+      "image": "assets/Images/business_category_block_block_img(4).png",
+      "description": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident."
+    },
+    {
+      "id": "5",
+      "category": "ECONOMY",
+      "title": "Font sizes in UI design: The complete guide to follow",
+      "image": "assets/Images/business_category_block_blog_img.png",
+      "description": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident."
+    }
+  ],
+  "category-posts": [
+    {
+      "id": "1",
+      "category": "BUSINESS",
+      "title": "Top 6 free website mockup tools 2022",
+      "image": "assets/Images/two-women-img-category-page.png",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Non blandit massa enim nec."
+    },
+    {
+      "id": "2",
+      "category": "BUSINESS",
+      "title": "Step-by-step guide to choosing great font pairs",
+      "image": "assets/Images/two-women-img-category-page.png",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Non blandit massa enim nec."
+    },
+    {
+      "id": "3",
+      "category": "BUSINESS",
+      "title": "Ten free foogle fonts that you should use",
+      "image": "assets/Images/two-women-img-category-page.png",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Non blandit massa enim nec."
+    },
+    {
+      "id": "4",
+      "category": "BUSINESS",
+      "title": "What did I learn from doing 50+ design sprints?",
+      "image": "assets/Images/two-women-img-category-page.png",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Non blandit massa enim nec."
+    }
+  ],
+  "author-posts": [
+    {
+      "id": "1",
+      "category": "BUSINESS",
+      "title": "Font sizes in UI design: The complete guide to follow",
+      "image": "assets/Images/stained-glass.png",
+      "description": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident."
+    },
+    {
+      "id": "2",
+      "category": "ECONOMY",
+      "title": "How to build rapport with your web design clients",
+      "image": "assets/Images/man-in-black-crew.png",
+      "description": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident."
+    }
+  ]
+}
