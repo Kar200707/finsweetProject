@@ -9,6 +9,8 @@ import {ListOuthorsComponent} from "../../components/list-outhors/list-outhors.c
 import {HttpClient, HttpClientModule, HttpErrorResponse} from "@angular/common/http";
 import {FeaturedPostList} from "../../models/featured-post-list";
 import {LoaderBarComponent} from "../../components/loader-bar/loader-bar.component";
+import {RequestService} from "../../services/request.service";
+import {environment} from "../../environment/environment";
 
 @Component({
   selector: 'app-home',
@@ -25,7 +27,6 @@ import {LoaderBarComponent} from "../../components/loader-bar/loader-bar.compone
     NgIf,
     NgForOf,
     RouterModule,
-    HttpClientModule,
     LoaderBarComponent
   ]
 })
@@ -36,39 +37,35 @@ export class HomeComponent implements OnInit {
   dataFeaturedPostLists!: FeaturedPostList[];
 
 
-  constructor(public http: HttpClient) { }
+  constructor(private reqServ: RequestService) { }
 
   ngOnInit():void {
-    this.http.get(
-      'http://localhost:3000/category'
-    ).subscribe(
-      (data:any):void => {
-        this.dataCategory = data as Category[];
-      }
-    )
+    this.reqServ.getData<Category[]>(environment.category.get)
+      .subscribe(
+        (data: Category[]):void => {
+          this.dataCategory = data;
+        }
+      )
 
-    this.http.get(
-      'http://localhost:3000/author'
-    ).subscribe(
-      (data:any):void => {
-        this.dataAuthors = data as Authors[];
-      }
-    )
+    this.reqServ.getData<Authors[]>(environment.author.get)
+      .subscribe(
+        (data: Authors[]):void => {
+          this.dataAuthors = data;
+        }
+      )
 
-    this.http.get(
-      'http://localhost:3000/logos'
-    ).subscribe(
-      (data:any):void => {
-        this.dataLogos = data as string[];
-      }
-    )
+    this.reqServ.getData<string[]>(environment.logos.get)
+      .subscribe(
+        (data: string[]):void => {
+          this.dataLogos = data;
+        }
+      )
 
-    this.http.get(
-      'http://localhost:3000/featuredPostLists'
-    ).subscribe(
-      (data:any):void => {
-        this.dataFeaturedPostLists = data as FeaturedPostList[];
-      }
-    )
+    this.reqServ.getData<FeaturedPostList[]>(environment.featuredPostLists.get)
+      .subscribe(
+        (data: FeaturedPostList[]):void => {
+          this.dataFeaturedPostLists = data;
+        }
+      )
   }
 }

@@ -5,6 +5,9 @@ import {JoinOurTeamComponent} from "../../components/join-our-team/join-our-team
 import {ListOuthorsComponent} from "../../components/list-outhors/list-outhors.component";
 import {LoaderBarComponent} from "../../components/loader-bar/loader-bar.component";
 import {HttpClient, HttpClientModule} from "@angular/common/http";
+import {RequestService} from "../../services/request.service";
+import {Posts} from "../../models/posts";
+import {environment} from "../../environment/environment";
 
 @Component({
   selector: 'app-about-us',
@@ -19,22 +22,20 @@ import {HttpClient, HttpClientModule} from "@angular/common/http";
     JoinOurTeamComponent,
     ListOuthorsComponent,
     LoaderBarComponent,
-    HttpClientModule,
     NgIf
   ]
 })
 export class AboutUsComponent implements OnInit{
   dataAuthors!: Authors[]
 
-  constructor(public http: HttpClient) { }
+  constructor(private reqServ: RequestService) { }
 
-  ngOnInit() {
-    this.http.get(
-      'http://localhost:3000/author'
-    ).subscribe(
-      (data:any):void => {
-        this.dataAuthors = data as Authors[];
-      }
-    )
+  ngOnInit():void {
+    this.reqServ.getData<Authors[]>(environment.author.get)
+      .subscribe(
+        (data: Authors[]):void => {
+          this.dataAuthors = data;
+        }
+      )
   }
 }

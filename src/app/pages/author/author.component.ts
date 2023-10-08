@@ -4,6 +4,8 @@ import {NgFor, NgIf} from "@angular/common";
 import {PostsComponent} from "../../components/posts/posts.component";
 import {HttpClient, HttpClientModule} from "@angular/common/http";
 import {LoaderBarComponent} from "../../components/loader-bar/loader-bar.component";
+import {RequestService} from "../../services/request.service";
+import {environment} from "../../environment/environment";
 
 @Component({
   selector: 'app-author',
@@ -16,22 +18,20 @@ import {LoaderBarComponent} from "../../components/loader-bar/loader-bar.compone
   imports: [
     NgFor,
     PostsComponent,
-    HttpClientModule,
     LoaderBarComponent,
     NgIf
   ]
 })
 export class AuthorComponent implements OnInit{
   dataPosts!: Posts[];
-  constructor(public http: HttpClient) { }
+  constructor(private reqServ: RequestService) { }
 
   ngOnInit():void {
-    this.http.get(
-      'http://localhost:3000/author-posts'
-    ).subscribe(
-      (data:any):void => {
-        this.dataPosts = data as Posts[];
-      }
-    )
+    this.reqServ.getData<Posts[]>(environment.authorPosts.get)
+      .subscribe(
+        (data: Posts[]):void => {
+          this.dataPosts = data;
+        }
+      )
   }
 }

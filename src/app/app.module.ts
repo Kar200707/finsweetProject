@@ -7,6 +7,7 @@ import {RouterModule, Routes} from "@angular/router";
 import { LayoutComponent } from './layout/layout.component';
 
 import {provideClientHydration} from '@angular/platform-browser';
+import {HttpClientModule} from "@angular/common/http";
 
 const routes: Routes = [
   {
@@ -68,6 +69,7 @@ const routes: Routes = [
     BrowserModule,
     NgOptimizedImage,
     RouterModule.forRoot(routes, { scrollPositionRestoration: 'top', initialNavigation: 'enabledBlocking' }),
+    HttpClientModule
   ],
   providers: [ provideClientHydration() ],
   bootstrap: [AppComponent]

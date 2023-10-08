@@ -5,6 +5,9 @@ import {PostsComponent} from "../../components/posts/posts.component";
 import {HttpClient, HttpClientModule} from "@angular/common/http";
 import {LoaderBarComponent} from "../../components/loader-bar/loader-bar.component";
 import {FeaturedPostList} from "../../models/featured-post-list";
+import {Category} from "../../models/category";
+import {RequestService} from "../../services/request.service";
+import {environment} from "../../environment/environment";
 
 @Component({
   selector: 'app-category',
@@ -17,7 +20,6 @@ import {FeaturedPostList} from "../../models/featured-post-list";
   imports: [
     NgFor,
     PostsComponent,
-    HttpClientModule,
     LoaderBarComponent,
     NgIf
   ]
@@ -25,15 +27,14 @@ import {FeaturedPostList} from "../../models/featured-post-list";
 export class CategoryComponent implements OnInit{
   dataPosts!: Posts[];
 
-  constructor(public http: HttpClient) { }
+  constructor(private reqServ: RequestService) { }
 
   ngOnInit():void {
-    this.http.get(
-      'http://localhost:3000/category-posts'
-    ).subscribe(
-      (data:any):void => {
-        this.dataPosts = data as Posts[];
-      }
-    )
+    this.reqServ.getData<Posts[]>(environment.categoryPosts.get)
+      .subscribe(
+        (data: Posts[]):void => {
+          this.dataPosts = data;
+        }
+      )
   }
 }

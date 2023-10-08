@@ -7,5 +7,5 @@ import {Component, Input} from '@angular/core';
   standalone: true
 })
 export class LoaderBarComponent {
-  @Input() Height:string = '100 px'
+  @Input() Height:string = '100px'
 }
