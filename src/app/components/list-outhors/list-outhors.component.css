@@ -12,6 +12,13 @@
   background-color: #ffd768;
 }
 
+.user_info_block > img {
+  width: 128px;
+  height: 128px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
 .user_info_block:active {
   scale: .95;
 }

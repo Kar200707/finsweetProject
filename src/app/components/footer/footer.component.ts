@@ -1,6 +1,7 @@
-import {Component} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {FormControl, FormGroup, ReactiveFormsModule, Validators} from "@angular/forms";
 import {RouterModule} from "@angular/router";
+import {RequestService} from "../../services/request.service";
 
 @Component({
   selector: 'app-footer',
@@ -22,4 +23,17 @@ export class FooterComponent {
         Validators.maxLength(30)
       ])
   })
+
+  constructor(private reqServ: RequestService) {  }
+
+  save ():void {
+    this.reqServ.addData(
+      'http://localhost:3000/contact-us',
+      this.form.value
+    ).subscribe(():void=> {})
+
+    this.form.disable()
+
+    this.form.reset()
+  }
 }

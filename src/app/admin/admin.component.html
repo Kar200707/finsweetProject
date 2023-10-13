@@ -1,0 +1,29 @@
+<div class="menu-panel">
+  <mat-drawer-container class="container">
+    <mat-drawer class="mat-drawer" mode="side" opened>
+      <mat-tree class="test" [dataSource]="dataSource" [treeControl]="treeControl" class="example-tree">
+        <mat-tree-node *matTreeNodeDef="let node" matTreeNodeToggle>
+          {{node.name}}
+        </mat-tree-node>
+        <mat-nested-tree-node *matTreeNodeDef="let node; when: hasChild">
+          <div class="mat-tree-node">
+            <button class="icon-button" mat-icon-button matTreeNodeToggle
+                    [attr.aria-label]="'Toggle ' + node.name">
+              <mat-icon [style.color]="treeControl.isExpanded(node) ? 'blueviolet' : 'white'" class="mat-icon-rtl-mirror">
+                list
+              </mat-icon>
+            </button>
+            {{node.name}}
+          </div>
+          <div [class.example-tree-invisible]="!treeControl.isExpanded(node)"
+               role="group">
+            <ng-container matTreeNodeOutlet></ng-container>
+          </div>
+        </mat-nested-tree-node>
+      </mat-tree>
+    </mat-drawer>
+    <mat-drawer-content class="mat-drawer-content">Main content</mat-drawer-content>
+  </mat-drawer-container>
+</div>
+
+// admin drop ov

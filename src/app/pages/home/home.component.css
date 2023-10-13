@@ -209,6 +209,21 @@
   flex-direction: column;
   margin-left: 96px;
   width: 100%;
+  overflow-y: scroll;
+  max-height: 700px;
+  margin-top: 32px;
+}
+
+.featured_post_lists_block::-webkit-scrollbar {
+  width: 5px;
+}
+
+.featured_post_lists_block::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+.featured_post_lists_block::-webkit-scrollbar-thumb {
+  background-color: rgba(73, 73, 73, 0.2);
 }
 
 .list_box {

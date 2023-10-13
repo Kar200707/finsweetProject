@@ -4,10 +4,11 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import {NgOptimizedImage} from "@angular/common";
 import {RouterModule, Routes} from "@angular/router";
-import { LayoutComponent } from './layout/layout.component';
 
 import {provideClientHydration} from '@angular/platform-browser';
 import {HttpClientModule} from "@angular/common/http";
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatButtonModule, MatIconButton} from "@angular/material/button";
 
 const routes: Routes = [
   {
@@ -35,7 +36,7 @@ const routes: Routes = [
         title: 'About Us'
       },
       {
-        path: 'author',
+        path: 'author/:id',
         loadComponent: () => import('./pages/author/author.component').then(m => m.AuthorComponent),
         title: 'Author'
       },
@@ -50,11 +51,16 @@ const routes: Routes = [
         title: 'Privacy Policy'
       },
       {
-        path: 'category',
+        path: 'category/:id',
         loadComponent: () => import('./pages/category/category.component').then(m => m.CategoryComponent),
         title: 'Category'
       }
     ]
+  },
+  {
+    path: 'admin',
+    loadComponent: () => import('./admin/admin.component').then(m => m.AdminComponent),
+    title: 'Admin Panel'
   },
   {
     path: '**',
@@ -69,7 +75,9 @@ const routes: Routes = [
     BrowserModule,
     NgOptimizedImage,
     RouterModule.forRoot(routes, { scrollPositionRestoration: 'top', initialNavigation: 'enabledBlocking' }),
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule,
+    MatButtonModule,
   ],
   providers: [ provideClientHydration() ],
   bootstrap: [AppComponent]

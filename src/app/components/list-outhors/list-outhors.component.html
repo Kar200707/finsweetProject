@@ -1,4 +1,4 @@
-<div routerLink="/author">
+<div [routerLink]="['/author', dataAuthors.id]">
   <div class="user_info_block">
     <img [src]="dataAuthors.image" alt="this is user image">
     <h3 class="user_full_name">

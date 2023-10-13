@@ -43,10 +43,12 @@
         <app-loader-bar style="width: 100%; margin-top: 30px" [Height]="'200px'" *ngIf="dataFeaturedPostLists === undefined"></app-loader-bar>
         <app-loader-bar style="width: 100%; margin-top: 30px" [Height]="'200px'" *ngIf="dataFeaturedPostLists === undefined"></app-loader-bar>
         <app-loader-bar style="width: 100%; margin-top: 30px" [Height]="'200px'" *ngIf="dataFeaturedPostLists === undefined"></app-loader-bar>
-        <div *ngFor="let items of dataFeaturedPostLists" style="margin-top: 32px;" class="list_box">
-          <p>By <span>{{ items.author }}</span>  &nbsp;l&nbsp;  {{ items.date }}</p>
-          <a routerLink="/blog-post">{{ items.link }}</a>
-        </div>
+        <ng-container *ngFor="let items of dataFeaturedPostLists">
+          <div class="list_box">
+            <p>By <span>{{ items.author }}</span>  &nbsp;l&nbsp;  {{ items.date }}</p>
+            <a routerLink="/blog-post">{{ items.link }}</a>
+          </div>
+        </ng-container>
       </div>
     </div>
     <div class="featured_post_color_box">

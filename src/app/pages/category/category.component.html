@@ -1,10 +1,7 @@
 <div class="business_block">
-  <h2>Business</h2>
-  <p>
-    Lorem ipsum dolor sit amet, consectetur adipiscing
-    elit, sed do eiusmod tempor incididunt ut labore.
-  </p>
-  <span>Blog > Business</span>
+  <h2>{{ title }}</h2>
+  <p>{{ description }}</p>
+  <span>Blog > {{ title }}</span>
 </div>
 <div class="informations_block_categories_page">
   <div class="container">
@@ -30,30 +27,48 @@
         [Height]="'312px'"
       ></app-loader-bar>
       <div *ngFor="let data of dataPosts">
-        <app-posts [dataPosts]="data"></app-posts>
+          <app-posts
+            [dataPosts]="data"
+          ></app-posts>
       </div>
     </div>
     <div class="categories_block">
-      <h2>Categories</h2>
-      <div style="margin-top: 40px;" class="category">
+      <h2>Category</h2>
+      <div
+        (click)="chooseCategory('startup')"
+        style="margin-top: 40px;"
+        [style.background-color]="isStartup !== '' ? '#FFD050': 'white'"
+        class="category">
         <div class="category_icon">
           <img src="assets/Images/icons/startup.png" alt="this is icon">
         </div>
         <h3>Startup</h3>
       </div>
-      <div style="margin-top: 24px;" class="category">
+      <div
+        (click)="chooseCategory('business')"
+        style="margin-top: 24px;"
+        [style.background-color]="isBusiness !== '' ? '#FFD050': 'white'"
+        class="category">
         <div class="category_icon">
           <img src="assets/Images/icons/business.png" alt="this is icon">
         </div>
         <h3>Business</h3>
       </div>
-      <div style="margin-top: 24px;" class="category">
+      <div
+        (click)="chooseCategory('economy')"
+        style="margin-top: 24px;"
+        [style.background-color]="isEconomy !== '' ? '#FFD050': 'white'"
+        class="category">
         <div class="category_icon">
           <img src="assets/Images/icons/economy.png" alt="this is icon">
         </div>
         <h3>Economy</h3>
       </div>
-      <div style="margin-top: 24px;" class="category">
+      <div
+        (click)="chooseCategory('technology')"
+        style="margin-top: 24px;"
+        [style.background-color]="isTechnology !== '' ? '#FFD050': 'white'"
+        class="category">
         <div class="category_icon">
           <img src="assets/Images/icons/technology.png" alt="this is icon">
         </div>

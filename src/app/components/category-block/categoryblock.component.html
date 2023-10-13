@@ -1,9 +1,9 @@
-<div routerLink="/category" class="business_box">
+<div [routerLink]="['/category', dataCategory.id]" class="business_box">
   <div>
     <img [src]="dataCategory.image" alt="this is icon business">
   </div>
   <h3>{{ dataCategory.title }}</h3>
   <p>
-    {{ dataCategory.description }}
+    {{ dataCategory.shortDescription }}
   </p>
 </div>

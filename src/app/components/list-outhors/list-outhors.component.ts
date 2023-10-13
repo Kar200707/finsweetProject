@@ -1,4 +1,4 @@
-import {Component, Input} from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import {Authors} from "../../models/authors";
 import {RouterModule} from "@angular/router";
 
@@ -14,6 +14,14 @@ import {RouterModule} from "@angular/router";
     RouterModule,
   ]
 })
-export class ListOuthorsComponent {
+export class ListOuthorsComponent implements OnInit{
   @Input() dataAuthors!: Authors
+
+  constructor() {
+
+  }
+
+  ngOnInit() {
+    this.dataAuthors.image
+  }
 }

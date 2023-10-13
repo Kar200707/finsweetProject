@@ -6,6 +6,8 @@ import {HttpClient, HttpClientModule} from "@angular/common/http";
 import {LoaderBarComponent} from "../../components/loader-bar/loader-bar.component";
 import {RequestService} from "../../services/request.service";
 import {environment} from "../../environment/environment";
+import {Authors} from "../../models/authors";
+import {ActivatedRoute, Params, RouterLinkActive} from "@angular/router";
 
 @Component({
   selector: 'app-author',
@@ -23,14 +25,37 @@ import {environment} from "../../environment/environment";
   ]
 })
 export class AuthorComponent implements OnInit{
+  id: number = 0;
+  dataAuthor!: Authors;
   dataPosts!: Posts[];
-  constructor(private reqServ: RequestService) { }
+  authorImage!: string;
+  authorTitle!: string;
+  authorBio!: string;
+  authorFaceBook!: string;
+  authorTwitter!: string;
+  authorInsta!: string;
+  authorLinkedin!: string;
+  constructor(private reqServ: RequestService, private route: ActivatedRoute) {
+
+  }
 
   ngOnInit():void {
-    this.reqServ.getData<Posts[]>(environment.authorPosts.get)
+    this.route.params.subscribe((params: any):void => {
+      this.id = params.id
+    })
+
+    this.reqServ.getData<Authors>(environment.author.get + '/' + this.id)
       .subscribe(
-        (data: Posts[]):void => {
-          this.dataPosts = data;
+        (data: Authors):void => {
+          this.dataAuthor = data;
+          this.authorImage = data.image;
+          this.dataPosts = data.posts;
+          this.authorTitle = data.title;
+          this.authorBio = data.bio;
+          this.authorFaceBook = data.facebook;
+          this.authorTwitter = data.twitter;
+          this.authorInsta = data.instagram;
+          this.authorLinkedin = data.linkedin
         }
       )
   }
