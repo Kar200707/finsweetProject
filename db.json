@@ -380,6 +380,27 @@
     {
       "email": "karen@gmail.com",
       "id": 2
+    },
+    {
+      "f_name": "Karen",
+      "email": "harutyunyna2007karen@gmail.com",
+      "message": "es Karenn em",
+      "county": "Gyumri",
+      "id": 3
     }
-  ]
+  ],
+  "privacy-policy": {
+    "last_update": "13th Hokteber 2023",
+    "texts": [
+      {
+        "title": "Lorem ipsum dolor sit amet",
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do\n      eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim\n      ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut\n      aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit\n      in voluptate velit esse cillum dolore eu fugiat nulla pariatur.Lorem\n      ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod\n      tempor incididunt ut labore et dolore magna aliqua. Non blandit massa\n      enim nec. Scelerisque viverra mauris in aliquam sem. At risus viverra\n      adipiscing at in tellus. Sociis natoque penatibus et magnis dis parturient\n      montes. Ridiculus mus mauris vitae ultricies leo. Neque egestas congue quisque\n      egestas diam. Risus in hendrerit gravida rutrum quisque non. Sit amet nulla\n      facilisi morbi tempus iaculis urna. Lorem sed risus ultricies tristique nulla\n      aliquet enim. Volutpat blandit aliquam etiam erat velit. Orci eu lobortis\n      elementum nibh. Ipsum suspendisse ultrices gravida dictum fusce ut placerat\n      orci nulla. Neque convallis a cras semper auctor neque vitae tempus quam."
+      },
+      {
+        "title": "Lorem ipsum dolor sit amet, consectetur\n      adipiscing elit, sed do eiusmod tempor.",
+        "text1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor\n      incididunt ut labore et dolore magna aliqua. Non blandit massa enim nec. Scelerisque\n      viverra mauris in aliquam sem. At risus viverra adipiscing at in tellus. Sociis natoque\n      penatibus et magnis dis parturient montes. Ridiculus mus mauris vitae ultricies leo.\n      Neque egestas congue quisque egestas diam. Risus in hendrerit gravida rutrum quisque\n      non. Sit amet nulla facilisi morbi tempus iaculis urna. Lorem sed risus ultricies\n      tristique nulla aliquet enim. Volutpat blandit aliquam etiam erat velit. Orci eu\n      lobortis elementum nibh. Ipsum suspendisse ultrices gravida dictum fusce ut placerat\n      orci nulla. Neque convallis a cras semper auctor neque vitae tempus quam.",
+        "text2": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor\n      incididunt ut labore et dolore magna aliqua. Non blandit massa enim nec. Scelerisque\n      viverra mauris in aliquam sem. At risus viverra adipiscing at in tellus. Sociis natoque\n      penatibus et magnis dis parturient montes. Ridiculus mus mauris vitae ultricies leo.\n      Neque egestas congue quisque egestas diam. Risus in hendrerit gravida rutrum quisque\n      non. Sit amet nulla facilisi morbi tempus iaculis urna. Lorem sed risus ultricies\n      tristique nulla aliquet enim. Volutpat blandit aliquam etiam erat velit. Orci eu\n      lobortis elementum nibh. Ipsum suspendisse ultrices gravida dictum fusce ut placerat\n      orci nulla. Neque convallis a cras semper auctor neque vitae tempus quam."
+      }
+    ]
+  }
 }

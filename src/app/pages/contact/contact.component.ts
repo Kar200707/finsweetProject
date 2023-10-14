@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import {FormControl, FormGroup, ReactiveFormsModule, Validators} from "@angular/forms";
 import {NgIf} from "@angular/common";
+import {RequestService} from "../../services/request.service";
+import {environment} from "../../environment/environment";
 
 @Component({
   selector: 'app-contact',
@@ -27,5 +29,20 @@ export class ContactComponent {
         Validators.minLength(3),
         Validators.email
       ]),
+
+      message: new FormControl('', []),
+
+      county: new FormControl('Coutry', [])
   })
+
+  constructor(private reqServ: RequestService) {  }
+
+  save ():void {
+    this.reqServ.addData(
+      environment.contactUs.get,
+      this.form.value
+    ).subscribe(():void=> {})
+
+    this.form.reset()
+  }
 }

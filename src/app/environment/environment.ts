@@ -20,6 +20,14 @@ export const environment = {
     get: host + 'category-posts'
   },
 
+  privacyPolicy: {
+    get: host + 'privacy-policy'
+  },
+
+  contactUs: {
+    get: host + 'contact-us'
+  },
+
   posts: {
     get: host + 'posts'
   },

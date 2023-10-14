@@ -23,8 +23,8 @@
         </div>
       </div>
       <div class="inputs_box">
-        <form [formGroup]="form" (ngSubmit)="form.reset()">
-          <input #fName formControlName="f_name" name="f_name" placeholder="Full Name" type="text">
+        <form [formGroup]="form" (ngSubmit)="save()">
+          <input formControlName="f_name" name="f_name" placeholder="Full Name" type="text">
           <div *ngIf="form.get('f_name')?.touched || form.get('f_name')?.dirty">
             <span *ngIf="form.get('f_name')?.invalid">
               *required, minimum 3 symbol
@@ -37,15 +37,14 @@
             </span>
           </div>
           <div class="select_block">
-            <select name="query-related">
-              <option>Query Related</option>
-              <option>test</option>
-              <option>test</option>
-              <option>test</option>
-              <option>test</option>
+            <select formControlName="county" name="county">
+              <option [defaultSelected]="form">Gyumri</option>
+              <option>Erevan</option>
+              <option>Hrazdan</option>
+              <option>Vanadzor</option>
             </select>
           </div>
-          <textarea name="message" placeholder="Message"></textarea>
+          <textarea formControlName="message" name="message" placeholder="Message"></textarea>
           <button [disabled]="form.invalid">Send Message</button>
         </form>
       </div>

@@ -4,6 +4,10 @@ export const environment = {
     get: host + 'category'
   },
 
+  privacyPolicy: {
+    get: host + 'privacy-policy'
+  },
+
   author: {
     get: host + 'author'
   },

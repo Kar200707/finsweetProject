@@ -2,6 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {FormControl, FormGroup, ReactiveFormsModule, Validators} from "@angular/forms";
 import {RouterModule} from "@angular/router";
 import {RequestService} from "../../services/request.service";
+import {environment} from "../../environment/environment";
 
 @Component({
   selector: 'app-footer',
@@ -28,7 +29,7 @@ export class FooterComponent {
 
   save ():void {
     this.reqServ.addData(
-      'http://localhost:3000/contact-us',
+      environment.contactUs.get,
       this.form.value
     ).subscribe(():void=> {})
 
