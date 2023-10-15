@@ -6,11 +6,10 @@ import {RouterModule} from "@angular/router";
 import {CategoryblockComponent} from "../../components/category-block/categoryblock.component";
 import {JoinOurTeamComponent} from "../../components/join-our-team/join-our-team.component";
 import {ListOuthorsComponent} from "../../components/list-outhors/list-outhors.component";
-import {HttpClient, HttpClientModule, HttpErrorResponse} from "@angular/common/http";
-import {FeaturedPostList} from "../../models/featured-post-list";
 import {LoaderBarComponent} from "../../components/loader-bar/loader-bar.component";
 import {RequestService} from "../../services/request.service";
 import {environment} from "../../environment/environment";
+import {Posts} from "../../models/posts";
 
 @Component({
   selector: 'app-home',
@@ -32,10 +31,9 @@ import {environment} from "../../environment/environment";
 })
 export class HomeComponent implements OnInit {
   dataCategory!: Category[];
+  dataPosts!: Posts[];
   dataAuthors!: Authors[];
   dataLogos!: string[];
-  dataFeaturedPostLists!: FeaturedPostList[];
-
 
   constructor(private reqServ: RequestService) { }
 
@@ -44,6 +42,13 @@ export class HomeComponent implements OnInit {
       .subscribe(
         (data: Category[]):void => {
           this.dataCategory = data;
+        }
+      )
+
+    this.reqServ.getData<Posts[]>(environment.posts.get)
+      .subscribe(
+        (data: Posts[]):void => {
+          this.dataPosts = data;
         }
       )
 
@@ -60,12 +65,7 @@ export class HomeComponent implements OnInit {
           this.dataLogos = data;
         }
       )
-
-    this.reqServ.getData<FeaturedPostList[]>(environment.featuredPostLists.get)
-      .subscribe(
-        (data: FeaturedPostList[]):void => {
-          this.dataFeaturedPostLists = data;
-        }
-      )
   }
+
+  protected readonly name = name;
 }

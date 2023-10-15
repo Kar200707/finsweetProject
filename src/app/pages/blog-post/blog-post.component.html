@@ -2,19 +2,19 @@
   <div class="container">
     <div>
       <div class="user_info_block">
-        <img src="assets/Images/user_blugpost_Image.png" alt="this is user image">
+        <img [src]="dataAuthor === undefined ? '' : dataAuthor.image" alt="this is user image">
         <div class="user_text_block">
-          <h3>Andrew Jonson</h3>
-          <p>Posted on 27th January 2022</p>
+          <h3>{{ dataAuthor === undefined ? 'loading...' : dataAuthor.name }}</h3>
+          <p>Posted on {{ dataPosts === undefined ? 'loading...' : dataPosts.created_date }}</p>
         </div>
       </div>
-      <h1>Step-by-step guide to choosing great font pairs</h1>
+      <h1>{{ dataPosts === undefined ? 'loading...' : dataPosts.title }}</h1>
       <div class="category_box">
-        <img src="assets/Images/icons/startup.png" alt="this image category">
-        <h4>Startup</h4>
+        <img [src]="dataPosts === undefined ? 'loading...' : dataPosts.category_icon" alt="this image category">
+        <h4>{{ dataPosts === undefined ? 'loading...' : dataPosts.category }}</h4>
       </div>
     </div>
-    <img src="assets/Images/backgraunds/background-of-woman-wearing.png" alt="this is image">
+    <img class="post-img" [src]="dataPosts === undefined ? '' : dataPosts.image" alt="this is image">
     <div class="texts_block">
       <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</h2>
       <p>

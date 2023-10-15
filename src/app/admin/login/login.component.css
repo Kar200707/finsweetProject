@@ -1,0 +1,30 @@
+.parent-div {
+  width: 100%;
+  height: 100vh;
+  background-color: #232536;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.full-width {
+  width: 100%;
+}
+
+.valid-text {
+  color: #159a2f;
+  font-size: 20px;
+}
+
+.mat-card {
+  width: 35%;
+}
+
+.login-text {
+  margin-bottom: 30px;
+  font-weight: bolder;
+  letter-spacing: 3px;
+  font-size: 25px;
+  color: #757575;
+}

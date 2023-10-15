@@ -1,29 +1,51 @@
 <div class="menu-panel">
-  <mat-drawer-container class="container">
+  <mat-toolbar class="mat-toolbar">
+    <span>FinsWeet Admin Panel</span>
+    <div class="authors-details">
+      <button (click)="logOut()" class="logout-btn" color="warn" mat-button>
+        <mat-icon>logout</mat-icon>
+        LogOut
+      </button>
+      <div style="display: flex; flex-direction: column; align-items: flex-end; margin-right: 10px">
+        <span class="user-name">{{ userData.name }}</span>
+        <span class="user-email">{{ userData.email }}</span>
+      </div>
+      <img [src]="userData.image" alt="author" class="author-image">
+    </div>
+  </mat-toolbar>
+  <mat-drawer-container [style.height]="window.innerHeight - 64 + 'px'" class="container">
     <mat-drawer class="mat-drawer" mode="side" opened>
-      <mat-tree class="test" [dataSource]="dataSource" [treeControl]="treeControl" class="example-tree">
-        <mat-tree-node *matTreeNodeDef="let node" matTreeNodeToggle>
-          {{node.name}}
-        </mat-tree-node>
-        <mat-nested-tree-node *matTreeNodeDef="let node; when: hasChild">
-          <div class="mat-tree-node">
-            <button class="icon-button" mat-icon-button matTreeNodeToggle
-                    [attr.aria-label]="'Toggle ' + node.name">
-              <mat-icon [style.color]="treeControl.isExpanded(node) ? 'blueviolet' : 'white'" class="mat-icon-rtl-mirror">
-                list
-              </mat-icon>
-            </button>
-            {{node.name}}
-          </div>
-          <div [class.example-tree-invisible]="!treeControl.isExpanded(node)"
-               role="group">
-            <ng-container matTreeNodeOutlet></ng-container>
-          </div>
-        </mat-nested-tree-node>
-      </mat-tree>
+      <button routerLinkActive="active-rout" [routerLinkActiveOptions]="{exact: true}" routerLink="/admin/" class="nav-btn" color="primary" mat-button>
+        <mat-icon>dashboard</mat-icon>
+        DashBoard
+      </button>
+      <button routerLinkActive="active-rout" routerLink="/admin/posts" class="nav-btn" color="primary" mat-button>
+        <mat-icon>assignment</mat-icon>
+        Posts
+      </button>
+      <button routerLinkActive="active-rout" routerLink="/admin/category" class="nav-btn" color="primary" mat-button>
+        <mat-icon>category</mat-icon>
+        Category
+      </button>
+      <button routerLinkActive="active-rout" routerLink="/admin/logos" class="nav-btn" color="primary" mat-button>
+        <mat-icon>extension</mat-icon>
+        Logos
+      </button>
+      <button routerLinkActive="active-rout" routerLink="/admin/contact" class="nav-btn" color="primary" mat-button>
+        <mat-icon>account_circle</mat-icon>
+        Contact-us
+      </button>
+      <button routerLinkActive="active-rout" routerLink="/admin/privacy-policy" class="nav-btn" color="primary" mat-button>
+        <mat-icon>help</mat-icon>
+        Privacy-Policy
+      </button>
+      <button routerLink="/" class="nav-btn" color="primary" mat-button>
+        <mat-icon>logout</mat-icon>
+        Home
+      </button>
     </mat-drawer>
-    <mat-drawer-content class="mat-drawer-content">Main content</mat-drawer-content>
+    <mat-drawer-content class="mat-drawer-content">
+      <router-outlet></router-outlet>
+    </mat-drawer-content>
   </mat-drawer-container>
 </div>
-
-// admin drop ov

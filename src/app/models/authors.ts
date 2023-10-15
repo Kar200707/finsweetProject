@@ -1,6 +1,7 @@
 export interface Authors {
   id: number;
   image: string;
+  email: string;
   name: string;
   title: string;
   description: string;
@@ -9,5 +10,4 @@ export interface Authors {
   twitter: string;
   instagram: string;
   linkedin: string;
-  posts: [];
 }

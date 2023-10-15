@@ -6,10 +6,10 @@ import {RouterModule} from "@angular/router";
 import {CategoryblockComponent} from "../../components/category-block/categoryblock.component";
 import {JoinOurTeamComponent} from "../../components/join-our-team/join-our-team.component";
 import {PostsComponent} from "../../components/posts/posts.component";
-import {HttpClient, HttpClientModule} from "@angular/common/http";
 import {LoaderBarComponent} from "../../components/loader-bar/loader-bar.component";
 import {RequestService} from "../../services/request.service";
 import {environment} from "../../environment/environment";
+import {Authors} from "../../models/authors";
 
 @Component({
   selector: 'app-blog',

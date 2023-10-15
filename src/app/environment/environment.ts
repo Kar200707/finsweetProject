@@ -5,15 +5,11 @@ export const environment = {
   },
 
   author: {
-    get: host + 'author'
+    get: host + 'users'
   },
 
   logos: {
     get: host + 'logos'
-  },
-
-  featuredPostLists: {
-    get: host + 'featuredPostLists'
   },
 
   categoryPosts: {
@@ -31,8 +27,4 @@ export const environment = {
   posts: {
     get: host + 'posts'
   },
-
-  authorPosts: {
-    get: host + 'author-posts'
-  }
 }

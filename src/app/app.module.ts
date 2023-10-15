@@ -9,6 +9,8 @@ import {provideClientHydration} from '@angular/platform-browser';
 import {HttpClientModule} from "@angular/common/http";
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatButtonModule, MatIconButton} from "@angular/material/button";
+import {adminGuard} from "./guards/admin.guard";
+import {loginGuard} from "./guards/login.guard";
 
 const routes: Routes = [
   {
@@ -26,7 +28,7 @@ const routes: Routes = [
         title: 'Blog'
       },
       {
-        path: 'blog-post',
+        path: 'blog-post/:id',
         loadComponent: () => import('./pages/blog-post/blog-post.component').then(m => m.BlogPostComponent),
         title: 'Blog Post'
       },
@@ -58,9 +60,48 @@ const routes: Routes = [
     ]
   },
   {
+    path: 'admin/login',
+    canActivate: [loginGuard],
+    loadComponent: () => import('./admin/login/login.component').then(m => m.LoginComponent),
+    title: 'Login',
+  },
+  {
     path: 'admin',
+    canActivateChild: [adminGuard],
     loadComponent: () => import('./admin/admin.component').then(m => m.AdminComponent),
-    title: 'Admin Panel'
+    title: 'Admin Panel',
+    children: [
+      {
+        path: '',
+        loadComponent: () => import('./admin/adm_pages/dashboard/dashboard.component').then(m => m.DashboardComponent),
+        title: 'Admin DashBoard'
+      },
+      {
+        path: 'posts',
+        loadComponent: () => import('./admin/adm_pages/posts-adm/posts-adm.component').then(m => m.PostsAdmComponent),
+        title: 'Admin Posts'
+      },
+      {
+        path: 'category',
+        loadComponent: () => import('./admin/adm_pages/category-adm/category-adm.component').then(m => m.CategoryAdmComponent),
+        title: 'Admin Category'
+      },
+      {
+        path: 'logos',
+        loadComponent: () => import('./admin/adm_pages/logos-adm/logos-adm.component').then(m => m.LogosAdmComponent),
+        title: 'Admin Logos'
+      },
+      {
+        path: 'contact',
+        loadComponent: () => import('./admin/adm_pages/contact-us-adm/contact-us-adm.component').then(m => m.ContactUsAdmComponent),
+        title: 'Admin Contact Us'
+      },
+      {
+        path: 'privacy-policy',
+        loadComponent: () => import('./admin/adm_pages/privacy-policy-adm/privacy-policy-adm.component').then(m => m.PrivacyPolicyAdmComponent),
+        title: 'Admin Privacy Policy'
+      },
+    ]
   },
   {
     path: '**',

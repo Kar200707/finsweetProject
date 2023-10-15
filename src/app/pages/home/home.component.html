@@ -2,15 +2,13 @@
   <div class="posted_on_startup_block-lear">
     <div class="posted_on_startup_container">
       <div class="posted_on_startup_text_box">
-        <h3>Posted on <span>startup</span></h3>
-        <h1>Step-by-step guide to choosing great font pairs</h1>
-        <p>By <span>James West</span>&nbsp; | &nbsp;May 23, 2022 </p>
-        <p>
-          Duis aute irure dolor in reprehenderit in voluptate velit esse
-          cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-          cupidatat non proident.
-        </p>
-        <a style="margin-top: 48px;" class="global_button" routerLink="/blog-post">Read More ></a>
+        <h3>Posted on <span>{{ dataPosts === undefined ? 'loading...' : dataPosts[1].category }}</span></h3>
+        <h1>{{ dataPosts === undefined ? 'loading...' : dataPosts[1].title }}</h1>
+        <p>By <span>
+          {{ dataAuthors == undefined ? "loading..." : dataAuthors[(dataPosts[1].user_id == undefined ? 0 : dataPosts[1].user_id - 2)].name }}
+        </span>&nbsp; | &nbsp;{{ dataPosts !== undefined ? dataPosts[1].created_date : 'loading...' }}</p>
+        <p>{{ dataPosts !== undefined ? dataPosts[1].description : 'loading...' }}</p>
+        <a style="margin-top: 48px;" class="global_button" [routerLink]="['/blog-post', (dataPosts == undefined ? 1 : dataPosts[1].user_id)]">Read More ></a>
       </div>
     </div>
   </div>
@@ -39,14 +37,22 @@
         <a style="margin-top: 32px;" class="global_button" routerLink="/blog-post">Read More ></a>
       </div>
       <div class="featured_post_lists_block">
-        <app-loader-bar style="width: 100%; margin-top: 30px" [Height]="'200px'" *ngIf="dataFeaturedPostLists === undefined"></app-loader-bar>
-        <app-loader-bar style="width: 100%; margin-top: 30px" [Height]="'200px'" *ngIf="dataFeaturedPostLists === undefined"></app-loader-bar>
-        <app-loader-bar style="width: 100%; margin-top: 30px" [Height]="'200px'" *ngIf="dataFeaturedPostLists === undefined"></app-loader-bar>
-        <app-loader-bar style="width: 100%; margin-top: 30px" [Height]="'200px'" *ngIf="dataFeaturedPostLists === undefined"></app-loader-bar>
-        <ng-container *ngFor="let items of dataFeaturedPostLists">
+        <app-loader-bar style="width: 100%; margin-top: 30px" [Height]="'200px'" *ngIf="dataPosts === undefined"></app-loader-bar>
+        <app-loader-bar style="width: 100%; margin-top: 30px" [Height]="'200px'" *ngIf="dataPosts === undefined"></app-loader-bar>
+        <app-loader-bar style="width: 100%; margin-top: 30px" [Height]="'200px'" *ngIf="dataPosts === undefined"></app-loader-bar>
+        <app-loader-bar style="width: 100%; margin-top: 30px" [Height]="'200px'" *ngIf="dataPosts === undefined"></app-loader-bar>
+        <ng-container *ngFor="let items of dataPosts, let i = index">
           <div class="list_box">
-            <p>By <span>{{ items.author }}</span>  &nbsp;l&nbsp;  {{ items.date }}</p>
-            <a routerLink="/blog-post">{{ items.link }}</a>
+            <p>
+              By
+              <span>
+                {{
+                  dataAuthors == undefined ? 'loading...' : dataAuthors[(items.user_id == undefined ? 0 : items.user_id - 1)].name
+                }}
+              </span>
+              &nbsp;l&nbsp;  {{ items.created_date }}
+            </p>
+            <a [routerLink]="['/blog-post', items.user_id]">{{ items.shortDescription }}</a>
           </div>
         </ng-container>
       </div>
@@ -89,6 +95,13 @@
       <app-loader-bar style="width: 100%" [Height]="'300px'" *ngIf="dataCategory === undefined"></app-loader-bar>
       <div *ngFor="let data of dataCategory, let i = index">
         <ng-container *ngIf="i < 4">
+          <app-category-block [dataCategory]="data"></app-category-block>
+        </ng-container>
+      </div>
+    </div>
+    <div style="margin-top: 48px;" class="catagory_block">
+      <div *ngFor="let data of dataCategory, let i = index">
+        <ng-container *ngIf="i >= 4 && i <= 8">
           <app-category-block [dataCategory]="data"></app-category-block>
         </ng-container>
       </div>

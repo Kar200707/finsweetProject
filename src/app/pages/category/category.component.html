@@ -26,53 +26,22 @@
         style="display: block; width: 100%; margin-top: 32px; padding-right: 20px"
         [Height]="'312px'"
       ></app-loader-bar>
-      <div *ngFor="let data of dataPosts">
-          <app-posts
-            [dataPosts]="data"
-          ></app-posts>
+      <div *ngFor="let data of dataPosts, let i = index">
+        <app-posts *ngIf="i < 4" [isPrevPage]="'category'" [dataPosts]="data"></app-posts>
       </div>
     </div>
     <div class="categories_block">
       <h2>Category</h2>
       <div
-        (click)="chooseCategory('startup')"
+        *ngFor="let item of dataCategory, let i = index"
+        (click)="chooseCategory(item.title, i)"
         style="margin-top: 40px;"
-        [style.background-color]="isStartup !== '' ? '#FFD050': 'white'"
+        [style.background-color]="isSelectCategory[i]?.isSelect ? '#FFD050': 'white'"
         class="category">
         <div class="category_icon">
-          <img src="assets/Images/icons/startup.png" alt="this is icon">
+          <img [src]="item.image" alt="this is icon">
         </div>
-        <h3>Startup</h3>
-      </div>
-      <div
-        (click)="chooseCategory('business')"
-        style="margin-top: 24px;"
-        [style.background-color]="isBusiness !== '' ? '#FFD050': 'white'"
-        class="category">
-        <div class="category_icon">
-          <img src="assets/Images/icons/business.png" alt="this is icon">
-        </div>
-        <h3>Business</h3>
-      </div>
-      <div
-        (click)="chooseCategory('economy')"
-        style="margin-top: 24px;"
-        [style.background-color]="isEconomy !== '' ? '#FFD050': 'white'"
-        class="category">
-        <div class="category_icon">
-          <img src="assets/Images/icons/economy.png" alt="this is icon">
-        </div>
-        <h3>Economy</h3>
-      </div>
-      <div
-        (click)="chooseCategory('technology')"
-        style="margin-top: 24px;"
-        [style.background-color]="isTechnology !== '' ? '#FFD050': 'white'"
-        class="category">
-        <div class="category_icon">
-          <img src="assets/Images/icons/technology.png" alt="this is icon">
-        </div>
-        <h3>Technology</h3>
+        <h3>{{ item.title }}</h3>
       </div>
       <div class="all_tags_block">
         <h2>All Tags</h2>

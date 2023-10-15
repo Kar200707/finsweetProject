@@ -22,237 +22,11 @@
       "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore."
     },
     {
-      "id": "3",
+      "id": "4",
       "image": "assets/Images/icons/technology.png",
       "title": "Technology",
       "shortDescription": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit.",
       "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore."
-    }
-  ],
-  "author": [
-    {
-      "id": "1",
-      "image": "assets/Images/user_img.png",
-      "name": "Floyd Miles",
-      "title": "Hey there, I’m Andrew Jonhson and welcome to my Blog",
-      "description": "Content Writer @Company",
-      "bio": " Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Non blandit massa enim nec. Scelerisque viverra mauris in aliquam sem. At risus viverra adipiscing at in tellus. ",
-      "facebook": "https://www.google.com/",
-      "twitter": "https://www.google.com/",
-      "instagram": "https://www.google.com/",
-      "linkedin": "https://www.google.com/",
-      "posts": [
-        {
-          "id": "1",
-          "category": "BUSINESS",
-          "title": "Font sizes in UI design: The complete guide to follow",
-          "image": "assets/Images/stained-glass.png",
-          "description": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident."
-        },
-        {
-          "id": "2",
-          "category": "ECONOMY",
-          "title": "How to build rapport with your web design clients",
-          "image": "assets/Images/man-in-black-crew.png",
-          "description": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident."
-        }
-      ]
-    },
-    {
-      "id": "2",
-      "image": "assets/Images/user_img4.png",
-      "name": "Dianne Russell",
-      "title": "Hey there, I’m Andrew Jonhson and welcome to my Blog",
-      "description": "Content Writer @Company",
-      "bio": " Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Non blandit massa enim nec. Scelerisque viverra mauris in aliquam sem. At risus viverra adipiscing at in tellus. ",
-      "facebook": "https://www.google.com/",
-      "twitter": "https://www.google.com/",
-      "instagram": "https://www.google.com/",
-      "linkedin": "https://www.google.com/",
-      "posts": [
-        {
-          "id": "1",
-          "category": "BUSINESS",
-          "title": "Font sizes in UI design: The complete guide to follow",
-          "image": "assets/Images/stained-glass.png",
-          "description": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident."
-        },
-        {
-          "id": "2",
-          "category": "ECONOMY",
-          "title": "How to build rapport with your web design clients",
-          "image": "assets/Images/man-in-black-crew.png",
-          "description": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident."
-        }
-      ]
-    },
-    {
-      "id": "3",
-      "image": "assets/Images/user_img3.png",
-      "name": "Jenny Wilson",
-      "title": "Hey there, I’m Andrew Jonhson and welcome to my Blog",
-      "description": "Content Writer @Company",
-      "bio": " Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Non blandit massa enim nec. Scelerisque viverra mauris in aliquam sem. At risus viverra adipiscing at in tellus. ",
-      "facebook": "https://www.google.com/",
-      "twitter": "https://www.google.com/",
-      "instagram": "https://www.google.com/",
-      "linkedin": "https://www.google.com/",
-      "posts": [
-        {
-          "id": "1",
-          "category": "BUSINESS",
-          "title": "Font sizes in UI design: The complete guide to follow",
-          "image": "assets/Images/stained-glass.png",
-          "description": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident."
-        },
-        {
-          "id": "2",
-          "category": "ECONOMY",
-          "title": "How to build rapport with your web design clients",
-          "image": "assets/Images/man-in-black-crew.png",
-          "description": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident."
-        }
-      ]
-    },
-    {
-      "id": "4",
-      "image": "assets/Images/user_img2.png",
-      "name": "Leslie Alexander",
-      "title": "Hey there, I’m Andrew Jonhson and welcome to my Blog",
-      "description": "Content Writer @Company",
-      "bio": " Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Non blandit massa enim nec. Scelerisque viverra mauris in aliquam sem. At risus viverra adipiscing at in tellus. ",
-      "facebook": "https://www.google.com/",
-      "twitter": "https://www.google.com/",
-      "instagram": "https://www.google.com/",
-      "linkedin": "https://www.google.com/",
-      "posts": [
-        {
-          "id": "1",
-          "category": "BUSINESS",
-          "title": "Font sizes in UI design: The complete guide to follow",
-          "image": "assets/Images/stained-glass.png",
-          "description": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident."
-        },
-        {
-          "id": "2",
-          "category": "ECONOMY",
-          "title": "How to build rapport with your web design clients",
-          "image": "assets/Images/man-in-black-crew.png",
-          "description": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident."
-        }
-      ]
-    },
-    {
-      "id": "5",
-      "image": "assets/Images/user-img5.png",
-      "name": "Guy Hawkins",
-      "title": "Hey there, I’m Andrew Jonhson and welcome to my Blog",
-      "description": "Content Writer @Company",
-      "bio": " Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Non blandit massa enim nec. Scelerisque viverra mauris in aliquam sem. At risus viverra adipiscing at in tellus. ",
-      "facebook": "https://www.google.com/",
-      "twitter": "https://www.google.com/",
-      "instagram": "https://www.google.com/",
-      "linkedin": "https://www.google.com/",
-      "posts": [
-        {
-          "id": "1",
-          "category": "BUSINESS",
-          "title": "Font sizes in UI design: The complete guide to follow",
-          "image": "assets/Images/stained-glass.png",
-          "description": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident."
-        },
-        {
-          "id": "2",
-          "category": "ECONOMY",
-          "title": "How to build rapport with your web design clients",
-          "image": "assets/Images/man-in-black-crew.png",
-          "description": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident."
-        }
-      ]
-    },
-    {
-      "id": "6",
-      "image": "assets/Images/user-img6.svg",
-      "name": "Eleanor Pena",
-      "title": "Hey there, I’m Andrew Jonhson and welcome to my Blog",
-      "description": "Content Writer @Company",
-      "bio": " Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Non blandit massa enim nec. Scelerisque viverra mauris in aliquam sem. At risus viverra adipiscing at in tellus. ",
-      "facebook": "https://www.google.com/",
-      "twitter": "https://www.google.com/",
-      "instagram": "https://www.google.com/",
-      "linkedin": "https://www.google.com/",
-      "posts": [
-        {
-          "id": "1",
-          "category": "BUSINESS",
-          "title": "Font sizes in UI design: The complete guide to follow",
-          "image": "assets/Images/stained-glass.png",
-          "description": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident."
-        },
-        {
-          "id": "2",
-          "category": "ECONOMY",
-          "title": "How to build rapport with your web design clients",
-          "image": "assets/Images/man-in-black-crew.png",
-          "description": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident."
-        }
-      ]
-    },
-    {
-      "id": "7",
-      "image": "assets/Images/user-img7.png",
-      "name": "Robert Fox",
-      "title": "Hey there, I’m Andrew Jonhson and welcome to my Blog",
-      "description": "Content Writer @Company",
-      "bio": " Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Non blandit massa enim nec. Scelerisque viverra mauris in aliquam sem. At risus viverra adipiscing at in tellus. ",
-      "facebook": "https://www.google.com/",
-      "twitter": "https://www.google.com/",
-      "instagram": "https://www.google.com/",
-      "linkedin": "https://www.google.com/",
-      "posts": [
-        {
-          "id": "1",
-          "category": "BUSINESS",
-          "title": "Font sizes in UI design: The complete guide to follow",
-          "image": "assets/Images/stained-glass.png",
-          "description": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident."
-        },
-        {
-          "id": "2",
-          "category": "ECONOMY",
-          "title": "How to build rapport with your web design clients",
-          "image": "assets/Images/man-in-black-crew.png",
-          "description": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident."
-        }
-      ]
-    },
-    {
-      "id": "8",
-      "image": "assets/Images/user-img8.png",
-      "name": "Jacob Jones",
-      "title": "Hey there, I’m Andrew Jonhson and welcome to my Blog",
-      "description": "Content Writer @Company",
-      "bio": " Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Non blandit massa enim nec. Scelerisque viverra mauris in aliquam sem. At risus viverra adipiscing at in tellus. ",
-      "facebook": "https://www.google.com/",
-      "twitter": "https://www.google.com/",
-      "instagram": "https://www.google.com/",
-      "linkedin": "https://www.google.com/",
-      "posts": [
-        {
-          "id": "1",
-          "category": "BUSINESS",
-          "title": "Font sizes in UI design: The complete guide to follow",
-          "image": "assets/Images/stained-glass.png",
-          "description": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident."
-        },
-        {
-          "id": "2",
-          "category": "ECONOMY",
-          "title": "How to build rapport with your web design clients",
-          "image": "assets/Images/man-in-black-crew.png",
-          "description": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident."
-        }
-      ]
     }
   ],
   "logos": [
@@ -262,113 +36,60 @@
     "assets/Images/logos/logos ipsum/Logo 4.png",
     "assets/Images/logos/logos ipsum/Logo 5.png"
   ],
-  "featuredPostLists": [
-    {
-      "date": "Apr 17, 2023",
-      "author": "Jonh Doe",
-      "link": "2 Figma design systems that you can download for free today."
-    },
-    {
-      "date": "Apr 17, 2023",
-      "author": "Jonh Doe",
-      "link": "2 Figma design systems that you can download for free today."
-    },
-    {
-      "date": "May 23, 2023",
-      "author": "Jonh Doe",
-      "link": "3 Figma design systems that you can download for free today."
-    },
-    {
-      "date": "May 23, 2023",
-      "author": "Jonh Doe",
-      "link": "8 Figma design systems that you can download for free today."
-    },
-    {
-      "date": "May 23, 2023",
-      "author": "Jonh Doe",
-      "link": "3 Figma design systems that you can download for free today."
-    }
-  ],
   "posts": [
     {
       "id": "1",
-      "category": "Startup",
-      "title": "Design tips for designers that cover everything you need",
-      "image": "assets/Images/business_category_block_blog_img.png",
+      "user_id": "2",
+      "category": "STARTUP",
+      "category_icon": "assets/Images/icons/startup.png",
+      "created_date": "Apr 17, 2023",
+      "title": "Font sizes in UI design: The complete guide to follow",
+      "image": "assets/Images/stained-glass.png",
+      "shortDescription": "8 Figma design systems that you can download for free today.",
       "description": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident."
     },
     {
       "id": "2",
+      "user_id": "3",
       "category": "BUSINESS",
-      "title": "How to build rapport with your web design clients",
-      "image": "assets/Images/business_category_block_block_img(2).png",
+      "category_icon": "assets/Images/icons/business.png",
+      "created_date": "Apr 17, 2023",
+      "title": "Font sizes in UI design: The complete guide to follow",
+      "image": "assets/Images/stained-glass.png",
+      "shortDescription": "8 Figma design systems that you can download for free today.",
       "description": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident."
     },
     {
       "id": "3",
-      "category": "Startup",
-      "title": "Logo design trends to avoid in 2022",
-      "image": "assets/Images/business_category_block_block_img(3).png",
+      "user_id": "2",
+      "category": "ECONOMY",
+      "category_icon": "assets/Images/icons/economy.png",
+      "created_date": "Apr 17, 2023",
+      "title": "Font sizes in UI design: The complete guide to follow",
+      "image": "assets/Images/stained-glass.png",
+      "shortDescription": "8 Figma design systems that you can download for free today.",
       "description": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident."
     },
     {
       "id": "4",
+      "user_id": "2",
       "category": "TECHNOLOGY",
-      "title": "8 Figma design systems you can download for free today",
-      "image": "assets/Images/business_category_block_block_img(4).png",
+      "category_icon": "assets/Images/icons/technology.png",
+      "created_date": "Apr 17, 2023",
+      "title": "Font sizes in UI design: The complete guide to follow",
+      "image": "assets/Images/stained-glass.png",
+      "shortDescription": "8 Figma design systems that you can download for free today.",
       "description": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident."
     },
     {
       "id": "5",
-      "category": "ECONOMY",
-      "title": "Font sizes in UI design: The complete guide to follow",
-      "image": "assets/Images/business_category_block_blog_img.png",
-      "description": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident."
-    }
-  ],
-  "category-posts": [
-    {
-      "id": "1",
-      "category": "BUSINESS",
-      "title": "Top 6 free website mockup tools 2022",
-      "image": "assets/Images/two-women-img-category-page.png",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Non blandit massa enim nec."
-    },
-    {
-      "id": "2",
-      "category": "Startup",
-      "title": "Step-by-step guide to choosing great font pairs",
-      "image": "assets/Images/two-women-img-category-page.png",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Non blandit massa enim nec."
-    },
-    {
-      "id": "3",
-      "category": "Technology",
-      "title": "Ten free foogle fonts that you should use",
-      "image": "assets/Images/two-women-img-category-page.png",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Non blandit massa enim nec."
-    },
-    {
-      "id": "4",
-      "category": "Economy",
-      "title": "What did I learn from doing 50+ design sprints?",
-      "image": "assets/Images/two-women-img-category-page.png",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Non blandit massa enim nec."
-    }
-  ],
-  "author-posts": [
-    {
-      "id": "1",
-      "category": "BUSINESS",
+      "user_id": "2",
+      "category": "TECHNOLOGY",
+      "category_icon": "assets/Images/icons/technology.png",
+      "created_date": "Apr 17, 2023",
       "title": "Font sizes in UI design: The complete guide to follow",
       "image": "assets/Images/stained-glass.png",
-      "description": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident."
-    },
-    {
-      "id": "2",
-      "category": "ECONOMY",
-      "title": "How to build rapport with your web design clients",
-      "image": "assets/Images/man-in-black-crew.png",
+      "shortDescription": "8 Figma design systems that you can download for free today.",
       "description": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident."
     }
   ],
@@ -402,5 +123,119 @@
         "text2": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor\n      incididunt ut labore et dolore magna aliqua. Non blandit massa enim nec. Scelerisque\n      viverra mauris in aliquam sem. At risus viverra adipiscing at in tellus. Sociis natoque\n      penatibus et magnis dis parturient montes. Ridiculus mus mauris vitae ultricies leo.\n      Neque egestas congue quisque egestas diam. Risus in hendrerit gravida rutrum quisque\n      non. Sit amet nulla facilisi morbi tempus iaculis urna. Lorem sed risus ultricies\n      tristique nulla aliquet enim. Volutpat blandit aliquam etiam erat velit. Orci eu\n      lobortis elementum nibh. Ipsum suspendisse ultrices gravida dictum fusce ut placerat\n      orci nulla. Neque convallis a cras semper auctor neque vitae tempus quam."
       }
     ]
-  }
+  },
+  "users": [
+    {
+      "email": "floydMiles@gmail.com",
+      "password": "$2a$10$Br1r63qjvWk9FWwX5UpKuOG6ytRoaAxvRdz5z0C3jZdMKxoTnvDGm",
+      "image": "assets/Images/user_img.png",
+      "name": "Floyd Miles",
+      "title": "Hey there, I’m Andrew Jonhson and welcome to my Blog",
+      "description": "Content Writer @Company",
+      "bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Non blandit massa enim nec. Scelerisque viverra mauris in aliquam sem. At risus viverra adipiscing at in tellus. ",
+      "facebook": "https://www.google.com/",
+      "twitter": "https://www.google.com/",
+      "instagram": "https://www.google.com/",
+      "linkedin": "https://www.google.com/",
+      "id": 1
+    },
+    {
+      "email": "dianne-russell@gmail.com",
+      "password": "$2a$10$.VxvLtoEtv6S2JCQyf8meeA4EZ220wCjwyqE85GY8qNU6xS7bRRUe",
+      "image": "assets/Images/user_img4.png",
+      "name": "Dianne Russell",
+      "title": "Hey there, I’m Andrew Jonhson and welcome to my Blog",
+      "description": "Content Writer @Company",
+      "bio": " Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Non blandit massa enim nec. Scelerisque viverra mauris in aliquam sem. At risus viverra adipiscing at in tellus. ",
+      "facebook": "https://www.google.com/",
+      "twitter": "https://www.google.com/",
+      "instagram": "https://www.google.com/",
+      "linkedin": "https://www.google.com/",
+      "id": 2
+    },
+    {
+      "email": "jenny@gmail.com",
+      "password": "$2a$10$BctELMVsuekCwTfUQiW0m.c0RjIF3F2vGzgm3TRGQbcBtDFV/rBaO",
+      "image": "assets/Images/user_img3.png",
+      "name": "Jenny Wilson",
+      "title": "Hey there, I’m Andrew Jonhson and welcome to my Blog",
+      "description": "Content Writer @Company",
+      "bio": " Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Non blandit massa enim nec. Scelerisque viverra mauris in aliquam sem. At risus viverra adipiscing at in tellus. ",
+      "facebook": "https://www.google.com/",
+      "twitter": "https://www.google.com/",
+      "instagram": "https://www.google.com/",
+      "linkedin": "https://www.google.com/",
+      "id": 3
+    },
+    {
+      "email": "leslie@gmail.com",
+      "password": "$2a$10$N6HvmLKwbns2eto3jHqlKeGkS710xJjhjtTcsvIV0y8ERzt9T.mAq",
+      "image": "assets/Images/user_img2.png",
+      "name": "Leslie Alexander",
+      "title": "Hey there, I’m Andrew Jonhson and welcome to my Blog",
+      "description": "Content Writer @Company",
+      "bio": " Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Non blandit massa enim nec. Scelerisque viverra mauris in aliquam sem. At risus viverra adipiscing at in tellus. ",
+      "facebook": "https://www.google.com/",
+      "twitter": "https://www.google.com/",
+      "instagram": "https://www.google.com/",
+      "linkedin": "https://www.google.com/",
+      "id": 4
+    },
+    {
+      "email": "guy@gmail.com",
+      "password": "$2a$10$46DbRNi071JnooODCiobAOsv4l1pfSqGHX.LfQ6ZocfaXd3IDPvyW",
+      "image": "assets/Images/user-img5.png",
+      "name": "Guy Hawkins",
+      "title": "Hey there, I’m Andrew Jonhson and welcome to my Blog",
+      "description": "Content Writer @Company",
+      "bio": " Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Non blandit massa enim nec. Scelerisque viverra mauris in aliquam sem. At risus viverra adipiscing at in tellus. ",
+      "facebook": "https://www.google.com/",
+      "twitter": "https://www.google.com/",
+      "instagram": "https://www.google.com/",
+      "linkedin": "https://www.google.com/",
+      "id": 5
+    },
+    {
+      "email": "pena@gmail.com",
+      "password": "$2a$10$bB6oiwppkWNJhoES4T7zhepC9SA0May487a2n64J1ZL7EaXbzm1w2",
+      "image": "assets/Images/user-img6.svg",
+      "name": "Eleanor Pena",
+      "title": "Hey there, I’m Andrew Jonhson and welcome to my Blog",
+      "description": "Content Writer @Company",
+      "bio": " Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Non blandit massa enim nec. Scelerisque viverra mauris in aliquam sem. At risus viverra adipiscing at in tellus. ",
+      "facebook": "https://www.google.com/",
+      "twitter": "https://www.google.com/",
+      "instagram": "https://www.google.com/",
+      "linkedin": "https://www.google.com/",
+      "id": 6
+    },
+    {
+      "email": "robert@gmail.com",
+      "password": "$2a$10$5lPHTYf7qEO5FHZGbeJ3jODiDMsg/TW1sgXGDArB34OnsC2LzIZ1q",
+      "image": "assets/Images/user-img7.png",
+      "name": "Robert Fox",
+      "title": "Hey there, I’m Andrew Jonhson and welcome to my Blog",
+      "description": "Content Writer @Company",
+      "bio": " Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Non blandit massa enim nec. Scelerisque viverra mauris in aliquam sem. At risus viverra adipiscing at in tellus. ",
+      "facebook": "https://www.google.com/",
+      "twitter": "https://www.google.com/",
+      "instagram": "https://www.google.com/",
+      "linkedin": "https://www.google.com/",
+      "id": 7
+    },
+    {
+      "email": "jones@gmail.com",
+      "password": "$2a$10$hipIhEdPQhEcsr.G5A8lDuhq6.Mz86Db554qxmOL4gNsI3G1jpIEu",
+      "image": "assets/Images/user-img8.png",
+      "name": "Jacob Jones",
+      "title": "Hey there, I’m Andrew Jonhson and welcome to my Blog",
+      "description": "Content Writer @Company",
+      "bio": " Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Non blandit massa enim nec. Scelerisque viverra mauris in aliquam sem. At risus viverra adipiscing at in tellus. ",
+      "facebook": "https://www.google.com/",
+      "twitter": "https://www.google.com/",
+      "instagram": "https://www.google.com/",
+      "linkedin": "https://www.google.com/",
+      "id": 8
+    }
+  ]
 }

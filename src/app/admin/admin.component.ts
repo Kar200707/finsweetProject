@@ -5,6 +5,10 @@ import {MatSidenavModule} from "@angular/material/sidenav";
 import {MatTreeModule, MatTreeNestedDataSource} from "@angular/material/tree";
 import {NestedTreeControl} from "@angular/cdk/tree";
 import {MatButton, MatButtonModule, MatIconButton} from "@angular/material/button";
+import {RequestService} from "../services/request.service";
+import {MatToolbarModule} from "@angular/material/toolbar";
+import {Authors} from "../models/authors";
+import {Router, RouterLink, RouterLinkActive, RouterOutlet} from "@angular/router";
 
 interface FoodNode {
   name: string;
@@ -41,17 +45,24 @@ const TREE_DATA: FoodNode[] = [
     MatIconModule,
     MatSidenavModule,
     MatTreeModule,
-    MatButtonModule
+    MatButtonModule,
+    MatToolbarModule,
+    RouterOutlet,
+    RouterLink,
+    RouterLinkActive
   ],
   standalone: true
 })
-export class AdminComponent {
-  treeControl = new NestedTreeControl<FoodNode>(node => node.children);
-  dataSource = new MatTreeNestedDataSource<FoodNode>();
+export class AdminComponent{
+  userData: Authors = JSON.parse(localStorage.getItem('userData') ?? 'null').user;
 
-  constructor() {
-    this.dataSource.data = TREE_DATA;
+  constructor(private reqServ: RequestService, private router: Router) { }
+
+  logOut():void {
+    localStorage.removeItem('token');
+    localStorage.removeItem('userData');
+    this.router.navigate(['/admin/login'])
   }
 
-  hasChild = (_: number, node: FoodNode) => !!node.children && node.children.length > 0;
+  protected readonly window:Window = window;
 }

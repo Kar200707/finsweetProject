@@ -4,31 +4,27 @@ export const environment = {
     get: host + 'category'
   },
 
-  privacyPolicy: {
-    get: host + 'privacy-policy'
-  },
-
   author: {
-    get: host + 'author'
+    get: host + 'users'
   },
 
   logos: {
     get: host + 'logos'
   },
 
-  featuredPostLists: {
-    get: host + 'featuredPostLists'
-  },
-
   categoryPosts: {
     get: host + 'category-posts'
+  },
+
+  privacyPolicy: {
+    get: host + 'privacy-policy'
+  },
+
+  contactUs: {
+    get: host + 'contact-us'
   },
 
   posts: {
     get: host + 'posts'
   },
-
-  authorPosts: {
-    get: host + 'author-posts'
-  }
 }

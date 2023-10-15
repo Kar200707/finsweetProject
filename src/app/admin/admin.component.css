@@ -1,13 +1,13 @@
 .container {
-  height: 100vh;
   width: 100%;
-  background-color: #202123;
+  background-color: #bbbbbb;
+  overflow-y: scroll;
 }
 
 .mat-drawer {
   padding: 20px;
   width: 18.75%;
-  background-color: #22252d;
+  background-color: #211f1f;
   border-right: 1px solid rgba(128, 128, 128, 0.13);
 }
 
@@ -45,4 +45,60 @@
 .mat-tree-node {
   background-color: #22252d;
   color: white;
+}
+
+.authors-details {
+  display: flex;
+  align-items: center;
+}
+
+.author-image {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid rgba(0, 0, 0, 0.31);
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.mat-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #292b2d;
+}
+
+.mat-toolbar > span {
+  color: white;
+}
+
+.user-name {
+  color: white;
+  font-size: 14px;
+}
+
+.logout-btn {
+  background-color: #ffffff;
+  margin-right: 30px;
+  padding: 0 10px;
+}
+
+.user-email {
+  color: rgba(255, 255, 255, 0.35);
+  font-size: 12px;
+  margin-top: -10px;
+}
+
+.nav-btn {
+  width: 100%;
+  background-color: #232536;
+  margin-top: 15px;
+  display: flex;
+  justify-content: flex-start;
+  padding: 25px;
+  transition: .2s background-color;
+}
+
+.active-rout {
+  background-color: #e7e7e7;
 }

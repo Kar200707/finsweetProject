@@ -37,6 +37,10 @@
   text-decoration: none;
 }
 
+.business_category_block_blog > img {
+  object-fit: cover;
+}
+
 .business_category_block_blog > .text_block > a:hover {
   text-decoration: underline 2px #592EA9;
 }
@@ -87,5 +91,38 @@
   .business_category_block_blog > img {
     object-fit: cover;
     width: 100%;
+  }
+}
+
+.blogPage {
+  width: 490px;
+  height: 318px;
+}
+
+.categoryPage {
+  width: 294px;
+  height: 312px;
+}
+
+.authorPage {
+  width: 412px;
+  height: 320px;
+}
+
+@media screen and (max-width: 544px) {
+  .blogPage {
+    width:  100%;
+  }
+}
+
+@media screen and (max-width: 544px) {
+  .categoryPage {
+    width:  100%;
+  }
+}
+
+@media screen and (max-width: 544px) {
+  .authorPage {
+    width:  100%;
   }
 }

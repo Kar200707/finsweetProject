@@ -27,7 +27,7 @@ import {ActivatedRoute, Params, RouterLinkActive} from "@angular/router";
 export class AuthorComponent implements OnInit{
   id: number = 0;
   dataAuthor!: Authors;
-  dataPosts!: Posts[];
+  dataPosts: Posts[] = [];
   authorImage!: string;
   authorTitle!: string;
   authorBio!: string;
@@ -49,13 +49,16 @@ export class AuthorComponent implements OnInit{
         (data: Authors):void => {
           this.dataAuthor = data;
           this.authorImage = data.image;
-          this.dataPosts = data.posts;
           this.authorTitle = data.title;
           this.authorBio = data.bio;
           this.authorFaceBook = data.facebook;
           this.authorTwitter = data.twitter;
           this.authorInsta = data.instagram;
           this.authorLinkedin = data.linkedin
+          this.reqServ.getData<Posts[]>(environment.posts.get + '?user_id=' + data.id)
+            .subscribe((posts:Posts[]):void => {
+              this.dataPosts = posts;
+            })
         }
       )
   }
