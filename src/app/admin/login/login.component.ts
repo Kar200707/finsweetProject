@@ -1,8 +1,7 @@
-import {Component, OnInit} from '@angular/core';
+import {Component} from '@angular/core';
 import {RequestService} from "../../services/request.service";
 import {MatInputModule} from "@angular/material/input";
-import {MatLegacyCardModule} from "@angular/material/legacy-card";
-import {MatCardContent, MatCardModule} from "@angular/material/card";
+import {MatCardModule} from "@angular/material/card";
 import {FormControl, FormGroup, ReactiveFormsModule, Validators} from "@angular/forms";
 import {NgIf} from "@angular/common";
 import {MatIconModule} from "@angular/material/icon";

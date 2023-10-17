@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {MatDatepickerModule} from "@angular/material/datepicker";
 import {MatIconModule} from "@angular/material/icon";
 import {MatSidenavModule} from "@angular/material/sidenav";
@@ -9,6 +9,7 @@ import {RequestService} from "../services/request.service";
 import {MatToolbarModule} from "@angular/material/toolbar";
 import {Authors} from "../models/authors";
 import {Router, RouterLink, RouterLinkActive, RouterOutlet} from "@angular/router";
+import {NgIf} from "@angular/common";
 
 interface FoodNode {
   name: string;
@@ -49,7 +50,8 @@ const TREE_DATA: FoodNode[] = [
     MatToolbarModule,
     RouterOutlet,
     RouterLink,
-    RouterLinkActive
+    RouterLinkActive,
+    NgIf
   ],
   standalone: true
 })

@@ -1,0 +1,32 @@
+<mat-card>
+  <h1 style="margin: 15px; color: #3a3a3a">Edit Post</h1>
+  <mat-card-content>
+    <form class="example-form">
+      <mat-form-field class="example-full-width">
+        <mat-label>Title</mat-label>
+        <input matInput placeholder="enter your post title" value="">
+      </mat-form-field>
+      <mat-form-field style="width: 100%">
+        <mat-label>Category</mat-label>
+        <mat-select>
+          <mat-option *ngFor="let category of dataCategory" value="sdasd">
+            {{category.title}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+      <mat-form-field style="width: 100%">
+        <mat-label>Image</mat-label>
+        <input matInput placeholder="enter your post title" value="">
+      </mat-form-field>
+      <mat-form-field style="width: 100%">
+        <mat-label>short description</mat-label>
+        <textarea matInput placeholder="enter your post short deskription"></textarea>
+      </mat-form-field>
+      <mat-form-field class="example-full-width">
+        <mat-label>Description</mat-label>
+        <textarea matInput placeholder="enter your post deskription"></textarea>
+      </mat-form-field>
+      <button color="primary" mat-raised-button>SAVE</button>
+    </form>
+  </mat-card-content>
+</mat-card>

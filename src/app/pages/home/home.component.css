@@ -242,6 +242,11 @@
 
 .list_box > p > span {
   color: #592EA9;
+  text-underline-offset: 4px;
+}
+
+.list_box > p > span:hover {
+  text-decoration: 1px underline;
 }
 
 .list_box > p + a {
@@ -255,6 +260,7 @@
   display: block;
   width: 369px;
   text-decoration: none;
+  text-underline-offset: 3px;
 }
 
 @media screen and (max-width: 420px) {

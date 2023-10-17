@@ -15,7 +15,11 @@ export class RequestService {
     return this.http.get<T>(url, {headers: header});
   }
 
-  addData<T>(url: string, data: any) {
+  addData<T>(url: string, data: T) {
     return this.http.post<T>(url, data);
+  }
+
+  deleteData(url: string) {
+    return this.http.delete(url);
   }
 }

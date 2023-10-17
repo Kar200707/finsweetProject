@@ -1,7 +1,7 @@
 <div class="menu-panel">
   <mat-toolbar class="mat-toolbar">
     <span><span style="color:#301ac2;">FinsWeet</span> Admin Panel</span>
-    <div class="authors-details">
+    <div *ngIf="userData !== undefined" class="authors-details">
       <button (click)="logOut()" class="logout-btn" color="warn" mat-button>
         <mat-icon>logout</mat-icon>
         LogOut

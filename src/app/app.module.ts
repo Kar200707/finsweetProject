@@ -120,7 +120,9 @@ const routes: Routes = [
     BrowserAnimationsModule,
     MatButtonModule,
   ],
-  providers: [ provideClientHydration() ],
+  providers: [
+    // provideClientHydration()
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

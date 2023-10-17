@@ -60,7 +60,7 @@
     <mat-card-content>
       <div class="text-box">
         <span>Logos</span>
-        <div>
+        <div *ngIf="dataLogos !== undefined">
           <span>Activated {{ dataLogos.length }}/#</span>
         </div>
       </div>

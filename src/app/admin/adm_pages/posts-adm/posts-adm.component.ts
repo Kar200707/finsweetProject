@@ -3,19 +3,11 @@ import {RouterModule} from "@angular/router";
 import {MatTableModule} from "@angular/material/table";
 import {RequestService} from "../../../services/request.service";
 import {Posts} from "../../../models/posts";
-
-const ELEMENT_DATA: any = [
-  {position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H'},
-  {position: 2, name: 'Helium', weight: 4.0026, symbol: 'He'},
-  {position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li'},
-  {position: 4, name: 'Beryllium', weight: 9.0122, symbol: 'Be'},
-  {position: 5, name: 'Boron', weight: 10.811, symbol: 'B'},
-  {position: 6, name: 'Carbon', weight: 12.0107, symbol: 'C'},
-  {position: 7, name: 'Nitrogen', weight: 14.0067, symbol: 'N'},
-  {position: 8, name: 'Oxygen', weight: 15.9994, symbol: 'O'},
-  {position: 9, name: 'Fluorine', weight: 18.9984, symbol: 'F'},
-  {position: 10, name: 'Neon', weight: 20.1797, symbol: 'Ne'},
-];
+import {MatButtonModule} from "@angular/material/button";
+import {MatIconModule} from "@angular/material/icon";
+import {environment} from "../../../environment/environment";
+import {MatDialog, MatDialogModule} from "@angular/material/dialog";
+import {DialogPostsComponent} from "../dialog_components/dialog-posts/dialog-posts.component";
 
 @Component({
   selector: 'app-posts-adm',
@@ -23,7 +15,10 @@ const ELEMENT_DATA: any = [
   styleUrls: ['./posts-adm.component.css'],
   standalone: true,
   imports: [
-    MatTableModule
+    MatTableModule,
+    MatButtonModule,
+    MatIconModule,
+    MatDialogModule
   ]
 })
 export class PostsAdmComponent implements OnInit{
@@ -35,15 +30,32 @@ export class PostsAdmComponent implements OnInit{
     'created-date',
     'image',
     'description',
-    'shortDescription'
+    'shortDescription',
+    'action'
   ];
 
-  constructor(private reqServ: RequestService) {  }
+  constructor(private reqServ: RequestService, private dialog: MatDialog) {  }
 
   ngOnInit():void {
-    this.reqServ.getData<Posts[]>('http://localhost:3000/posts')
+    this.getPosts();
+  }
+
+  deletePost(id: string):void {
+    this.reqServ.deleteData(environment.posts.get + '/' + id)
+      .subscribe(():void => {})
+    this.getPosts();
+  }
+
+  getPosts ():void {
+    this.reqServ.getData<Posts[]>(environment.posts.get)
       .subscribe((data:Posts[]):void=>{
         this.dataPosts = data;
       })
+  }
+
+  openDialog ():void {
+    this.dialog.open(DialogPostsComponent, {
+      width: '520px',
+    })
   }
 }

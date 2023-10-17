@@ -38,17 +38,6 @@
   ],
   "posts": [
     {
-      "id": "1",
-      "user_id": "3",
-      "category": "STARTUP",
-      "category_icon": "assets/Images/icons/startup.png",
-      "created_date": "Apr 17, 2023",
-      "title": "Font sizes in UI design: The complete guide to follow",
-      "image": "assets/Images/stained-glass.png",
-      "shortDescription": "8 Figma design systems that you can download for free today.",
-      "description": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident."
-    },
-    {
       "id": "2",
       "user_id": "4",
       "category": "BUSINESS",

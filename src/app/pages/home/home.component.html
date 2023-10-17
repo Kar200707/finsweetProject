@@ -45,7 +45,7 @@
           <div class="list_box">
             <p>
               By
-              <span>
+              <span [routerLink]="['/author', items.user_id]">
                 {{
                   dataAuthors == undefined ? 'loading...' : dataAuthors[(items.user_id == undefined ? 0 : items.user_id - 1)].name
                 }}
