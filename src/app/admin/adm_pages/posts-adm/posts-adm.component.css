@@ -1,0 +1,15 @@
+.show-all-text {
+  display: none;
+  background-color: #3f3f3f;
+  position: absolute;
+  bottom: 0;
+  right: 0px;
+}
+
+.td-table {
+  position: relative;
+}
+
+.td-table:hover > .show-all-text {
+  display: block;
+}

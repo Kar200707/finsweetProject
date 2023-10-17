@@ -39,7 +39,7 @@
   "posts": [
     {
       "id": "1",
-      "user_id": "2",
+      "user_id": "3",
       "category": "STARTUP",
       "category_icon": "assets/Images/icons/startup.png",
       "created_date": "Apr 17, 2023",
@@ -50,7 +50,7 @@
     },
     {
       "id": "2",
-      "user_id": "3",
+      "user_id": "4",
       "category": "BUSINESS",
       "category_icon": "assets/Images/icons/business.png",
       "created_date": "Apr 17, 2023",
@@ -61,7 +61,7 @@
     },
     {
       "id": "3",
-      "user_id": "2",
+      "user_id": "1",
       "category": "ECONOMY",
       "category_icon": "assets/Images/icons/economy.png",
       "created_date": "Apr 17, 2023",
@@ -72,7 +72,7 @@
     },
     {
       "id": "4",
-      "user_id": "2",
+      "user_id": "3",
       "category": "TECHNOLOGY",
       "category_icon": "assets/Images/icons/technology.png",
       "created_date": "Apr 17, 2023",
@@ -83,7 +83,62 @@
     },
     {
       "id": "5",
-      "user_id": "2",
+      "user_id": "3",
+      "category": "TECHNOLOGY",
+      "category_icon": "assets/Images/icons/technology.png",
+      "created_date": "Apr 17, 2023",
+      "title": "Font sizes in UI design: The complete guide to follow",
+      "image": "assets/Images/stained-glass.png",
+      "shortDescription": "8 Figma design systems that you can download for free today.",
+      "description": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident."
+    },
+    {
+      "id": "1",
+      "user_id": "3",
+      "category": "STARTUP",
+      "category_icon": "assets/Images/icons/startup.png",
+      "created_date": "Apr 17, 2023",
+      "title": "Font sizes in UI design: The complete guide to follow",
+      "image": "assets/Images/stained-glass.png",
+      "shortDescription": "8 Figma design systems that you can download for free today.",
+      "description": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident."
+    },
+    {
+      "id": "2",
+      "user_id": "4",
+      "category": "BUSINESS",
+      "category_icon": "assets/Images/icons/business.png",
+      "created_date": "Apr 17, 2023",
+      "title": "Font sizes in UI design: The complete guide to follow",
+      "image": "assets/Images/stained-glass.png",
+      "shortDescription": "8 Figma design systems that you can download for free today.",
+      "description": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident."
+    },
+    {
+      "id": "3",
+      "user_id": "1",
+      "category": "ECONOMY",
+      "category_icon": "assets/Images/icons/economy.png",
+      "created_date": "Apr 17, 2023",
+      "title": "Font sizes in UI design: The complete guide to follow",
+      "image": "assets/Images/stained-glass.png",
+      "shortDescription": "8 Figma design systems that you can download for free today.",
+      "description": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident."
+    },
+    {
+      "id": "4",
+      "user_id": "3",
+      "category": "TECHNOLOGY",
+      "category_icon": "assets/Images/icons/technology.png",
+      "created_date": "Apr 17, 2023",
+      "title": "Font sizes in UI design: The complete guide to follow",
+      "image": "assets/Images/stained-glass.png",
+      "shortDescription": "8 Figma design systems that you can download for free today.",
+      "description": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident."
+    },
+    {
+      "id": "5",
+      "user_id": "3",
       "category": "TECHNOLOGY",
       "category_icon": "assets/Images/icons/technology.png",
       "created_date": "Apr 17, 2023",
@@ -108,6 +163,13 @@
       "message": "es Karenn em",
       "county": "Gyumri",
       "id": 3
+    },
+    {
+      "f_name": "dsa",
+      "email": "dasdasd@mail.ru",
+      "message": "Bareva axpers inchxes co\n",
+      "county": "Erevan",
+      "id": 4
     }
   ],
   "privacy-policy": {

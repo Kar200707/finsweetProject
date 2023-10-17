@@ -1,7 +1,6 @@
 .container {
   width: 100%;
-  background-color: #bbbbbb;
-  overflow-y: scroll;
+  background-color: #505050;
 }
 
 .mat-drawer {
@@ -15,36 +14,12 @@
   padding: 20px;
 }
 
-.example-tree-invisible {
-  display: none;
-}
-
-.example-tree ul,
-.example-tree li {
-  margin-top: 0;
-  margin-bottom: 0;
-  list-style-type: none;
-}
-
-.example-tree .mat-nested-tree-node div[role=group] {
-  padding-left: 25px;
-}
-
-.example-tree div[role=group] > .mat-tree-node {
-  padding-left: 6px;
-}
-
 .mat-icon-rtl-mirror {
   color: white;
 }
 
 .icon-button {
   background-color: transparent;
-}
-
-.mat-tree-node {
-  background-color: #22252d;
-  color: white;
 }
 
 .authors-details {
@@ -70,6 +45,9 @@
 
 .mat-toolbar > span {
   color: white;
+  font-family: Inter;
+  text-transform: uppercase;
+  font-weight: bolder;
 }
 
 .user-name {
@@ -96,7 +74,7 @@
   display: flex;
   justify-content: flex-start;
   padding: 25px;
-  transition: .2s background-color;
+  transition: .3s background-color;
 }
 
 .active-rout {

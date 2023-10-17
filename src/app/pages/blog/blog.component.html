@@ -16,7 +16,7 @@
   </div>
 </div>
 <div class="all_post_block_blog">
-  <div class="container">
+  <div *ngIf="dataPosts != undefined" class="container">
     <h1>All posts</h1>
     <div class="line_gray_all_posts_blog"></div>
     <app-loader-bar style="width: 100%; margin-top: 64px; display: block" [Height]="'318px'" *ngIf="dataPosts == undefined"></app-loader-bar>
@@ -27,9 +27,9 @@
     <div *ngFor="let data of dataPosts, let i = index">
       <app-posts *ngIf="i < 4" [isPrevPage]="'blog'" [dataPosts]="data"></app-posts>
     </div>
-    <div class="next_prew_buttons">
-      <a class="prev" href="#">< Prev</a>
-      <a class="next" href="#">Next ></a>
+    <div class="next_prew_buttons" *ngIf="dataPosts.length <= 4">
+      <a class="prev" *ngIf="pageIndex > 1" (click)="prevPage()">< Prev</a>
+      <a class="next"  *ngIf="dataPosts.length >= 4 || dataPosts.length == 0" (click)="nextPage()">Next ></a>
     </div>
   </div>
 </div>

@@ -32,8 +32,30 @@ import {Authors} from "../../models/authors";
 export class BlogComponent implements OnInit {
   dataCategory!: Category[];
   dataPosts!: Posts[];
+  pageIndex: number = 1;
 
   constructor(private reqServ: RequestService) {  }
+
+  loadPosts():void {
+    this.reqServ.getData<Posts[]>(environment.posts.get + '?_page=' + this.pageIndex + '&_limit=4')
+      .subscribe(
+        (data: Posts[]):void => {
+          this.dataPosts = data;
+        }
+      )
+  }
+
+  nextPage():void {
+    this.pageIndex++;
+    this.loadPosts();
+  }
+
+  prevPage():void {
+    if (this.pageIndex > 1) {
+      this.pageIndex--;
+      this.loadPosts();
+    }
+  }
 
   ngOnInit():void {
     this.reqServ.getData<Category[]>(environment.category.get)
@@ -42,12 +64,6 @@ export class BlogComponent implements OnInit {
           this.dataCategory = data;
         }
       )
-
-    this.reqServ.getData<Posts[]>(environment.posts.get)
-      .subscribe(
-        (data: Posts[]):void => {
-          this.dataPosts = data;
-        }
-      )
+    this.loadPosts();
   }
 }

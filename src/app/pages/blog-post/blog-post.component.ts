@@ -33,7 +33,7 @@ export class BlogPostComponent implements OnInit{
     this.reqServ.getData<Posts>(environment.posts.get + '/' + this.id)
       .subscribe((data:Posts):void=>{
         this.dataPosts = data
-        this.reqServ.getData<Authors>(environment.author.get + '/' + data.user_id)
+        this.reqServ.getData<Authors>(environment.author.get + '/' + (this.dataPosts.user_id))
           .subscribe((author:Authors):void=>{
             this.dataAuthor = author;
           })
