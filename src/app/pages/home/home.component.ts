@@ -33,7 +33,7 @@ export class HomeComponent implements OnInit {
   dataCategory!: Category[];
   dataPosts!: Posts[];
   dataAuthors!: Authors[];
-  dataLogos!: string[];
+  dataLogos!: any;
 
   constructor(private reqServ: RequestService) { }
 
@@ -59,13 +59,11 @@ export class HomeComponent implements OnInit {
         }
       )
 
-    this.reqServ.getData<string[]>(environment.logos.get)
+    this.reqServ.getData<any>(environment.logos.get)
       .subscribe(
-        (data: string[]):void => {
+        (data: any):void => {
           this.dataLogos = data;
         }
       )
   }
-
-  protected readonly name = name;
 }

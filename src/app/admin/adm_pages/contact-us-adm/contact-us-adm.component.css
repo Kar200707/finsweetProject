@@ -1,0 +1,21 @@
+mat-card {
+  margin-bottom: 20px;
+}
+
+div + div {
+  margin-top: 10px;
+}
+
+div > span {
+  color: #313131;
+  font-weight: bolder;
+  width: 90px;
+  display: inline-block;
+}
+
+div > span + span {
+  color: #494949;
+  font-weight: 500;
+  margin-left: 30px;
+  width: 87%;
+}

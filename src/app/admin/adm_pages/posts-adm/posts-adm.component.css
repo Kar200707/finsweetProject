@@ -1,3 +1,8 @@
+.parent-div {
+  display: flex;
+  flex-direction: column;
+}
+
 table {
   background-color: #e5e5e5;
 }
@@ -70,8 +75,6 @@ mat-dialog-actions {
   display: none;
   background-color: rgb(63, 63, 63);
   position: absolute;
-  /*bottom: -80px;*/
-  /*right: -100px;*/
   z-index: 1099;
   color: whitesmoke;
   font-weight: bold;

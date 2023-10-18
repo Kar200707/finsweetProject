@@ -1,0 +1,68 @@
+.parent-div {
+  display: flex;
+  flex-direction: column;
+}
+
+.parent-div {
+  display: flex;
+  flex-direction: column;
+}
+
+table {
+  background-color: #e5e5e5;
+}
+
+th {
+  color: #3a3a3a;
+}
+
+td {
+  color: #252525;
+}
+
+mat-dialog-actions {
+  display: inline-block;
+  padding: 1px;
+}
+
+.show-all-text {
+  display: none;
+  background-color: rgb(63, 63, 63);
+  position: absolute;
+  bottom: -80px;
+  right: -100px;
+  overflow-y: scroll;
+  height: 100px;
+  z-index: 999;
+  color: whitesmoke;
+  font-weight: bold;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.show-all-text::-webkit-scrollbar {
+  width: 4px;
+}
+
+.td-table {
+  position: relative;
+  overflow: unset;
+}
+
+.td-table:hover > .show-all-text {
+  display: block;
+}
+
+.category-td > img {
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+}
+
+.image-td > img {
+  width: 20px;
+  height: 20px;
+  object-fit: cover;
+  display: block;
+  margin: 10px 0;
+}

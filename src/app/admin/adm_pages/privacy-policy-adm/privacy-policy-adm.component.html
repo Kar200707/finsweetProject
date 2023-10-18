@@ -1,1 +1,31 @@
-<p>privacy-policy-adm works!</p>
+<mat-card>
+  <mat-card-content *ngIf="form != undefined">
+    <form (ngSubmit)="save()" [formGroup]="form">
+      <button style="margin-bottom: 20px" color="primary" mat-raised-button>SAVE</button>
+      <div class="row">
+        <mat-form-field style="width: 49%">
+          <mat-label>Title 1</mat-label>
+          <textarea formControlName="title1" name="title1" cols="20" rows="3" matInput></textarea>
+        </mat-form-field>
+        <mat-form-field style="width: 49%">
+          <mat-label>Title 2</mat-label>
+          <textarea formControlName="title2" name="title2" cols="20" rows="3" matInput></textarea>
+        </mat-form-field>
+      </div>
+      <div class="row">
+        <mat-form-field style="width: 49%">
+          <mat-label>Text 1</mat-label>
+          <textarea formControlName="text1" name="text1" cols="20" rows="8" matInput></textarea>
+        </mat-form-field>
+        <mat-form-field style="width: 49%">
+          <mat-label>Text 2</mat-label>
+          <textarea formControlName="text2" name="text2" cols="20" rows="8" matInput></textarea>
+        </mat-form-field>
+      </div>
+      <mat-form-field style="width: 100%">
+        <mat-label>Text 3</mat-label>
+        <textarea formControlName="text3" name="text3" cols="20" rows="10" matInput></textarea>
+      </mat-form-field>
+    </form>
+  </mat-card-content>
+</mat-card>

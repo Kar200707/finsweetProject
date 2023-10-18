@@ -19,56 +19,45 @@
       "image": "assets/Images/icons/economy.png",
       "title": "Economy",
       "shortDescription": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit.",
-      "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore."
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore."
     },
     {
       "id": "4",
       "image": "assets/Images/icons/technology.png",
       "title": "Technology",
       "shortDescription": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit.",
-      "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore."
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore."
     }
   ],
-  "logos": [
-    "assets/Images/logos/logos ipsum/Logo 1.png",
-    "assets/Images/logos/logos ipsum/Logo 2.png",
-    "assets/Images/logos/logos ipsum/Logo 3.png",
-    "assets/Images/logos/logos ipsum/Logo 4.png",
-    "assets/Images/logos/logos ipsum/Logo 5.png"
-  ],
+  "logos": {
+    "logo1": "assets/Images/logos/logos ipsum/Logo 1.png",
+    "logo2": "assets/Images/logos/logos ipsum/Logo 2.png",
+    "logo3": "assets/Images/logos/logos ipsum/Logo 3.png",
+    "logo4": "assets/Images/logos/logos ipsum/Logo 4.png",
+    "logo5": "assets/Images/logos/logos ipsum/Logo 5.png"
+  },
   "posts": [
     {
-      "id": "2",
-      "user_id": "4",
-      "category": "BUSINESS",
-      "category_icon": "assets/Images/icons/business.png",
-      "created_date": "Apr 17, 2023",
-      "title": "Font sizes in UI design: The complete guide to follow",
+      "user_id": 6,
+      "category": "STARTUP",
+      "category_icon": "assets/Images/icons/startup.png",
+      "created_date": "Oct 18, 2023",
+      "title": "Font sizes in UI design: The complete guide to follow.........",
       "image": "assets/Images/stained-glass.png",
-      "shortDescription": "8 Figma design systems that you can download for free today.",
-      "description": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident."
+      "shortDescription": "2 Figma design systems that you can download for free today.",
+      "description": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.",
+      "id": "3"
     },
     {
-      "id": "3",
-      "user_id": "1",
+      "user_id": 6,
       "category": "ECONOMY",
       "category_icon": "assets/Images/icons/economy.png",
-      "created_date": "Apr 17, 2023",
-      "title": "Font sizes in UI design: The complete guide to follow",
-      "image": "assets/Images/stained-glass.png",
-      "shortDescription": "8 Figma design systems that you can download for free today.",
-      "description": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident."
-    },
-    {
-      "id": "4",
-      "user_id": "3",
-      "category": "TECHNOLOGY",
-      "category_icon": "assets/Images/icons/technology.png",
-      "created_date": "Apr 17, 2023",
-      "title": "Font sizes in UI design: The complete guide to follow",
-      "image": "assets/Images/stained-glass.png",
-      "shortDescription": "8 Figma design systems that you can download for free today.",
-      "description": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident."
+      "created_date": "Oct 18, 2023",
+      "title": "Font sizes in UI design: The complete guide to follow......",
+      "image": "assets/Images/why-we-started-image.png",
+      "shortDescription": "3 Figma design systems that you can download for free today.",
+      "description": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.",
+      "id": "4"
     },
     {
       "id": "5",
@@ -78,7 +67,7 @@
       "created_date": "Apr 17, 2023",
       "title": "Font sizes in UI design: The complete guide to follow",
       "image": "assets/Images/stained-glass.png",
-      "shortDescription": "8 Figma design systems that you can download for free today.",
+      "shortDescription": "4 Figma design systems that you can download for free today.",
       "description": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident."
     },
     {
@@ -89,7 +78,7 @@
       "created_date": "Apr 17, 2023",
       "title": "Font sizes in UI design: The complete guide to follow",
       "image": "assets/Images/stained-glass.png",
-      "shortDescription": "8 Figma design systems that you can download for free today.",
+      "shortDescription": "5 Figma design systems that you can download for free today.",
       "description": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident."
     },
     {
@@ -100,7 +89,7 @@
       "created_date": "Apr 17, 2023",
       "title": "Font sizes in UI design: The complete guide to follow",
       "image": "assets/Images/stained-glass.png",
-      "shortDescription": "8 Figma design systems that you can download for free today.",
+      "shortDescription": "6 Figma design systems that you can download for free today.",
       "description": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident."
     },
     {
@@ -111,7 +100,7 @@
       "created_date": "Apr 17, 2023",
       "title": "Font sizes in UI design: The complete guide to follow",
       "image": "assets/Images/stained-glass.png",
-      "shortDescription": "8 Figma design systems that you can download for free today.",
+      "shortDescription": "7 Figma design systems that you can download for free today.",
       "description": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident."
     },
     {
@@ -133,7 +122,7 @@
       "created_date": "Apr 17, 2023",
       "title": "Font sizes in UI design: The complete guide to follow",
       "image": "assets/Images/stained-glass.png",
-      "shortDescription": "8 Figma design systems that you can download for free today.",
+      "shortDescription": "9 Figma design systems that you can download for free today.",
       "description": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident."
     }
   ],
@@ -154,24 +143,24 @@
       "id": 3
     },
     {
-      "f_name": "dsa",
-      "email": "dasdasd@mail.ru",
-      "message": "Bareva axpers inchxes co\n",
+      "f_name": "testo",
+      "email": "test@gmail.ocm",
+      "message": "Hello test helooooooo",
       "county": "Erevan",
       "id": 4
     }
   ],
   "privacy-policy": {
-    "last_update": "13th Hokteber 2023",
+    "last_update": "18 October, 2023",
     "texts": [
       {
-        "title": "Lorem ipsum dolor sit amet",
-        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do\n      eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim\n      ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut\n      aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit\n      in voluptate velit esse cillum dolore eu fugiat nulla pariatur.Lorem\n      ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod\n      tempor incididunt ut labore et dolore magna aliqua. Non blandit massa\n      enim nec. Scelerisque viverra mauris in aliquam sem. At risus viverra\n      adipiscing at in tellus. Sociis natoque penatibus et magnis dis parturient\n      montes. Ridiculus mus mauris vitae ultricies leo. Neque egestas congue quisque\n      egestas diam. Risus in hendrerit gravida rutrum quisque non. Sit amet nulla\n      facilisi morbi tempus iaculis urna. Lorem sed risus ultricies tristique nulla\n      aliquet enim. Volutpat blandit aliquam etiam erat velit. Orci eu lobortis\n      elementum nibh. Ipsum suspendisse ultrices gravida dictum fusce ut placerat\n      orci nulla. Neque convallis a cras semper auctor neque vitae tempus quam."
+        "title": "Lorem ipsum dolor sit amet 3",
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim\n      ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut  aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit\n      in voluptate velit esse cillum dolore eu fugiat nulla pariatur.Lorem\n      ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod\n      tempor incididunt ut labore et dolore magna aliqua. Non blandit massa\n      enim nec. Scelerisque viverra mauris in aliquam sem. At risus viverra\n      adipiscing at in tellus. Sociis natoque penatibus et magnis dis parturient\n      montes. Ridiculus mus mauris vitae ultricies leo. Neque egestas congue quisque\n      egestas diam. Risus in hendrerit gravida rutrum quisque non. Sit amet nulla\n      facilisi morbi tempus iaculis urna. Lorem sed risus ultricies tristique nulla\n      aliquet enim. Volutpat blandit aliquam etiam erat velit. Orci eu lobortis\n      elementum nibh. Ipsum suspendisse ultrices gravida dictum fusce ut placerat\n      orci nulla. Neque convallis a cras semper auctor neque vitae tempus quam."
       },
       {
-        "title": "Lorem ipsum dolor sit amet, consectetur\n      adipiscing elit, sed do eiusmod tempor.",
-        "text1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor\n      incididunt ut labore et dolore magna aliqua. Non blandit massa enim nec. Scelerisque\n      viverra mauris in aliquam sem. At risus viverra adipiscing at in tellus. Sociis natoque\n      penatibus et magnis dis parturient montes. Ridiculus mus mauris vitae ultricies leo.\n      Neque egestas congue quisque egestas diam. Risus in hendrerit gravida rutrum quisque\n      non. Sit amet nulla facilisi morbi tempus iaculis urna. Lorem sed risus ultricies\n      tristique nulla aliquet enim. Volutpat blandit aliquam etiam erat velit. Orci eu\n      lobortis elementum nibh. Ipsum suspendisse ultrices gravida dictum fusce ut placerat\n      orci nulla. Neque convallis a cras semper auctor neque vitae tempus quam.",
-        "text2": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor\n      incididunt ut labore et dolore magna aliqua. Non blandit massa enim nec. Scelerisque\n      viverra mauris in aliquam sem. At risus viverra adipiscing at in tellus. Sociis natoque\n      penatibus et magnis dis parturient montes. Ridiculus mus mauris vitae ultricies leo.\n      Neque egestas congue quisque egestas diam. Risus in hendrerit gravida rutrum quisque\n      non. Sit amet nulla facilisi morbi tempus iaculis urna. Lorem sed risus ultricies\n      tristique nulla aliquet enim. Volutpat blandit aliquam etiam erat velit. Orci eu\n      lobortis elementum nibh. Ipsum suspendisse ultrices gravida dictum fusce ut placerat\n      orci nulla. Neque convallis a cras semper auctor neque vitae tempus quam."
+        "title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.",
+        "text1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Non blandit massa enim nec. Scelerisque viverra mauris in aliquam sem. At risus viverra adipiscing at in tellus. Sociis natoque\n      penatibus et magnis dis parturient montes. Ridiculus mus mauris vitae ultricies leo.\n      Neque egestas congue quisque egestas diam. Risus in hendrerit gravida rutrum quisque\n      non. Sit amet nulla facilisi morbi tempus iaculis urna. Lorem sed risus ultricies\n      tristique nulla aliquet enim. Volutpat blandit aliquam etiam erat velit. Orci eu\n      lobortis elementum nibh. Ipsum suspendisse ultrices gravida dictum fusce ut placerat\n      orci nulla. Neque convallis a cras semper auctor neque vitae tempus quam.",
+        "text2": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Non blandit massa enim nec. Scelerisque viverra mauris in aliquam sem. At risus viverra adipiscing at in tellus. Sociis natoque\n      penatibus et magnis dis parturient montes. Ridiculus mus mauris vitae ultricies leo.\n      Neque egestas congue quisque egestas diam. Risus in hendrerit gravida rutrum quisque\n      non. Sit amet nulla facilisi morbi tempus iaculis urna. Lorem sed risus ultricies\n      tristique nulla aliquet enim. Volutpat blandit aliquam etiam erat velit. Orci eu\n      lobortis elementum nibh. Ipsum suspendisse ultrices gravida dictum fusce ut placerat\n      orci nulla. Neque convallis a cras semper auctor neque vitae tempus quam."
       }
     ]
   },

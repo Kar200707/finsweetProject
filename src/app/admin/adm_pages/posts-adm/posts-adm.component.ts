@@ -8,6 +8,7 @@ import {MatIconModule} from "@angular/material/icon";
 import {environment} from "../../../environment/environment";
 import {MatDialog, MatDialogModule} from "@angular/material/dialog";
 import {DialogPostsComponent} from "../dialog_components/dialog-posts/dialog-posts.component";
+import {DialoginputValueService} from "../../../services/dialoginput-value.service";
 
 @Component({
   selector: 'app-posts-adm',
@@ -34,16 +35,18 @@ export class PostsAdmComponent implements OnInit{
     'action'
   ];
 
-  constructor(private reqServ: RequestService, private dialog: MatDialog) {  }
+  constructor(private reqServ: RequestService, private dialog: MatDialog, private dialogDetails: DialoginputValueService) {  }
 
   ngOnInit():void {
     this.getPosts();
   }
 
   deletePost(id: string):void {
-    this.reqServ.deleteData(environment.posts.get + '/' + id)
-      .subscribe(():void => {})
-    this.getPosts();
+    if (confirm('delete this post ?')) {
+      this.reqServ.deleteData(environment.posts.get + '/' + id)
+        .subscribe(():void => {})
+      this.getPosts();
+    }
   }
 
   getPosts ():void {
@@ -53,9 +56,28 @@ export class PostsAdmComponent implements OnInit{
       })
   }
 
-  openDialog ():void {
+  openAddDialog ():void {
     this.dialog.open(DialogPostsComponent, {
       width: '520px',
     })
+
+    this.dialog.afterAllClosed.subscribe(() => {
+      this.getPosts();
+    })
+
+    this.dialogDetails.isCalled = 'postAdd'
+  }
+
+  openEditDialog (id: any):void {
+    this.dialog.open(DialogPostsComponent, {
+      width: '520px',
+    })
+
+    this.dialog.afterAllClosed.subscribe(() => {
+      this.getPosts();
+    })
+
+    this.dialogDetails.dialogPostsValue = id;
+    this.dialogDetails.isCalled = 'postEdit'
   }
 }

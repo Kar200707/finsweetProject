@@ -1,30 +1,77 @@
 <mat-card>
-  <h1 style="margin: 15px; color: #3a3a3a">Edit Post</h1>
-  <mat-card-content>
-    <form class="example-form">
+  <mat-card-content *ngIf="form != undefined && valuePost != undefined">
+    <form [formGroup]="form" (ngSubmit)="save()" class="example-form">
       <mat-form-field class="example-full-width">
         <mat-label>Title</mat-label>
-        <input matInput placeholder="enter your post title" value="">
+        <input
+          matInput
+          placeholder="enter your post title"
+          formControlName="title"
+          name="title"
+        >
+        <mat-error *ngIf="form.get('title')?.hasError('minlength')">
+          min symbol is <strong>3</strong>
+        </mat-error>
+        <mat-error *ngIf="form.get('title')?.hasError('maxlength')">
+          max symbol is <strong>70</strong>
+        </mat-error>
+        <mat-error *ngIf="form.get('title')?.hasError('required')">
+          title is <strong>required</strong>
+        </mat-error>
       </mat-form-field>
       <mat-form-field style="width: 100%">
         <mat-label>Category</mat-label>
-        <mat-select>
-          <mat-option *ngFor="let category of dataCategory" value="sdasd">
-            {{category.title}}
-          </mat-option>
+        <mat-select formControlName="category">
+          <ng-container *ngFor="let category of dataCategory">
+            <mat-option [value]="category.title.toUpperCase()">
+              {{ category.title }}
+            </mat-option>
+          </ng-container>
         </mat-select>
       </mat-form-field>
       <mat-form-field style="width: 100%">
         <mat-label>Image</mat-label>
-        <input matInput placeholder="enter your post title" value="">
+        <input
+          matInput
+          placeholder="enter your post image"
+          formControlName="image"
+          name="image">
+        <mat-error *ngIf="form.get('image')?.hasError('required')">
+          title is <strong>required</strong>
+        </mat-error>
       </mat-form-field>
       <mat-form-field style="width: 100%">
         <mat-label>short description</mat-label>
-        <textarea matInput placeholder="enter your post short deskription"></textarea>
+        <textarea
+          class="input_textarea"
+          matInput
+          placeholder="enter your post short deskription"
+          formControlName="shortDescription"
+          name="shortDescription"
+        ></textarea>
+        <mat-error *ngIf="form.get('shortDescription')?.hasError('minlength')">
+          min symbol is <strong>5</strong>
+        </mat-error>
+        <mat-error *ngIf="form.get('shortDescription')?.hasError('required')">
+          title is <strong>required</strong>
+        </mat-error>
       </mat-form-field>
       <mat-form-field class="example-full-width">
         <mat-label>Description</mat-label>
-        <textarea matInput placeholder="enter your post deskription"></textarea>
+        <textarea
+          class="input_textarea"
+          rows="3"
+          matInput
+          placeholder="enter your post description"
+          formControlName="description"
+          name="description"
+        ></textarea>
+        <mat-error *ngIf="form.get('description')?.hasError('minlength')">
+          min symbol is <strong>15</strong>
+        </mat-error>
+        <mat-error *ngIf="form.get('description')?.hasError('required')">
+          title is <strong>required</strong>
+        </mat-error>
       </mat-form-field>
       <button color="primary" mat-raised-button>SAVE</button>
     </form>

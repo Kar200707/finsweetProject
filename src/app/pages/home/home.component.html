@@ -1,14 +1,14 @@
 <div class="posted_on_startup_block">
   <div class="posted_on_startup_block-lear">
     <div class="posted_on_startup_container">
-      <div class="posted_on_startup_text_box">
+      <div *ngIf="dataAuthors != undefined && dataPosts[1].user_id != undefined" class="posted_on_startup_text_box">
         <h3>Posted on <span>{{ dataPosts === undefined ? 'loading...' : dataPosts[1].category }}</span></h3>
         <h1>{{ dataPosts === undefined ? 'loading...' : dataPosts[1].title }}</h1>
         <p>By <span>
-          {{ dataAuthors == undefined ? "loading..." : dataAuthors[(dataPosts[1].user_id == undefined ? 0 : dataPosts[1].user_id - 2)].name }}
+          {{ dataAuthors == undefined ? "loading..." : dataAuthors[dataPosts[1].user_id - 1].name }}
         </span>&nbsp; | &nbsp;{{ dataPosts !== undefined ? dataPosts[1].created_date : 'loading...' }}</p>
         <p>{{ dataPosts !== undefined ? dataPosts[1].description : 'loading...' }}</p>
-        <a style="margin-top: 48px;" class="global_button" [routerLink]="['/blog-post', (dataPosts == undefined ? 1 : dataPosts[1].user_id)]">Read More ></a>
+        <a style="margin-top: 48px;" class="global_button" [routerLink]="['/blog-post', (dataPosts == undefined ? 1 : dataPosts[1].id)]">Read More ></a>
       </div>
     </div>
   </div>
@@ -42,7 +42,7 @@
         <app-loader-bar style="width: 100%; margin-top: 30px" [Height]="'200px'" *ngIf="dataPosts === undefined"></app-loader-bar>
         <app-loader-bar style="width: 100%; margin-top: 30px" [Height]="'200px'" *ngIf="dataPosts === undefined"></app-loader-bar>
         <ng-container *ngFor="let items of dataPosts, let i = index">
-          <div class="list_box">
+          <div *ngIf="dataPosts != undefined && dataAuthors != undefined" class="list_box">
             <p>
               By
               <span [routerLink]="['/author', items.user_id]">
@@ -145,9 +145,11 @@
       <h4>Featured in</h4>
     </div>
     <app-loader-bar style="width: 100%" [Height]="'80px'" *ngIf="dataAuthors === undefined"></app-loader-bar>
-    <ng-container *ngFor="let item of dataLogos, let i = index">
-      <img *ngIf="i < 5" [src]="item" alt="this is logog">
-    </ng-container>
+    <img [src]="dataLogos.logo1" alt="this is logog">
+    <img [src]="dataLogos.logo2" alt="this is logog">
+    <img [src]="dataLogos.logo3" alt="this is logog">
+    <img [src]="dataLogos.logo4" alt="this is logog">
+    <img [src]="dataLogos.logo5" alt="this is logog">
   </div>
   <div class="testimonials_block">
     <div class="title_and_text_blocks">
