@@ -1,42 +1,20 @@
-.business_box,
-.economy_box,
-.technology_box {
+.category_box {
   padding: 32px;
   border: 1px solid rgba(109,	110,	118, .3);
-}
-
-.startup_box {
-  background: #FFD050;
-  padding: 32px;
-}
-
-.business_box,
-.startup_box,
-.economy_box,
-.technology_box {
   display: flex;
   flex-direction: column;
   transition: .2s scale;
 }
 
-.business_box:hover,
-.startup_box:hover,
-.economy_box:hover,
-.technology_box:hover {
+.category_box:hover {
   background-color: #FFD050;
 }
 
-.business_box:active,
-.startup_box:active,
-.economy_box:active,
-.technology_box:active {
+.category_box:active {
   scale: .95;
 }
 
-.business_box > div,
-.startup_box > div,
-.economy_box > div,
-.technology_box > div {
+.category_box > div {
   width: 48px;
   height: 48px;
   background-color: #FBF6EA;
@@ -46,10 +24,7 @@
   align-items: center;
 }
 
-.business_box > h3,
-.startup_box > h3,
-.economy_box > h3,
-.technology_box > h3 {
+.category_box > h3 {
   color: #232536;
   font-family: Sen;
   font-size: 28px;
@@ -60,10 +35,7 @@
   margin-top: 16px;
 }
 
-.business_box > p,
-.startup_box > p,
-.economy_box > p,
-.technology_box > p {
+.category_box > p {
   width: 232px;
   color: #6D6E76;
   font-family: Inter;
@@ -78,37 +50,20 @@
     flex-wrap: wrap;
   }
 
-  .business_box {
+  .category_box {
     margin: 0 20px;
     margin-top: 20px;
   }
 }
 
-@media screen and (max-width: 1110px) {
-  .startup_box,
-  .economy_box {
-    margin-left: 20px;
-  }
-}
-
 @media screen and (max-width: 1047px) {
-  .technology_box,
-  .economy_box {
-    margin-top: 20px;
-  }
-
-  .technology_box {
-    margin-left: 20px;
-    margin-right: 20px;
-  }
-
   .catagory_block {
     justify-content: center;
   }
 }
 
 @media screen and (max-width: 743px) {
-  .business_box {
+  .category_box {
     margin: 0;
     margin-top: 20px;
   }
@@ -117,10 +72,13 @@
     flex-direction: column;
   }
 
-  .business_box,
-  .startup_box,
-  .economy_box,
-  .technology_box {
+  .category_box {
     padding: 20px;
   }
+}
+
+.image-category {
+  width: 23px;
+  height: 23px;
+  object-fit: cover;
 }

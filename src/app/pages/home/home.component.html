@@ -23,18 +23,16 @@
       </div>
     </div>
     <div class="featured_post_box">
-      <div class="featured_post_img_and_text_block">
-        <img src="assets/Images/featured-Post_image.png" alt="this is image featured post block">
-        <p>By <span>John Doe</span>  &nbsp;l&nbsp;  May 23, 2022</p>
-        <h3>
-          Lorem ipsum dolor sit amet, consectetur
-          adipiscing elit, sed do eiusmod tempor.
-        </h3>
-        <span>
-          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore <br>
-          eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.
-        </span>
-        <a style="margin-top: 32px;" class="global_button" routerLink="/blog-post">Read More ></a>
+      <div *ngIf="dataPosts != undefined && dataAuthors != undefined" class="featured_post_img_and_text_block">
+        <img [src]="dataPosts[0].image" alt="this is image featured post block">
+        <p>
+          By
+          <span [routerLink]="['/author', dataPosts[0].user_id]">{{ dataPosts[0].user_id == undefined ? "loading..." : dataAuthors[dataPosts[0].user_id - 1].name }}</span>
+          &nbsp;l&nbsp;  {{ dataPosts[0].created_date }}
+        </p>
+        <h3>{{ dataPosts[0].title }}</h3>
+        <span>{{ dataPosts[0].description }}</span>
+        <a style="margin-top: 32px;" class="global_button" [routerLink]="['/blog-post', dataPosts[0].id]">Read More ></a>
       </div>
       <div class="featured_post_lists_block">
         <app-loader-bar style="width: 100%; margin-top: 30px" [Height]="'200px'" *ngIf="dataPosts === undefined"></app-loader-bar>
@@ -42,7 +40,7 @@
         <app-loader-bar style="width: 100%; margin-top: 30px" [Height]="'200px'" *ngIf="dataPosts === undefined"></app-loader-bar>
         <app-loader-bar style="width: 100%; margin-top: 30px" [Height]="'200px'" *ngIf="dataPosts === undefined"></app-loader-bar>
         <ng-container *ngFor="let items of dataPosts, let i = index">
-          <div *ngIf="dataPosts != undefined && dataAuthors != undefined" class="list_box">
+          <div *ngIf="dataPosts != undefined && dataAuthors != undefined && i > 0" class="list_box">
             <p>
               By
               <span [routerLink]="['/author', items.user_id]">
@@ -94,14 +92,7 @@
     <div style="margin-top: 48px;" class="catagory_block">
       <app-loader-bar style="width: 100%" [Height]="'300px'" *ngIf="dataCategory === undefined"></app-loader-bar>
       <div *ngFor="let data of dataCategory, let i = index">
-        <ng-container *ngIf="i < 4">
-          <app-category-block [dataCategory]="data"></app-category-block>
-        </ng-container>
-      </div>
-    </div>
-    <div style="margin-top: 48px;" class="catagory_block">
-      <div *ngFor="let data of dataCategory, let i = index">
-        <ng-container *ngIf="i >= 4 && i <= 8">
+        <ng-container *ngIf="i < 8">
           <app-category-block [dataCategory]="data"></app-category-block>
         </ng-container>
       </div>
@@ -120,7 +111,7 @@
         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
         quis nostrud exercitation ullamco laboris nisi ut aliquip.
       </p>
-      <a routerLink="/blog-post" style="margin-top: 32px;" class="global_button" >Discover our story ></a>
+      <a routerLink="/about-us" style="margin-top: 32px;" class="global_button" >Discover our story ></a>
     </div>
     <img src="assets/Images/why-we-started-image.png" alt="this is image why we started">
   </div>
@@ -144,12 +135,12 @@
       <p>We are</p>
       <h4>Featured in</h4>
     </div>
-    <app-loader-bar style="width: 100%" [Height]="'80px'" *ngIf="dataAuthors === undefined"></app-loader-bar>
-    <img [src]="dataLogos.logo1" alt="this is logog">
-    <img [src]="dataLogos.logo2" alt="this is logog">
-    <img [src]="dataLogos.logo3" alt="this is logog">
-    <img [src]="dataLogos.logo4" alt="this is logog">
-    <img [src]="dataLogos.logo5" alt="this is logog">
+    <app-loader-bar style="width: 100%" [Height]="'80px'" *ngIf="dataLogos === undefined"></app-loader-bar>
+    <img *ngIf="dataLogos != undefined" [src]="dataLogos.logo1" alt="this is logog">
+    <img *ngIf="dataLogos != undefined" [src]="dataLogos.logo2" alt="this is logog">
+    <img *ngIf="dataLogos != undefined" [src]="dataLogos.logo3" alt="this is logog">
+    <img *ngIf="dataLogos != undefined" [src]="dataLogos.logo4" alt="this is logog">
+    <img *ngIf="dataLogos != undefined" [src]="dataLogos.logo5" alt="this is logog">
   </div>
   <div class="testimonials_block">
     <div class="title_and_text_blocks">

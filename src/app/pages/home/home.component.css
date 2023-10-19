@@ -183,6 +183,11 @@
   color: #592EA9;
 }
 
+.featured_post_img_and_text_block > p > span:hover {
+  text-decoration: underline 1px;
+  text-underline-offset: 3px;
+}
+
 .featured_post_img_and_text_block > h3 {
   color: #232536;
   font-family: Sen;
@@ -393,8 +398,8 @@
 
 .catagory_block {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  flex-wrap: wrap;
+  gap: 25px;
 }
 
 .why_we_started_block {

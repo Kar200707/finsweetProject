@@ -284,8 +284,8 @@
 
 .list-authors_block {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  gap: 25px;
+  flex-wrap: wrap;
 }
 
 .list_of_authors_block > .container > h2 {

@@ -32,6 +32,7 @@ import {Authors} from "../../models/authors";
 export class BlogComponent implements OnInit {
   dataCategory!: Category[];
   dataPosts!: Posts[];
+  dataAuthors!: Authors[];
   pageIndex: number = 1;
 
   constructor(private reqServ: RequestService) {  }
@@ -64,6 +65,14 @@ export class BlogComponent implements OnInit {
           this.dataCategory = data;
         }
       )
+
+    this.reqServ.getData<Authors[]>(environment.author.get)
+      .subscribe(
+        (data: Authors[]):void => {
+          this.dataAuthors = data;
+        }
+      )
+
     this.loadPosts();
   }
 }

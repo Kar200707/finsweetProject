@@ -48,6 +48,12 @@
   margin-top: 20px;
 }
 
+.featured_post_block_blog_text_box > img {
+  width: 515px;
+  height: 359px;
+  object-fit: cover;
+}
+
 .featured_post_block_blog_text_box > p {
   color: #4C4C4C;
   font-family: Inter;
@@ -192,8 +198,8 @@
 
 .catagory_block {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  flex-wrap: wrap;
+  gap: 25px;
 }
 
 @media screen and (max-width: 1326px) {

@@ -7,6 +7,8 @@ import {Posts} from "../models/posts";
 export class DialoginputValueService {
   dialogPostsValue!: Posts;
   isCalled!: string;
+  isCalledCategory!: string;
+  idCatgory!: string;
 
   constructor() { }
 }

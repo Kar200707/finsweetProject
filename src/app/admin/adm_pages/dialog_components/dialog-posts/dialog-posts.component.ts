@@ -192,7 +192,7 @@ export class DialogPostsComponent implements OnInit{
 
           this.reqServ.addData(environment.posts.get, obj)
             .subscribe((posts):void=>{
-              this.dialog.closeAll()
+              this.dialog.closeAll();
             })
         })
     }

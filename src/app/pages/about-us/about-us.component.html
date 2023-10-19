@@ -106,15 +106,7 @@
       <div style="margin-top: 48px;" class="list-authors_block">
         <app-loader-bar style="width: 100%" [Height]="'350px'" *ngIf="dataAuthors === undefined"></app-loader-bar>
         <ng-container *ngFor="let data of dataAuthors, let i = index">
-          <div *ngIf="i < 4">
-            <app-list-outhors [dataAuthors]="data" style="width: 100%"></app-list-outhors>
-          </div>
-        </ng-container>
-      </div>
-      <div style="margin-top: 48px;" class="list-authors_block">
-        <app-loader-bar style="width: 100%" [Height]="'350px'" *ngIf="dataAuthors === undefined"></app-loader-bar>
-        <ng-container *ngFor="let data of dataAuthors, let i = index">
-          <div *ngIf="i >= 4 && i <= 8">
+          <div *ngIf="i < 15">
             <app-list-outhors [dataAuthors]="data" style="width: 100%"></app-list-outhors>
           </div>
         </ng-container>

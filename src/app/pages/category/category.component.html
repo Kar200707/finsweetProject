@@ -27,7 +27,7 @@
         [Height]="'312px'"
       ></app-loader-bar>
       <div *ngFor="let data of dataPosts, let i = index">
-        <app-posts *ngIf="i < 4" [isPrevPage]="'category'" [dataPosts]="data"></app-posts>
+        <app-posts [isPrevPage]="'category'" [dataPosts]="data"></app-posts>
       </div>
     </div>
     <div class="categories_block">
@@ -39,7 +39,7 @@
         [style.background-color]="isSelectCategory[i]?.isSelect ? '#FFD050': 'white'"
         class="category">
         <div class="category_icon">
-          <img [src]="item.image" alt="this is icon">
+          <img [src]="item.image" class="category-image" alt="this is icon">
         </div>
         <h3>{{ item.title }}</h3>
       </div>

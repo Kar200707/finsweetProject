@@ -4,6 +4,7 @@
     style="align-self: flex-end;
     margin-bottom: 10px"
     mat-raised-button
+    (click)="openAddDialog()"
   >ADD</button>
   <table mat-table [dataSource]="dataCategory" class="mat-elevation-z8">
     <ng-container matColumnDef="category">
@@ -43,7 +44,7 @@
           <mat-icon color="warn">delete</mat-icon>
         </button>
         <mat-dialog-actions>
-          <button mat-icon-button>
+          <button (click)="openEditDialog(element.id)" mat-icon-button>
             <mat-icon color="primary">edit</mat-icon>
           </button>
         </mat-dialog-actions>

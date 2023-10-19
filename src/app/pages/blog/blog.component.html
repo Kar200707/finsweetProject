@@ -1,18 +1,13 @@
 <div class="featured_post_block_blog">
   <div class="container">
-    <div class="featured_post_block_blog_text_box">
+    <div *ngIf="dataPosts != undefined && dataAuthors != undefined" class="featured_post_block_blog_text_box">
       <h5>Featured Post</h5>
-      <h2>
-        Step-by-step guide to choosing great font pairs
-      </h2>
-      <p>By <span>John Doe</span>  &nbsp;l&nbsp;  May 23, 2022</p>
-      <span>
-        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolor
-        e eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.
-      </span>
-      <a routerLink="/blog-post" style="margin-top: 32px;" class="global_button">Read More ></a>
+      <h2>{{ dataPosts[0].title }}</h2>
+      <p>By <span>{{ dataPosts[0].user_id != undefined ? dataAuthors[dataPosts[0].user_id - 1].name : 'loading' }}</span>  &nbsp;l&nbsp;  {{ dataPosts[0].created_date }}</p>
+      <span>{{ dataPosts[0].description }}</span>
+      <a [routerLink]="['/blog-post', dataPosts[0].id]" style="margin-top: 32px;" class="global_button">Read More ></a>
     </div>
-    <img src="assets/Images/featured_post_block_blog_img.png" alt="this is image">
+    <img [src]="dataPosts != undefined ? dataPosts[0].image : ''" alt="this is image">
   </div>
 </div>
 <div class="all_post_block_blog">
@@ -39,14 +34,7 @@
     <div style="margin-top: 48px;" class="catagory_block">
       <app-loader-bar style="width: 100%" [Height]="'300px'" *ngIf="dataCategory == undefined"></app-loader-bar>
       <div *ngFor="let data of dataCategory, let i = index">
-        <ng-container *ngIf="i < 4">
-          <app-category-block [dataCategory]="data"></app-category-block>
-        </ng-container>
-      </div>
-    </div>
-    <div style="margin-top: 48px;" class="catagory_block">
-      <div *ngFor="let data of dataCategory, let i = index">
-        <ng-container *ngIf="i >= 4 && i <= 8">
+        <ng-container *ngIf="i < 8">
           <app-category-block [dataCategory]="data"></app-category-block>
         </ng-container>
       </div>

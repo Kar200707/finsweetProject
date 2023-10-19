@@ -5,6 +5,7 @@ import {RequestService} from "../../services/request.service";
 import {Authors} from "../../models/authors";
 import {environment} from "../../environment/environment";
 import {Posts} from "../../models/posts";
+import {NgIf} from "@angular/common";
 
 @Component({
   selector: 'app-blog-post',
@@ -16,6 +17,7 @@ import {Posts} from "../../models/posts";
   standalone: true,
   imports: [
     JoinOurTeamComponent,
+    NgIf,
   ]
 })
 export class BlogPostComponent implements OnInit{
