@@ -39,6 +39,14 @@
         <mat-icon>help</mat-icon>
         Privacy-Policy
       </button>
+      <button routerLinkActive="active-rout" *ngIf="userData.superAdmin" routerLink="/" class="nav-btn" color="primary" mat-button>
+        <mat-icon>assignment_ind</mat-icon>
+        Users
+      </button>
+      <button routerLinkActive="active-rout" routerLink="/admin/register" class="nav-btn" color="primary" mat-button>
+        <mat-icon>how_to_reg</mat-icon>
+        Register
+      </button>
       <button routerLink="/" class="nav-btn" color="primary" mat-button>
         <mat-icon>logout</mat-icon>
         Home

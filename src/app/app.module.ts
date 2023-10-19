@@ -101,6 +101,16 @@ const routes: Routes = [
         loadComponent: () => import('./admin/adm_pages/privacy-policy-adm/privacy-policy-adm.component').then(m => m.PrivacyPolicyAdmComponent),
         title: 'Admin Privacy Policy'
       },
+      {
+        path: 'user',
+        loadComponent: () => import('./admin/adm_pages/users/users.component').then(m => m.UsersComponent),
+        title: 'Admin Users'
+      },
+      {
+        path: 'register',
+        loadComponent: () => import('./admin/adm_pages/register/register.component').then(m => m.RegisterComponent),
+        title: 'Admin Register'
+      },
     ]
   },
   {

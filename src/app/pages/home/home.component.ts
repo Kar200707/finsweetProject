@@ -52,7 +52,7 @@ export class HomeComponent implements OnInit {
         }
       )
 
-    this.reqServ.getData<Authors[]>(environment.author.get)
+    this.reqServ.getData<Authors[]>(environment.author.get + '?superAdmin=false')
       .subscribe(
         (data: Authors[]):void => {
           this.dataAuthors = data;

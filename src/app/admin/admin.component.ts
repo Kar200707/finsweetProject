@@ -58,7 +58,7 @@ const TREE_DATA: FoodNode[] = [
 export class AdminComponent{
   userData: Authors = JSON.parse(localStorage.getItem('userData') ?? 'null').user;
 
-  constructor(private reqServ: RequestService, private router: Router) { }
+  constructor(private reqServ: RequestService, private router: Router) {  }
 
   logOut():void {
     localStorage.removeItem('token');

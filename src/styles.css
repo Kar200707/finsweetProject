@@ -3,6 +3,10 @@
 @import "assets/Fonts/Sen/sen.css";
 @import "app/styles/button.css";
 
+.mat-drawer-inner-container::-webkit-scrollbar {
+  display: none;
+}
+
 ::-webkit-scrollbar {
   width: 10px;
 }
