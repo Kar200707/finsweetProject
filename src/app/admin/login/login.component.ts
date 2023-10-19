@@ -7,6 +7,7 @@ import {NgIf} from "@angular/common";
 import {MatIconModule} from "@angular/material/icon";
 import {MatButtonModule} from "@angular/material/button";
 import {Router} from "@angular/router";
+import {environment} from "../../environment/environment";
 
 @Component({
   selector: 'app-login',
@@ -44,7 +45,7 @@ export class LoginComponent {
       email: this.form.get('email')?.value,
       password: this.form.get('password')?.value,
     }
-    this.reqServ.addData<any>('http://localhost:3000/login', obj)
+    this.reqServ.addData<any>(environment.host + '/login', obj)
       .subscribe((data):void=>{
         localStorage.setItem('token', data.accessToken)
         localStorage.setItem('userData', JSON.stringify(data))

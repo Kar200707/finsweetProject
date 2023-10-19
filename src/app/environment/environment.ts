@@ -4,6 +4,10 @@ export const environment = {
     get: host + 'category'
   },
 
+  host: {
+    get: host
+  },
+
   author: {
     get: host + 'users'
   },
