@@ -11,6 +11,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatButtonModule, MatIconButton} from "@angular/material/button";
 import {adminGuard} from "./guards/admin.guard";
 import {loginGuard} from "./guards/login.guard";
+import {userAdmGuard} from "./guards/user-adm.guard";
 
 const routes: Routes = [
   {
@@ -104,6 +105,7 @@ const routes: Routes = [
       {
         path: 'user',
         loadComponent: () => import('./admin/adm_pages/users/users.component').then(m => m.UsersComponent),
+        canActivate: [userAdmGuard],
         title: 'Admin Users'
       },
       {

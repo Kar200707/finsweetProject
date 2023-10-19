@@ -82,6 +82,6 @@ export class CategoryAdmComponent implements OnInit{
       this.getPosts();
     })
 
-    this.dialogDetails.isCalled = 'categoryEdit'
+    this.dialogDetails.isCalledCategory = 'categoryAdd'
   }
 }

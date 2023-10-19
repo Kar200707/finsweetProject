@@ -45,10 +45,10 @@
   },
   "posts": [
     {
-      "user_id": 6,
-      "category": "BUSINESS",
-      "category_icon": "assets/Images/icons/business.png",
-      "created_date": "Oct 18, 2023",
+      "user_id": 1,
+      "category": "INJINER",
+      "category_icon": "https://cdn-icons-png.flaticon.com/512/3700/3700845.png",
+      "created_date": "Oct 19, 2023",
       "title": "Kont sizes in UI design: The complete guide to follow..........",
       "image": "assets/Images/stained-glass.png",
       "shortDescription": "2 Figma design systems that you can download for free today.",
@@ -269,6 +269,21 @@
       "linkedin": "https://www.google.com/",
       "superAdmin": false,
       "id": 8
+    },
+    {
+      "email": "kar@gmail.com",
+      "password": "$2a$10$YHMAYqLBQ6SpMFrGfGPNrO.gqgPorIAJoSQIUPF4FrCdgNPdeb31q",
+      "image": "https://i1.sndcdn.com/avatars-000425326518-6qekg1-t500x500.jpg",
+      "name": "Kar",
+      "title": "???",
+      "description": "???????????????",
+      "bio": "////",
+      "facebook": "/",
+      "twitter": "/",
+      "instagram": "/",
+      "linkedin": "/",
+      "superAdmin": true,
+      "id": 9
     }
   ]
 }

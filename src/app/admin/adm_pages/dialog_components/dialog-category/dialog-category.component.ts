@@ -102,32 +102,34 @@ export class DialogCategoryComponent {
   }
 
   save ():void {
-    if (this.valueDetails.isCalledCategory == 'categoryEdit') {
+    if (this.form.valid) {
+      if (this.valueDetails.isCalledCategory == 'categoryEdit') {
 
-      const obj = {
-        image: this.form.get('icon')?.value,
-        title: this.form.get('name')?.value,
-        shortDescription: this.form.get('shortDescription')?.value,
-        description: this.form.get('description')?.value
+        const obj = {
+          image: this.form.get('icon')?.value,
+          title: this.form.get('name')?.value,
+          shortDescription: this.form.get('shortDescription')?.value,
+          description: this.form.get('description')?.value
+        }
+
+        this.reqServ.editData(environment.category.get + '/' + this.valueCategory.id, obj)
+          .subscribe(():void => {
+            this.dialog.closeAll();
+          })
+
+      } else {
+        const obj = {
+          image: this.form.get('icon')?.value,
+          title: this.form.get('name')?.value,
+          shortDescription: this.form.get('shortDescription')?.value,
+          description: this.form.get('description')?.value
+        }
+
+        this.reqServ.addData(environment.category.get, obj)
+          .subscribe(():void => {
+            this.dialog.closeAll();
+          })
       }
-
-      this.reqServ.editData(environment.category.get + '/' + this.valueCategory.id, obj)
-        .subscribe(():void => {
-          this.dialog.closeAll();
-        })
-
-    } else {
-      const obj = {
-        image: this.form.get('icon')?.value,
-        title: this.form.get('name')?.value,
-        shortDescription: this.form.get('shortDescription')?.value,
-        description: this.form.get('description')?.value
-      }
-
-      this.reqServ.addData(environment.category.get, obj)
-        .subscribe(():void => {
-          this.dialog.closeAll();
-        })
     }
   }
 }

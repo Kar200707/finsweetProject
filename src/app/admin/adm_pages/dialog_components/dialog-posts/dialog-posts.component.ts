@@ -115,86 +115,88 @@ export class DialogPostsComponent implements OnInit{
   }
 
   save ():void {
-    if (this.valueDetails.isCalled == 'postEdit') {
-      let date: Date = new Date();
-      let userData = JSON.parse(localStorage.getItem('userData') ?? 'null').user;
+    if (this.form.valid) {
+      if (this.valueDetails.isCalled == 'postEdit') {
+        let date: Date = new Date();
+        let userData = JSON.parse(localStorage.getItem('userData') ?? 'null').user;
 
-      let months: string[] = [
-        "Jan",
-        "Feb",
-        "Mar",
-        "Apr",
-        "May",
-        "Jun",
-        "Jul",
-        "Aug",
-        "Sep",
-        "Oct",
-        "Nov",
-        "Dec"
-      ]
+        let months: string[] = [
+          "Jan",
+          "Feb",
+          "Mar",
+          "Apr",
+          "May",
+          "Jun",
+          "Jul",
+          "Aug",
+          "Sep",
+          "Oct",
+          "Nov",
+          "Dec"
+        ]
 
-      this.reqServ.getData<Category[]>(environment.category.get + '?title=' +
-        this.form.get('category')?.value.slice(0, 1).toUpperCase()
-        + this.form.get('category')?.value.slice(1).toLowerCase()
-      )
-        .subscribe((category: Category[]):void => {
-          const obj = {
-            user_id: userData.id,
-            category: this.form.get('category')?.value,
-            category_icon: category[0].image,
-            created_date: months[date.getMonth()] + ' ' + date.getDate() + ', ' + date.getFullYear(),
-            title: this.form.get('title')?.value,
-            image: this.form.get('image')?.value,
-            shortDescription: this.form.get('shortDescription')?.value,
-            description: this.form.get('description')?.value
-          }
+        this.reqServ.getData<Category[]>(environment.category.get + '?title=' +
+          this.form.get('category')?.value.slice(0, 1).toUpperCase()
+          + this.form.get('category')?.value.slice(1).toLowerCase()
+        )
+          .subscribe((category: Category[]):void => {
+            const obj = {
+              user_id: userData.id,
+              category: this.form.get('category')?.value,
+              category_icon: category[0].image,
+              created_date: months[date.getMonth()] + ' ' + date.getDate() + ', ' + date.getFullYear(),
+              title: this.form.get('title')?.value,
+              image: this.form.get('image')?.value,
+              shortDescription: this.form.get('shortDescription')?.value,
+              description: this.form.get('description')?.value
+            }
 
-          this.reqServ.editData(environment.posts.get + '/' + this.valueDetails.dialogPostsValue, obj)
-            .subscribe((posts):void=>{
-              this.dialog.closeAll()
-            })
-        })
-    } else {
-      let date: Date = new Date();
-      let userData = JSON.parse(localStorage.getItem('userData') ?? 'null').user;
+            this.reqServ.editData(environment.posts.get + '/' + this.valueDetails.dialogPostsValue, obj)
+              .subscribe((posts):void=>{
+                this.dialog.closeAll()
+              })
+          })
+      } else {
+        let date: Date = new Date();
+        let userData = JSON.parse(localStorage.getItem('userData') ?? 'null').user;
 
-      let months: string[] = [
-        "Jan",
-        "Feb",
-        "Mar",
-        "Apr",
-        "May",
-        "Jun",
-        "Jul",
-        "Aug",
-        "Sep",
-        "Oct",
-        "Nov",
-        "Dec"
-      ]
+        let months: string[] = [
+          "Jan",
+          "Feb",
+          "Mar",
+          "Apr",
+          "May",
+          "Jun",
+          "Jul",
+          "Aug",
+          "Sep",
+          "Oct",
+          "Nov",
+          "Dec"
+        ]
 
-      this.reqServ.getData<Category[]>(environment.category.get + '?title=' +
-        this.form.get('category')?.value.slice(0, 1).toUpperCase()
-        + this.form.get('category')?.value.slice(1).toLowerCase()
-      )
-        .subscribe((category: Category[]):void => {
-          const obj = {
-            user_id: userData.id,
-            category: this.form.get('category')?.value,
-            category_icon: category[0].image,
-            created_date: months[date.getMonth()] + ' ' + date.getDate() + ', ' + date.getFullYear(),
-            title: this.form.get('title')?.value,
-            image: this.form.get('image')?.value,
-            shortDescription: this.form.get('shortDescription')?.value,
-            description: this.form.get('description')?.value
-          }
+        this.reqServ.getData<Category[]>(environment.category.get + '?title=' +
+          this.form.get('category')?.value.slice(0, 1).toUpperCase()
+          + this.form.get('category')?.value.slice(1).toLowerCase()
+        )
+          .subscribe((category: Category[]):void => {
+            const obj = {
+              user_id: userData.id,
+              category: this.form.get('category')?.value,
+              category_icon: category[0].image,
+              created_date: months[date.getMonth()] + ' ' + date.getDate() + ', ' + date.getFullYear(),
+              title: this.form.get('title')?.value,
+              image: this.form.get('image')?.value,
+              shortDescription: this.form.get('shortDescription')?.value,
+              description: this.form.get('description')?.value
+            }
 
-          this.reqServ.addData(environment.posts.get, obj)
-            .subscribe((posts):void=>{
-              this.dialog.closeAll();
-            })
-        })
+            this.reqServ.addData(environment.posts.get, obj)
+              .subscribe((posts):void=>{
+                this.dialog.closeAll();
+              })
+          })
+      }
     }
   }
 }

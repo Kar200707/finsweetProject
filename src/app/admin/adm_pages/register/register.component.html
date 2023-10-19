@@ -1,1 +1,176 @@
-<p>register works!</p>
+<mat-card>
+  <h1>Register</h1>
+  <mat-card-content>
+    <form
+      style="display: flex; align-self: center; justify-content: space-between"
+      [formGroup]="form" (ngSubmit)="save()"
+      class="example-form"
+    >
+      <div style="width: 48%">
+        <mat-form-field class="example-full-width">
+          <mat-label>Name</mat-label>
+          <input
+            matInput
+            placeholder="enter your name"
+            formControlName="name"
+            name="name"
+          >
+          <mat-error *ngIf="form.get('name')?.hasError('minlength')">
+            min symbol is <strong>3</strong>
+          </mat-error>
+          <mat-error *ngIf="form.get('name')?.hasError('maxlength')">
+            max symbol is <strong>70</strong>
+          </mat-error>
+          <mat-error *ngIf="form.get('name')?.hasError('required')">
+            name is <strong>required</strong>
+          </mat-error>
+        </mat-form-field>
+        <mat-form-field style="width: 100%">
+          <mat-label>Avatar</mat-label>
+          <input
+            matInput
+            placeholder="enter your avatar"
+            formControlName="image"
+            name="image">
+          <mat-error *ngIf="form.get('image')?.hasError('required')">
+            image is <strong>required</strong>
+          </mat-error>
+        </mat-form-field>
+        <mat-form-field style="width: 100%">
+          <mat-label>Title</mat-label>
+          <textarea
+            class="input_textarea"
+            matInput
+            placeholder="enter your title"
+            formControlName="title"
+            name="title"
+          ></textarea>
+          <mat-error *ngIf="form.get('title')?.hasError('minlength')">
+            min symbol is <strong>5</strong>
+          </mat-error>
+          <mat-error *ngIf="form.get('title')?.hasError('required')">
+            title is <strong>required</strong>
+          </mat-error>
+        </mat-form-field>
+        <mat-form-field class="example-full-width">
+          <mat-label>Description</mat-label>
+          <textarea
+            class="input_textarea"
+            rows="3"
+            matInput
+            placeholder="enter your description"
+            formControlName="description"
+            name="description"
+          ></textarea>
+          <mat-error *ngIf="form.get('description')?.hasError('minlength')">
+            min symbol is <strong>15</strong>
+          </mat-error>
+          <mat-error *ngIf="form.get('description')?.hasError('required')">
+            description is <strong>required</strong>
+          </mat-error>
+        </mat-form-field>
+        <button color="primary" mat-raised-button>SAVE</button>
+        <strong *ngIf="isRegistred" style="color: #0cbd37; margin-left: 20px">Rigestered</strong>
+      </div>
+      <div style="width: 49%">
+        <mat-form-field class="example-full-width">
+          <mat-label>email</mat-label>
+          <input
+            matInput
+            placeholder="enter your email"
+            formControlName="email"
+            name="email"
+          >
+          <mat-error *ngIf="form.get('email')?.hasError('minlength')">
+            min symbol is <strong>3</strong>
+          </mat-error>
+          <mat-error *ngIf="form.get('email')?.hasError('maxlength')">
+            max symbol is <strong>70</strong>
+          </mat-error>
+          <mat-error *ngIf="form.get('email')?.hasError('email')">
+            <strong>email is not valid</strong>
+          </mat-error>
+          <mat-error *ngIf="form.get('email')?.hasError('required')">
+            title is <strong>required</strong>
+          </mat-error>
+        </mat-form-field>
+        <mat-form-field style="width: 100%">
+          <mat-label>password</mat-label>
+          <input
+            matInput
+            placeholder="enter your password"
+            type="password"
+            formControlName="password"
+            name="password">
+          <mat-error *ngIf="form.get('password')?.hasError('required')">
+            password is <strong>required</strong>
+          </mat-error>
+        </mat-form-field>
+        <mat-form-field style="width: 100%">
+          <mat-label>Biography</mat-label>
+          <textarea
+            class="input_textarea"
+            matInput
+            placeholder="enter your biography"
+            formControlName="bio"
+            name="bio"
+          ></textarea>
+          <mat-error *ngIf="form.get('bio')?.hasError('minlength')">
+            min symbol is <strong>5</strong>
+          </mat-error>
+          <mat-error *ngIf="form.get('bio')?.hasError('required')">
+            biography is <strong>required</strong>
+          </mat-error>
+        </mat-form-field>
+        <mat-form-field class="example-full-width">
+          <mat-label>Facebook</mat-label>
+          <input
+            matInput
+            placeholder="enter your facebook url"
+            formControlName="facebook"
+            name="facebook"
+          />
+          <mat-error *ngIf="form.get('facebook')?.hasError('required')">
+            facebook is <strong>required</strong>
+          </mat-error>
+        </mat-form-field>
+        <mat-form-field class="example-full-width">
+          <mat-label>Twitter</mat-label>
+          <input
+            matInput
+            placeholder="enter your twitter url"
+            formControlName="twitter"
+            name="twitter"
+          />
+          <mat-error *ngIf="form.get('twitter')?.hasError('required')">
+            twitter is <strong>required</strong>
+          </mat-error>
+        </mat-form-field>
+        <mat-form-field class="example-full-width">
+          <mat-label>Instagram</mat-label>
+          <input
+            matInput
+            placeholder="enter your instagram url"
+            formControlName="instagram"
+            name="instagram"
+          />
+          <mat-error *ngIf="form.get('instagram')?.hasError('required')">
+            instagram is <strong>required</strong>
+          </mat-error>
+        </mat-form-field>
+        <mat-form-field class="example-full-width">
+          <mat-label>Linkedin</mat-label>
+          <input
+            matInput
+            placeholder="enter your linkedin url"
+            formControlName="linkedin"
+            name="linkedin"
+          />
+          <mat-error *ngIf="form.get('linkedin')?.hasError('required')">
+            linkedin is <strong>required</strong>
+          </mat-error>
+        </mat-form-field>
+      </div>
+    </form>
+  </mat-card-content>
+</mat-card>

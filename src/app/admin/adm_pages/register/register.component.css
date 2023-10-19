@@ -1,0 +1,22 @@
+textarea {
+  resize: none;
+}
+
+h1 {
+  margin: 13px;
+  color: #4f4f4f;
+  text-underline-offset: 7px;
+  text-decoration: underline 3px #3f51b5;
+}
+
+.example-form {
+  width: 100%;
+}
+
+.example-full-width {
+  width: 100%;
+}
+
+.input_textarea::-webkit-scrollbar {
+  width: 2px;
+}

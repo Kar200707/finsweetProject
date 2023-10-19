@@ -1,6 +1,6 @@
 <div class="menu-panel">
   <mat-toolbar class="mat-toolbar">
-    <span><span style="color:#301ac2;">FinsWeet</span> Admin Panel</span>
+    <span><span style="color:#301ac2;">FinsWeet {{ userData.superAdmin ? 'super' : '' }}</span> Admin Panel</span>
     <div *ngIf="userData !== undefined" class="authors-details">
       <button (click)="logOut()" class="logout-btn" color="warn" mat-button>
         <mat-icon>logout</mat-icon>
@@ -39,13 +39,13 @@
         <mat-icon>help</mat-icon>
         Privacy-Policy
       </button>
-      <button routerLinkActive="active-rout" *ngIf="userData.superAdmin" routerLink="/" class="nav-btn" color="primary" mat-button>
-        <mat-icon>assignment_ind</mat-icon>
-        Users
-      </button>
       <button routerLinkActive="active-rout" routerLink="/admin/register" class="nav-btn" color="primary" mat-button>
         <mat-icon>how_to_reg</mat-icon>
         Register
+      </button>
+      <button routerLinkActive="active-rout" *ngIf="userData.superAdmin" routerLink="/admin/user" class="nav-btn" color="primary" mat-button>
+        <mat-icon>assignment_ind</mat-icon>
+        Users
       </button>
       <button routerLink="/" class="nav-btn" color="primary" mat-button>
         <mat-icon>logout</mat-icon>
