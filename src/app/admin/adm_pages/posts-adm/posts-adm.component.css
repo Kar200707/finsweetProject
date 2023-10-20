@@ -3,6 +3,10 @@
   flex-direction: column;
 }
 
+.edit-button:disabled {
+  opacity: .5;
+}
+
 table {
   background-color: #e5e5e5;
 }

@@ -4,6 +4,7 @@
     style="align-self: flex-end;
     margin-bottom: 10px"
     mat-raised-button
+    [disabled]="userData.superAdmin"
     (click)="openAddDialog()"
   >ADD</button>
   <table mat-table [dataSource]="dataPosts" class="mat-elevation-z8">
@@ -61,7 +62,12 @@
           <mat-icon color="warn">delete</mat-icon>
         </button>
         <mat-dialog-actions>
-          <button  (click)="openEditDialog(element.id)" mat-icon-button>
+          <button
+            (click)="openEditDialog(element.id)"
+            [disabled]="userData.superAdmin"
+            mat-icon-button
+            class="edit-button"
+          >
             <mat-icon color="primary">edit</mat-icon>
           </button>
         </mat-dialog-actions>

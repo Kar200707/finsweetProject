@@ -1,0 +1,15 @@
+textarea {
+  resize: none;
+}
+
+.example-form {
+  width: 100%;
+}
+
+.example-full-width {
+  width: 100%;
+}
+
+.input_textarea::-webkit-scrollbar {
+  width: 2px;
+}

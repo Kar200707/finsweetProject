@@ -9,6 +9,7 @@ import {environment} from "../../../environment/environment";
 import {MatDialog, MatDialogModule} from "@angular/material/dialog";
 import {DialogPostsComponent} from "../dialog_components/dialog-posts/dialog-posts.component";
 import {DialoginputValueService} from "../../../services/dialoginput-value.service";
+import {Authors} from "../../../models/authors";
 
 @Component({
   selector: 'app-posts-adm',
@@ -24,6 +25,7 @@ import {DialoginputValueService} from "../../../services/dialoginput-value.servi
 })
 export class PostsAdmComponent implements OnInit{
   dataPosts!: Posts[];
+  userData: Authors = JSON.parse(localStorage.getItem('userData') ?? 'null').user;
 
   displayedColumns: string[] = [
     'title',

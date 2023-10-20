@@ -9,6 +9,7 @@ export class DialoginputValueService {
   isCalled!: string;
   isCalledCategory!: string;
   idCatgory!: string;
+  idUser!: string;
 
   constructor() { }
 }

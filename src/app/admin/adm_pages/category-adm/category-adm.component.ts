@@ -10,6 +10,7 @@ import {NgIf} from "@angular/common";
 import {DialogPostsComponent} from "../dialog_components/dialog-posts/dialog-posts.component";
 import {DialogCategoryComponent} from "../dialog_components/dialog-category/dialog-category.component";
 import {DialoginputValueService} from "../../../services/dialoginput-value.service";
+import {Authors} from "../../../models/authors";
 
 @Component({
   selector: 'app-category-adm',
@@ -26,6 +27,7 @@ import {DialoginputValueService} from "../../../services/dialoginput-value.servi
 })
 export class CategoryAdmComponent implements OnInit{
   dataCategory!: Category[];
+  userData: Authors = JSON.parse(localStorage.getItem('userData') ?? 'null').user;
 
   displayedColumns: string[] = [
     'category',

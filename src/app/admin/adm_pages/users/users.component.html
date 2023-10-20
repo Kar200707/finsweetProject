@@ -33,6 +33,15 @@
         <button (click)="deleteUser(element.id)"  mat-icon-button>
           <mat-icon color="warn">delete</mat-icon>
         </button>
+        <mat-dialog-actions>
+          <button
+            (click)="openEditDialog(element.id)"
+            mat-icon-button
+            class="edit-button"
+          >
+            <mat-icon color="primary">edit</mat-icon>
+          </button>
+        </mat-dialog-actions>
       </td>
     </ng-container>
 

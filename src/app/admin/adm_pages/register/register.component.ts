@@ -127,7 +127,7 @@ export class RegisterComponent {
         superAdmin: false
       }
 
-      this.reqServ.addData<any>(environment.host + '/register', obj)
+      this.reqServ.addData<any>(environment.host.get + 'register', obj)
         .subscribe(():void =>{
           this.isRegistred = true;
           setTimeout(():void =>{

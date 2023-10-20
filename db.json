@@ -45,11 +45,11 @@
   },
   "posts": [
     {
-      "user_id": 1,
+      "user_id": 3,
       "category": "INJINER",
       "category_icon": "https://cdn-icons-png.flaticon.com/512/3700/3700845.png",
-      "created_date": "Oct 19, 2023",
-      "title": "Kont sizes in UI design: The complete guide to follow..........",
+      "created_date": "Oct 20, 2023",
+      "title": "Kont sizes in UI design: The complete guide to follow",
       "image": "assets/Images/stained-glass.png",
       "shortDescription": "2 Figma design systems that you can download for free today.",
       "description": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.",
@@ -152,7 +152,7 @@
   "users": [
     {
       "email": "floydMiles@gmail.com",
-      "password": "$2a$10$Br1r63qjvWk9FWwX5UpKuOG6ytRoaAxvRdz5z0C3jZdMKxoTnvDGm",
+      "password": "$2a$10$aVINuM88O.ljg7YiSL6kxunKbw3c40ztMARIVwGYosgAF9Bx6i4ny",
       "image": "assets/Images/user_img.png",
       "name": "Floyd Miles",
       "title": "Hey there, I’m Andrew Jonhson and welcome to my Blog",
@@ -162,7 +162,7 @@
       "twitter": "https://www.google.com/",
       "instagram": "https://www.google.com/",
       "linkedin": "https://www.google.com/",
-      "superAdmin": false,
+      "superAdmin": "false",
       "id": 1
     },
     {

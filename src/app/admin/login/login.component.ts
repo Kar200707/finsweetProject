@@ -45,7 +45,8 @@ export class LoginComponent {
       email: this.form.get('email')?.value,
       password: this.form.get('password')?.value,
     }
-    this.reqServ.addData<any>(environment.host + '/login', obj)
+
+    this.reqServ.addData<any>(environment.host.get + 'login', obj)
       .subscribe((data):void=>{
         localStorage.setItem('token', data.accessToken)
         localStorage.setItem('userData', JSON.stringify(data))

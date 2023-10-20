@@ -9,6 +9,7 @@ import {DialoginputValueService} from "../../../services/dialoginput-value.servi
 import {environment} from "../../../environment/environment";
 import {DialogCategoryComponent} from "../dialog_components/dialog-category/dialog-category.component";
 import {Authors} from "../../../models/authors";
+import {DialogUsersComponent} from "../dialog_components/dialog-users/dialog-users.component";
 
 @Component({
   selector: 'app-users',
@@ -33,7 +34,11 @@ export class UsersComponent {
     'action'
   ];
 
-  constructor(private reqServ: RequestService) {  }
+  constructor(
+    private reqServ: RequestService,
+    private dialog: MatDialog,
+    private dialogDetails: DialoginputValueService
+  ) {  }
 
   ngOnInit():void {
     this.getPosts();
@@ -52,5 +57,17 @@ export class UsersComponent {
         .subscribe(():void => {})
       this.getPosts();
     }
+  }
+
+  openEditDialog (id: any):void {
+    this.dialog.open(DialogUsersComponent, {
+      width: '520px',
+    })
+
+    this.dialog.afterAllClosed.subscribe(() => {
+      this.getPosts();
+    })
+
+    this.dialogDetails.idUser = id;
   }
 }

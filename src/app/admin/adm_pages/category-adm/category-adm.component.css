@@ -66,3 +66,7 @@ mat-dialog-actions {
   display: block;
   margin: 10px 0;
 }
+
+.edit-button:disabled {
+  opacity: 0.5;
+}
