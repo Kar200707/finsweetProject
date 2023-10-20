@@ -152,7 +152,7 @@
   "users": [
     {
       "email": "floydMiles@gmail.com",
-      "password": "$2a$10$Fj8sUS.q/4gQ.ECYIz9.vOifOA8PMqz9uq4kxjZkg.BPhehMknH92",
+      "password": "$2a$10$2R5XwT8HLuz6Syr8R4YBtOFtwlxtvxXeVOejMae62TC0XOhDHzWRi",
       "image": "assets/Images/user_img.png",
       "name": "Floyd Miles",
       "title": "Hey there, I’m Andrew Jonhson and welcome to my Blog",
@@ -177,7 +177,7 @@
       "twitter": "https://www.google.com/",
       "instagram": "https://www.google.com/",
       "linkedin": "https://www.google.com/",
-      "superAdmin": false,
+      "superAdmin": "false",
       "id": 2
     },
     {
@@ -192,7 +192,7 @@
       "twitter": "https://www.google.com/",
       "instagram": "https://www.google.com/",
       "linkedin": "https://www.google.com/",
-      "superAdmin": false,
+      "superAdmin": "false",
       "id": 3
     },
     {
@@ -207,7 +207,7 @@
       "twitter": "https://www.google.com/",
       "instagram": "https://www.google.com/",
       "linkedin": "https://www.google.com/",
-      "superAdmin": false,
+      "superAdmin": "false",
       "id": 4
     },
     {
@@ -222,7 +222,7 @@
       "twitter": "https://www.google.com/",
       "instagram": "https://www.google.com/",
       "linkedin": "https://www.google.com/",
-      "superAdmin": false,
+      "superAdmin": "false",
       "id": 5
     },
     {
@@ -252,7 +252,7 @@
       "twitter": "https://www.google.com/",
       "instagram": "https://www.google.com/",
       "linkedin": "https://www.google.com/",
-      "superAdmin": false,
+      "superAdmin": "false",
       "id": 7
     },
     {
@@ -267,7 +267,7 @@
       "twitter": "https://www.google.com/",
       "instagram": "https://www.google.com/",
       "linkedin": "https://www.google.com/",
-      "superAdmin": false,
+      "superAdmin": "false",
       "id": 8
     },
     {
@@ -282,7 +282,7 @@
       "twitter": "/",
       "instagram": "/",
       "linkedin": "/",
-      "superAdmin": true,
+      "superAdmin": "true",
       "id": 9
     }
   ]

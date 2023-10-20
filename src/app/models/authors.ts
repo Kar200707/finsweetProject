@@ -11,5 +11,5 @@ export interface Authors {
   twitter: string;
   instagram: string;
   linkedin: string;
-  superAdmin: boolean;
+  superAdmin: string;
 }

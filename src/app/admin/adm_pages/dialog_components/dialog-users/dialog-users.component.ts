@@ -127,6 +127,12 @@ export class DialogUsersComponent implements OnInit {
               Validators.required,
             ]
           ),
+          password: new FormControl(
+            '',
+            [
+              Validators.required,
+            ]
+          ),
         });
       })
   }
@@ -135,7 +141,7 @@ export class DialogUsersComponent implements OnInit {
     if (this.form.valid) {
       const obj = {
         email: this.form.get('email')?.value,
-        password: this.dataAuthors.password,
+        password: this.form.get('password')?.value,
         image: this.form.get('image')?.value,
         name: this.form.get('name')?.value,
         title: this.form.get('title')?.value,

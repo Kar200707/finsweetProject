@@ -43,7 +43,7 @@
         <mat-icon>how_to_reg</mat-icon>
         Register
       </button>
-      <button routerLinkActive="active-rout" *ngIf="userData.superAdmin" routerLink="/admin/user" class="nav-btn" color="primary" mat-button>
+      <button routerLinkActive="active-rout" *ngIf="userData.superAdmin === 'true'" routerLink="/admin/user" class="nav-btn" color="primary" mat-button>
         <mat-icon>assignment_ind</mat-icon>
         Users
       </button>

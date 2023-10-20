@@ -156,6 +156,18 @@
             linkedin is <strong>required</strong>
           </mat-error>
         </mat-form-field>
+        <mat-form-field class="password">
+          <mat-label>Password</mat-label>
+          <input
+            matInput
+            placeholder="come up with a password"
+            formControlName="password"
+            name="password"
+          />
+          <mat-error *ngIf="form.get('password')?.hasError('required')">
+            linkedin is <strong>required</strong>
+          </mat-error>
+        </mat-form-field>
         <mat-form-field style="width: 100%">
           <mat-label>Super Admin</mat-label>
           <mat-select formControlName="superAdmin">
