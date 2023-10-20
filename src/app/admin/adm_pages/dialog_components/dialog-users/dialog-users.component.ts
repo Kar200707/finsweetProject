@@ -131,6 +131,7 @@ export class DialogUsersComponent implements OnInit {
             '',
             [
               Validators.required,
+              Validators.minLength(4)
             ]
           ),
         });

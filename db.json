@@ -152,7 +152,7 @@
   "users": [
     {
       "email": "floydMiles@gmail.com",
-      "password": "$2a$10$2R5XwT8HLuz6Syr8R4YBtOFtwlxtvxXeVOejMae62TC0XOhDHzWRi",
+      "password": "$2a$10$PplhO1lhDc4kygYPXeMkA.NiMS3N44TsYzJcCXj9Cs0O/ISfbzJYK",
       "image": "assets/Images/user_img.png",
       "name": "Floyd Miles",
       "title": "Hey there, I’m Andrew Jonhson and welcome to my Blog",
@@ -167,7 +167,7 @@
     },
     {
       "email": "dianne-russell@gmail.com",
-      "password": "$2a$10$.VxvLtoEtv6S2JCQyf8meeA4EZ220wCjwyqE85GY8qNU6xS7bRRUe",
+      "password": "$2a$10$VFLquuWmy4C6C3DWEJU8.uOSYtzlmC0G3yZSX04asiL/swKtQrsPi",
       "image": "assets/Images/user_img4.png",
       "name": "Dianne Russell",
       "title": "Hey there, I’m Andrew Jonhson and welcome to my Blog",
@@ -182,7 +182,7 @@
     },
     {
       "email": "jenny@gmail.com",
-      "password": "$2a$10$BctELMVsuekCwTfUQiW0m.c0RjIF3F2vGzgm3TRGQbcBtDFV/rBaO",
+      "password": "$2a$10$4UQ1kIkuFdk7TZz1X0uih.wK3Go/0PfnKhyEs4pJEhYMe3FQMdRXG",
       "image": "assets/Images/user_img3.png",
       "name": "Jenny Wilson",
       "title": "Hey there, I’m Andrew Jonhson and welcome to my Blog",
@@ -197,7 +197,7 @@
     },
     {
       "email": "leslie@gmail.com",
-      "password": "$2a$10$N6HvmLKwbns2eto3jHqlKeGkS710xJjhjtTcsvIV0y8ERzt9T.mAq",
+      "password": "$2a$10$WOzOIIe5lp97MUWF81zc.u9ROk0QUeHWuI6Cruq0AGAhkMlBA1anm",
       "image": "assets/Images/user_img2.png",
       "name": "Leslie Alexander",
       "title": "Hey there, I’m Andrew Jonhson and welcome to my Blog",
@@ -212,7 +212,7 @@
     },
     {
       "email": "guy@gmail.com",
-      "password": "$2a$10$46DbRNi071JnooODCiobAOsv4l1pfSqGHX.LfQ6ZocfaXd3IDPvyW",
+      "password": "$2a$10$QIsNZTkrjxjMchM0NApzHO.8/dl7NcDcW/ARHn8Y16CUi1.emkq5K",
       "image": "assets/Images/user-img5.png",
       "name": "Guy Hawkins",
       "title": "Hey there, I’m Andrew Jonhson and welcome to my Blog",
@@ -227,7 +227,7 @@
     },
     {
       "email": "pena@gmail.com",
-      "password": "$2a$10$wI9n30Muz6wtUtPcfPrLqeNI90kj3XIWbJsZa4RpSFXzOexbWwEIO",
+      "password": "$2a$10$Bs73kBx.9DvMSTZaC8VsO.BRypqSf4AG97OngFHdgJ49e4PqhEV0W",
       "image": "assets/Images/user-img6.svg",
       "name": "Eleanor Pena",
       "title": "Hey there, I’m Andrew Jonhson and welcome to my Blog",
@@ -242,7 +242,7 @@
     },
     {
       "email": "robert@gmail.com",
-      "password": "$2a$10$5lPHTYf7qEO5FHZGbeJ3jODiDMsg/TW1sgXGDArB34OnsC2LzIZ1q",
+      "password": "$2a$10$RJdRPX2Qn7x4rCKjTD27Nue18T8ZZTsXOvsZ3t1uRpIZVjZ.YrSgy",
       "image": "assets/Images/user-img7.png",
       "name": "Robert Fox",
       "title": "Hey there, I’m Andrew Jonhson and welcome to my Blog",
@@ -257,7 +257,7 @@
     },
     {
       "email": "jones@gmail.com",
-      "password": "$2a$10$hipIhEdPQhEcsr.G5A8lDuhq6.Mz86Db554qxmOL4gNsI3G1jpIEu",
+      "password": "$2a$10$kMadlVmEREubBAPXXt19d.TN1007lV23HqjJ4wZ/bvpACXz1Q1Gmu",
       "image": "assets/Images/user-img8.png",
       "name": "Jacob Jones",
       "title": "Hey there, I’m Andrew Jonhson and welcome to my Blog",
