@@ -1,37 +1,37 @@
 {
   "category": [
     {
-      "id": "1",
       "image": "assets/Images/icons/business.png",
       "title": "Business",
-      "shortDescription": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit.",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore."
+      "shortDescription": "this is category business\n",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.",
+      "id": "1"
     },
     {
       "image": "assets/Images/icons/startup.png",
       "title": "Startup",
-      "shortDescription": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit.",
+      "shortDescription": "this is category startup",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.",
       "id": "2"
     },
     {
-      "id": "3",
       "image": "assets/Images/icons/economy.png",
       "title": "Economy",
-      "shortDescription": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit.",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore."
+      "shortDescription": "this is category economy",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.",
+      "id": "3"
     },
     {
-      "id": "4",
       "image": "assets/Images/icons/technology.png",
       "title": "Technology",
-      "shortDescription": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit.",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore."
+      "shortDescription": "this is category technology\n",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.",
+      "id": "4"
     },
     {
       "image": "https://cdn-icons-png.flaticon.com/512/3700/3700845.png",
       "title": "Injiner",
-      "shortDescription": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit.",
+      "shortDescription": "this is category injiner",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.\n\n",
       "id": "Vi5Q6vE"
     }
