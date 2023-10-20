@@ -152,7 +152,7 @@
   "users": [
     {
       "email": "floydMiles@gmail.com",
-      "password": "$2a$10$aVINuM88O.ljg7YiSL6kxunKbw3c40ztMARIVwGYosgAF9Bx6i4ny",
+      "password": "$2a$10$Fj8sUS.q/4gQ.ECYIz9.vOifOA8PMqz9uq4kxjZkg.BPhehMknH92",
       "image": "assets/Images/user_img.png",
       "name": "Floyd Miles",
       "title": "Hey there, I’m Andrew Jonhson and welcome to my Blog",
@@ -227,7 +227,7 @@
     },
     {
       "email": "pena@gmail.com",
-      "password": "$2a$10$bB6oiwppkWNJhoES4T7zhepC9SA0May487a2n64J1ZL7EaXbzm1w2",
+      "password": "$2a$10$wI9n30Muz6wtUtPcfPrLqeNI90kj3XIWbJsZa4RpSFXzOexbWwEIO",
       "image": "assets/Images/user-img6.svg",
       "name": "Eleanor Pena",
       "title": "Hey there, I’m Andrew Jonhson and welcome to my Blog",
@@ -237,7 +237,7 @@
       "twitter": "https://www.google.com/",
       "instagram": "https://www.google.com/",
       "linkedin": "https://www.google.com/",
-      "superAdmin": false,
+      "superAdmin": "false",
       "id": 6
     },
     {

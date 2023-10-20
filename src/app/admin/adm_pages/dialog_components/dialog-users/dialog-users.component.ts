@@ -122,7 +122,7 @@ export class DialogUsersComponent implements OnInit {
             ]
           ),
           superAdmin: new FormControl(
-            this.dataAuthors.linkedin,
+            'false',
             [
               Validators.required,
             ]
