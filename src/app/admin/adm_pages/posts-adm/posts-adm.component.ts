@@ -75,7 +75,7 @@ export class PostsAdmComponent implements OnInit{
       width: '520px',
     })
 
-    this.dialog.afterAllClosed.subscribe(() => {
+    this.dialog.afterAllClosed.subscribe(():void => {
       this.getPosts();
     })
 

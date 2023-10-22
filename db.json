@@ -45,70 +45,70 @@
   },
   "posts": [
     {
-      "user_id": 3,
+      "user_id": 6,
       "category": "INJINER",
       "category_icon": "https://cdn-icons-png.flaticon.com/512/3700/3700845.png",
-      "created_date": "Oct 20, 2023",
-      "title": "Kont sizes in UI design: The complete guide to follow",
+      "created_date": "Oct 22, 2023",
+      "title": "Kont sizes in UI design: The complete guide to follow..........",
       "image": "assets/Images/stained-glass.png",
       "shortDescription": "2 Figma design systems that you can download for free today.",
-      "description": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.",
-      "id": "3"
-    },
-    {
-      "user_id": 6,
-      "category": "ECONOMY",
-      "category_icon": "assets/Images/icons/economy.png",
-      "created_date": "Oct 18, 2023",
-      "title": "Font sizes in UI design: The complete guide to follow......",
-      "image": "assets/Images/why-we-started-image.png",
-      "shortDescription": "3 Figma design systems that you can download for free today.",
-      "description": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.",
-      "id": "4"
-    },
-    {
-      "user_id": 6,
-      "category": "STARTUP",
-      "category_icon": "assets/Images/icons/startup.png",
-      "created_date": "Oct 19, 2023",
-      "title": "Font sizes in UI design: The complete guide to follow...",
-      "image": "assets/Images/featured-Post_image.png",
-      "shortDescription": "5 Figma design systems that you can download for free today.",
       "description": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.",
       "id": "1"
     },
     {
-      "id": "2",
-      "user_id": "4",
+      "user_id": 4,
       "category": "BUSINESS",
       "category_icon": "assets/Images/icons/business.png",
-      "created_date": "Apr 17, 2023",
-      "title": "Font sizes in UI design: The complete guide to follow",
-      "image": "assets/Images/stained-glass.png",
-      "shortDescription": "6 Figma design systems that you can download for free today.",
-      "description": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident."
+      "created_date": "Oct 22, 2023",
+      "title": "Font sizes in UI design: The complete guide to follow..........",
+      "image": "assets/Images/featured-Post_image.png",
+      "shortDescription": "5 Figma design systems that you can download for free today.",
+      "description": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.",
+      "id": "3"
     },
     {
-      "id": "3",
-      "user_id": "1",
+      "user_id": 5,
       "category": "ECONOMY",
       "category_icon": "assets/Images/icons/economy.png",
-      "created_date": "Apr 17, 2023",
-      "title": "Font sizes in UI design: The complete guide to follow",
+      "created_date": "Oct 22, 2023",
+      "title": "Font sizes in UI design: The complete guide to follow......",
       "image": "assets/Images/stained-glass.png",
-      "shortDescription": "7 Figma design systems that you can download for free today.",
-      "description": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident."
+      "shortDescription": "6 Figma design systems that you can download for free today.",
+      "description": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.",
+      "id": "4"
     },
     {
-      "id": "4",
-      "user_id": "3",
+      "user_id": 3,
       "category": "TECHNOLOGY",
       "category_icon": "assets/Images/icons/technology.png",
-      "created_date": "Apr 17, 2023",
-      "title": "Font sizes in UI design: The complete guide to follow",
+      "created_date": "Oct 22, 2023",
+      "title": "Font sizes in UI design: The complete guide to follow......",
+      "image": "assets/Images/stained-glass.png",
+      "shortDescription": "7 Figma design systems that you can download for free today.",
+      "description": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.",
+      "id": "5"
+    },
+    {
+      "user_id": 1,
+      "category": "INJINER",
+      "category_icon": "https://cdn-icons-png.flaticon.com/512/3700/3700845.png",
+      "created_date": "Oct 22, 2023",
+      "title": "Font sizes in UI design: The complete guide to follow......",
       "image": "assets/Images/stained-glass.png",
       "shortDescription": "8 Figma design systems that you can download for free today.",
-      "description": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident."
+      "description": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.",
+      "id": "6"
+    },
+    {
+      "user_id": 2,
+      "category": "STARTUP",
+      "category_icon": "assets/Images/icons/startup.png",
+      "created_date": "Oct 22, 2023",
+      "title": "Test Post...",
+      "image": "https://www.seiu1000.org/sites/main/files/main-images/camera_lense_0.jpeg",
+      "shortDescription": "test shor description",
+      "description": "dsfdfsdfsdfsdsdf\n",
+      "id": "Yw2sCqP"
     }
   ],
   "contact-us": [
