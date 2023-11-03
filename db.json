@@ -109,6 +109,17 @@
       "shortDescription": "test shor description",
       "description": "dsfdfsdfsdfsdsdf\n",
       "id": "Yw2sCqP"
+    },
+    {
+      "user_id": 6,
+      "category": "ECONOMY",
+      "category_icon": "assets/Images/icons/economy.png",
+      "created_date": "Nov 3, 2023",
+      "title": "Test Post",
+      "image": "https://media.sproutsocial.com/uploads/2017/02/10x-featured-social-media-image-size.png",
+      "shortDescription": "Test short description",
+      "description": "test description\n",
+      "id": "KCGNGBW"
     }
   ],
   "contact-us": [

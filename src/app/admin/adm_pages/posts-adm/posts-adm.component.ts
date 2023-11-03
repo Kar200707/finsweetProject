@@ -52,7 +52,7 @@ export class PostsAdmComponent implements OnInit{
   }
 
   getPosts ():void {
-    this.reqServ.getData<Posts[]>(environment.posts.get)
+    this.reqServ.getData<Posts[]>(environment.posts.get + '?user_id=' + this.userData.id)
       .subscribe((data:Posts[]):void=>{
         this.dataPosts = data;
       })
