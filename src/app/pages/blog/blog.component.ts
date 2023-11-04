@@ -8,7 +8,7 @@ import {JoinOurTeamComponent} from "../../components/join-our-team/join-our-team
 import {PostsComponent} from "../../components/posts/posts.component";
 import {LoaderBarComponent} from "../../components/loader-bar/loader-bar.component";
 import {RequestService} from "../../services/request.service";
-import {environment} from "../../environment/environment";
+import {environment} from "../../../environment/environment";
 import {Authors} from "../../models/authors";
 
 @Component({
@@ -31,17 +31,17 @@ import {Authors} from "../../models/authors";
 })
 export class BlogComponent implements OnInit {
   dataCategory!: Category[];
-  dataPosts!: Posts[];
+  dataPostsPage!: Posts[];
   dataAuthors!: Authors[];
   pageIndex: number = 1;
 
   constructor(private reqServ: RequestService) {  }
 
   loadPosts():void {
-    this.reqServ.getData<Posts[]>(environment.posts.get + '?_page=' + this.pageIndex + '&_limit=4')
+    this.reqServ.getData<Posts[]>(environment.posts.get + '?_page=' + this.pageIndex + '&_limit=5')
       .subscribe(
         (data: Posts[]):void => {
-          this.dataPosts = data;
+          this.dataPostsPage = data;
         }
       )
   }

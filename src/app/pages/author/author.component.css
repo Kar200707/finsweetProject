@@ -142,3 +142,11 @@
   line-height: 28px;
   margin-top: 16px;
 }
+
+@media screen and (max-width: 630px) {
+  .container_author > .user_info_block
+  > .user_info_text_block > h1 {
+    font-size: 35px;
+    line-height: 55px;
+  }
+}

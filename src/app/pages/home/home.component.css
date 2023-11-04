@@ -10,12 +10,6 @@
   text-align: center;
 }
 
-@media screen and (max-width: 700px) {
-  .choose-a-category-text {
-    margin-top: 50px;
-  }
-}
-
 .list_of_authors_block > .container > h2 {
   color: #232536;
   font-family: Sen;
@@ -83,8 +77,9 @@
   margin-top: 24px;
 }
 
-.posted_on_startup_text_box > h1 + p > span {
+.posted_on_startup_text_box > h1 + p > a {
   color: #FFD050;
+  text-decoration: none;
 }
 
 .posted_on_startup_text_box > h1 + p + p {
@@ -179,13 +174,13 @@
   margin-top: 32px;
 }
 
-.featured_post_img_and_text_block > p > span {
+.featured_post_img_and_text_block > p > a {
   color: #592EA9;
+  text-decoration: none;
 }
 
-.featured_post_img_and_text_block > p > span:hover {
-  text-decoration: underline 1px;
-  text-underline-offset: 3px;
+.featured_post_img_and_text_block > p > a:hover {
+  color: #1e2352;
 }
 
 .featured_post_img_and_text_block > h3 {
@@ -234,6 +229,9 @@
 .list_box {
   padding: 32px 0 25px 0;
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 .list_box > p {
@@ -245,13 +243,13 @@
   line-height: 20px;
 }
 
-.list_box > p > span {
+.list_box > p > a {
   color: #592EA9;
-  text-underline-offset: 4px;
+  text-decoration: none;
 }
 
-.list_box > p > span:hover {
-  text-decoration: 1px underline;
+.list_box > p > a:hover {
+  color: #1e2352;
 }
 
 .list_box > p + a {
@@ -268,14 +266,8 @@
   text-underline-offset: 3px;
 }
 
-@media screen and (max-width: 420px) {
-  .list_box > p + a {
-    width: 100%;
-  }
-}
-
 .list_box > p + a:hover {
-  text-decoration: 2px underline #592EA9;
+  color: #3f3f3f;
 }
 
 .featured_post_color_box {
@@ -459,8 +451,9 @@
 
 .list-authors_block {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  gap: 32px;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 .list_of_authors_block > .container > h2 {
@@ -641,47 +634,36 @@ img:active {
   line-height: 28px;
 }
 
-@media screen and (max-width: 1326px) {
-  .catagory_block {
-    flex-wrap: wrap;
-  }
-
-  .technology_box {
-    margin-top: 20px;
-  }
-}
-
-@media screen and (max-width: 1110px) {
-  .startup_box,
-  .economy_box {
-    margin-left: 20px;
-  }
-}
-
-@media screen and (max-width: 1047px) {
-  .technology_box,
-  .economy_box {
-    margin-top: 20px;
-  }
-
-  .technology_box {
-    margin-left: 20px;
-    margin-right: 20px;
-  }
-
+@media screen and (max-width: 1060px) {
   .catagory_block {
     justify-content: center;
   }
 }
 
-@media screen and (max-width: 1331px) {
-  .list-authors_block {
-    flex-direction: column;
+@media screen and (max-width: 891px) {
+  .list_box > p + a {
+    width: 100%;
   }
 }
 
 @media screen and (max-width: 700px) {
+  .choose-a-category-text {
+    margin-top: 50px;
+    font-size: 30px;
+  }
+
   .list_of_authors_block {
     margin-top: 48px;
+  }
+
+  .why_we_started_box > h2 {
+    font-size: 35px;
+    line-height: 40px;
+  }
+}
+
+@media screen and (max-width: 410px) {
+  .featured_post_color_box {
+    margin-top: 60px;
   }
 }

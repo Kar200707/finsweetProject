@@ -5,7 +5,7 @@ import {PostsComponent} from "../../components/posts/posts.component";
 import {HttpClient, HttpClientModule} from "@angular/common/http";
 import {LoaderBarComponent} from "../../components/loader-bar/loader-bar.component";
 import {RequestService} from "../../services/request.service";
-import {environment} from "../../environment/environment";
+import {environment} from "../../../environment/environment";
 import {Authors} from "../../models/authors";
 import {ActivatedRoute, Params, RouterLinkActive} from "@angular/router";
 

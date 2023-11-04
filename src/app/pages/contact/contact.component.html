@@ -25,17 +25,13 @@
       <div class="inputs_box">
         <form [formGroup]="form" (ngSubmit)="save()">
           <input formControlName="f_name" name="f_name" placeholder="Full Name" type="text">
-          <div *ngIf="form.get('f_name')?.touched || form.get('f_name')?.dirty">
-            <span *ngIf="form.get('f_name')?.invalid">
-              *required, minimum 3 symbol
-            </span>
-          </div>
+          <span *ngIf="form.get('f_name')?.invalid && form.get('f_name')?.touched">
+            *required, minimum 3 symbol
+          </span>
           <input formControlName="email" name="email" style="margin-top: 16px;" placeholder="Your Email" type="email">
-          <div *ngIf="form.get('email')?.touched || form.get('email')?.dirty">
-            <span *ngIf="form.get('email')?.invalid">
-              *required, in the form of email example@.ex
-            </span>
-          </div>
+          <span *ngIf="form.get('email')?.invalid && form.get('email')?.touched">
+             *required, in the form of email example@.ex
+          </span>
           <div class="select_block">
             <select formControlName="county" name="county">
               <option [defaultSelected]="form">Gyumri</option>

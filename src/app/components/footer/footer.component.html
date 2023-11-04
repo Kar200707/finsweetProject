@@ -19,7 +19,17 @@
         <div class="footer_enter_email">
           <form [formGroup]="form" (ngSubmit)="save()">
             <input
-              [style.border]="form.invalid && (form.touched || form.dirty) ? '1px solid red' : '1px solid #4C4C4C'" #inputEmail formControlName="email" name="email" placeholder="Enter Your Email" type="email">
+              [style.border]="form.invalid && (form.touched || form.dirty) ? '1px solid red' : '1px solid #4C4C4C'" formControlName="email" name="email" placeholder="Enter Your Email" type="email">
+            <div class="email-validator-text-box" *ngIf="form.touched || form.dirty">
+             <span
+               style="color: red;"
+               *ngIf="form.get('email')!.hasError('pattern')"
+             >enter is valid email</span>
+              <span
+                style="color: red;"
+                *ngIf="form.get('email')!.hasError('required')"
+              >email is requerid</span>
+            </div>
             <button [disabled]="form.invalid" style="border: none;" class="global_button">Subscribe</button>
           </form>
         </div>

@@ -8,7 +8,7 @@ import {JoinOurTeamComponent} from "../../components/join-our-team/join-our-team
 import {ListOuthorsComponent} from "../../components/list-outhors/list-outhors.component";
 import {LoaderBarComponent} from "../../components/loader-bar/loader-bar.component";
 import {RequestService} from "../../services/request.service";
-import {environment} from "../../environment/environment";
+import {environment} from "../../../environment/environment";
 import {Posts} from "../../models/posts";
 
 @Component({

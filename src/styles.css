@@ -2,6 +2,7 @@
 @import "assets/Fonts/Inter/Inter.css";
 @import "assets/Fonts/Sen/sen.css";
 @import "app/styles/button.css";
+@import "src/app/styles/media.css";
 
 .mat-drawer-inner-container::-webkit-scrollbar {
   display: none;
@@ -30,9 +31,18 @@
   margin: auto;
 }
 
+::-moz-selection {
+  color: #00ff6f;
+  background: #545454;
+}
+
+::selection {
+  color: #00ff6f;
+  background: #545454;
+}
+
 * {
   -webkit-tap-highlight-color: transparent;
-  user-select: none;
   user-zoom: fixed;
   -webkit-user-drag: none;
   margin: 0;

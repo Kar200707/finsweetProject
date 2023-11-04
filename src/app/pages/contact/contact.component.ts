@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import {FormControl, FormGroup, ReactiveFormsModule, Validators} from "@angular/forms";
 import {NgIf} from "@angular/common";
 import {RequestService} from "../../services/request.service";
-import {environment} from "../../environment/environment";
+import {environment} from "../../../environment/environment";
 
 @Component({
   selector: 'app-contact',
@@ -27,7 +27,7 @@ export class ContactComponent {
       email: new FormControl('', [
         Validators.required,
         Validators.minLength(3),
-        Validators.email
+        Validators.pattern(/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/)
       ]),
 
       message: new FormControl('', []),

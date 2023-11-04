@@ -9,7 +9,7 @@ import {Category} from "../../../models/category";
 import {RequestService} from "../../../services/request.service";
 import {DialoginputValueService} from "../../../services/dialoginput-value.service";
 import {MatDialog} from "@angular/material/dialog";
-import {environment} from "../../../environment/environment";
+import {environment} from "../../../../environment/environment";
 import {Authors} from "../../../models/authors";
 
 @Component({

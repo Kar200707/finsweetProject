@@ -9,7 +9,7 @@ import {Category} from "../../../../models/category";
 import {MatButtonModule} from "@angular/material/button";
 import {MatDialog} from "@angular/material/dialog";
 import {Posts} from "../../../../models/posts";
-import {environment} from "../../../../environment/environment";
+import {environment} from "../../../../../environment/environment";
 import {DialoginputValueService} from "../../../../services/dialoginput-value.service";
 import {FormControl, FormGroup, ReactiveFormsModule, Validators} from "@angular/forms";
 

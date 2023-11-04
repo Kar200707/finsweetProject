@@ -1,30 +1,40 @@
 <div class="featured_post_block_blog">
   <div class="container">
-    <div *ngIf="dataPosts != undefined && dataAuthors != undefined" class="featured_post_block_blog_text_box">
+    <div *ngIf="dataPostsPage != undefined && dataAuthors != undefined" class="featured_post_block_blog_text_box">
       <h5>Featured Post</h5>
-      <h2>{{ dataPosts[0].title }}</h2>
-      <p>By <span>{{ dataPosts[0].user_id != undefined ? dataAuthors[dataPosts[0].user_id - 1].name : 'loading' }}</span>  &nbsp;l&nbsp;  {{ dataPosts[0].created_date }}</p>
-      <span>{{ dataPosts[0].description }}</span>
-      <a [routerLink]="['/blog-post', dataPosts[0].id]" style="margin-top: 32px;" class="global_button">Read More ></a>
+      <h2>{{ dataPostsPage[0].title }}</h2>
+      <p>
+        By
+        <span>
+          {{ dataPostsPage[0].user_id != undefined ? dataAuthors[dataPostsPage[0].user_id - 1].name : 'loading...' }}
+        </span>
+        &nbsp;l&nbsp;
+        {{ dataPostsPage[0].created_date }}<
+      </p>
+      <span>{{ dataPostsPage[0].description }}</span>
+      <a
+        [routerLink]="['/blog-post', dataPostsPage[0].id]"
+        style="margin-top: 32px;" class="global_button"
+      >Read More ></a>
     </div>
-    <img [src]="dataPosts != undefined ? dataPosts[0].image : ''" alt="this is image">
+    <img [src]="dataPostsPage != undefined ? dataPostsPage[0].image : ''" alt="this is image">
   </div>
 </div>
 <div class="all_post_block_blog">
-  <div *ngIf="dataPosts != undefined" class="container">
+  <div *ngIf="dataPostsPage != undefined" class="container">
     <h1>All posts</h1>
     <div class="line_gray_all_posts_blog"></div>
-    <app-loader-bar style="width: 100%; margin-top: 64px; display: block" [Height]="'318px'" *ngIf="dataPosts == undefined"></app-loader-bar>
-    <app-loader-bar style="width: 100%; margin-top: 64px; display: block" [Height]="'318px'" *ngIf="dataPosts == undefined"></app-loader-bar>
-    <app-loader-bar style="width: 100%; margin-top: 64px; display: block" [Height]="'318px'" *ngIf="dataPosts == undefined"></app-loader-bar>
-    <app-loader-bar style="width: 100%; margin-top: 64px; display: block" [Height]="'318px'" *ngIf="dataPosts == undefined"></app-loader-bar>
-    <app-loader-bar style="width: 100%; margin-top: 64px; display: block" [Height]="'318px'" *ngIf="dataPosts == undefined"></app-loader-bar>
-    <div *ngFor="let data of dataPosts, let i = index">
-      <app-posts *ngIf="i < 4" [isPrevPage]="'blog'" [dataPosts]="data"></app-posts>
+    <app-loader-bar style="width: 100%; margin-top: 64px; display: block" [Height]="'318px'" *ngIf="dataPostsPage == undefined"></app-loader-bar>
+    <app-loader-bar style="width: 100%; margin-top: 64px; display: block" [Height]="'318px'" *ngIf="dataPostsPage == undefined"></app-loader-bar>
+    <app-loader-bar style="width: 100%; margin-top: 64px; display: block" [Height]="'318px'" *ngIf="dataPostsPage == undefined"></app-loader-bar>
+    <app-loader-bar style="width: 100%; margin-top: 64px; display: block" [Height]="'318px'" *ngIf="dataPostsPage == undefined"></app-loader-bar>
+    <app-loader-bar style="width: 100%; margin-top: 64px; display: block" [Height]="'318px'" *ngIf="dataPostsPage == undefined"></app-loader-bar>
+    <div *ngFor="let data of dataPostsPage, let i = index">
+      <app-posts *ngIf="i > 0 && i < 5" [isPrevPage]="'blog'" [dataPosts]="data"></app-posts>
     </div>
-    <div class="next_prew_buttons" *ngIf="dataPosts.length <= 4">
+    <div class="next_prew_buttons" *ngIf="dataPostsPage.length <= 5">
       <a class="prev" *ngIf="pageIndex > 1" (click)="prevPage()">< Prev</a>
-      <a class="next"  *ngIf="dataPosts.length >= 4 || dataPosts.length == 0" (click)="nextPage()">Next ></a>
+      <a class="next"  *ngIf="dataPostsPage.length >= 5 || dataPostsPage.length == 0" (click)="nextPage()">Next ></a>
     </div>
   </div>
 </div>

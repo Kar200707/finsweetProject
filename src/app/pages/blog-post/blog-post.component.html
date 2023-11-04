@@ -1,4 +1,7 @@
-<div class="step_by_step_block">
+<div class="post-not" *ngIf="!isTruePage">
+  <h6>404 This post doesn't exist or not connection</h6>
+</div>
+<div *ngIf="isTruePage" class="step_by_step_block">
   <div class="container">
     <div>
       <div class="user_info_block">
@@ -10,7 +13,7 @@
       </div>
       <h1>{{ dataPosts === undefined ? 'loading...' : dataPosts.title }}</h1>
       <div class="category_box">
-        <img [src]="dataPosts === undefined ? 'loading...' : dataPosts.category_icon" alt="this image category">
+        <img [src]="dataPosts === undefined ? '' : dataPosts.category_icon" alt="this image category">
         <h4>{{ dataPosts === undefined ? 'loading...' : dataPosts.category }}</h4>
       </div>
     </div>
@@ -59,40 +62,24 @@
 <div class="what_to_read_next_block">
   <div class="container">
     <h2>What to read next</h2>
-    <div class="what_to_read_next_box">
-      <div>
-        <img src="assets/Images/two-women-in-front.png" alt="this is image">
-        <p>By <span>John Doe</span>&nbsp; | &nbsp;Aug 23, 2021 </p>
-        <h3>
-          A UX Case Study Creating a Studious Environment for Students:
-        </h3>
-        <span>
-          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
-          dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.
-        </span>
-      </div>
-      <div>
-        <img src="assets/Images/photo-of-people.png" alt="this is image">
-        <p>By <span>John Doe</span>&nbsp; | &nbsp;Aug 23, 2021 </p>
-        <h3>
-          A UX Case Study Creating a Studious Environment for Students:
-        </h3>
-        <span>
-          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
-          dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.
-        </span>
-      </div>
-      <div>
-        <img src="assets/Images/photo-of-woman.png" alt="this is image">
-        <p>By <span>John Doe</span>&nbsp; | &nbsp;Aug 23, 2021 </p>
-        <h3>
-          A UX Case Study Creating a Studious Environment for Students:
-        </h3>
-        <span>
-          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
-          dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.
-        </span>
-      </div>
+    <div *ngIf="dataPostsMorePosts != undefined" class="what_to_read_next_box">
+      <ng-container *ngFor="let item of dataPostsMorePosts, let i = index">
+        <div *ngIf="i < 3">
+          <img [src]="item.image" alt="this is image">
+          <p>
+            By
+            <a
+              *ngIf="dataAuthorsMorePosts != undefined"
+              [routerLink]="['/author', item.user_id]"
+            >
+              {{ dataAuthorsMorePosts[item.user_id != undefined ? item.user_id - 1 : 0].name }}
+            </a>&nbsp;
+            | &nbsp;{{ item.created_date }}
+          </p>
+          <a [routerLink]="['/blog-post', item.id]">{{ item.title }}</a>
+          <span>{{ item.description }}</span>
+        </div>
+      </ng-container>
     </div>
     <div class="line_what_to_read_next_block"></div>
   </div>

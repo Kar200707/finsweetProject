@@ -26,6 +26,12 @@
   width: 624px;
 }
 
+.featured_post_block_blog > .container > img {
+  max-width: 515px;
+  height: 359px;
+  object-fit: cover;
+}
+
 .featured_post_block_blog_text_box > h5 {
   color: #232536;
   font-family: Inter;

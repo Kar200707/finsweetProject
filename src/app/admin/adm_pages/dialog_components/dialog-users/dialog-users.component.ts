@@ -9,7 +9,7 @@ import {MatInputModule} from "@angular/material/input";
 import {NgForOf, NgIf} from "@angular/common";
 import {Category} from "../../../../models/category";
 import {RequestService} from "../../../../services/request.service";
-import {environment} from "../../../../environment/environment";
+import {environment} from "../../../../../environment/environment";
 import {DialoginputValueService} from "../../../../services/dialoginput-value.service";
 import {Authors} from "../../../../models/authors";
 import {MatDialog} from "@angular/material/dialog";

@@ -5,10 +5,7 @@ import {RouterModule} from "@angular/router";
 @Component({
   selector: 'app-category-block',
   templateUrl: './categoryblock.component.html',
-  styleUrls: [
-    './categoryblock.component.css',
-    '../../styles/media.css'
-  ],
+  styleUrls: [ './categoryblock.component.css' ],
   standalone: true,
   imports: [
     RouterModule

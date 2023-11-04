@@ -5,7 +5,7 @@ import {MatIconModule} from "@angular/material/icon";
 import {MatChipsModule} from "@angular/material/chips";
 import {RequestService} from "../../../services/request.service";
 import {Category} from "../../../models/category";
-import {environment} from "../../../environment/environment";
+import {environment} from "../../../../environment/environment";
 import {MatButtonModule} from "@angular/material/button";
 import {Posts} from "../../../models/posts";
 import {NgForOf, NgIf} from "@angular/common";

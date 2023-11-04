@@ -1,15 +1,23 @@
-<div [routerLink]="['/author', dataAuthors.id]">
+<div>
   <div class="user_info_block">
     <img [src]="dataAuthors.image" alt="this is user image">
-    <h3 class="user_full_name">
+    <a [routerLink]="['/author', dataAuthors.id]" class="user_full_name">
       {{ dataAuthors.name }}
-    </h3>
+    </a>
     <p>{{ dataAuthors.description }}</p>
     <div class="site_icons">
-      <img src="assets/Images/icons/facebook.png" alt="this is icon facebook">
-      <img src="assets/Images/icons/twitter.png" alt="this is icon twitter">
-      <img src="assets/Images/icons/instagram.png" alt="this is icon instagram">
-      <img src="assets/Images/icons/linkedin.png" alt="this is icon linkedin">
+      <a [href]="dataAuthors.facebook">
+        <img src="assets/Images/icons/facebook.png" alt="this is icon facebook">
+      </a>
+      <a [href]="dataAuthors.twitter">
+        <img src="assets/Images/icons/twitter.png" alt="this is icon twitter">
+      </a>
+      <a [href]="dataAuthors.instagram">
+        <img src="assets/Images/icons/instagram.png" alt="this is icon instagram">
+      </a>
+      <a [href]="dataAuthors.linkedin">
+        <img src="assets/Images/icons/linkedin.png" alt="this is icon linkedin">
+      </a>
     </div>
   </div>
 </div>

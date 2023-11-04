@@ -1,8 +1,9 @@
-import {Component, OnInit} from '@angular/core';
+import {Component} from '@angular/core';
 import {FormControl, FormGroup, ReactiveFormsModule, Validators} from "@angular/forms";
 import {RouterModule} from "@angular/router";
 import {RequestService} from "../../services/request.service";
-import {environment} from "../../environment/environment";
+import {environment} from "../../../environment/environment";
+import {NgIf} from "@angular/common";
 
 @Component({
   selector: 'app-footer',
@@ -11,7 +12,8 @@ import {environment} from "../../environment/environment";
   standalone: true,
   imports: [
     ReactiveFormsModule,
-    RouterModule
+    RouterModule,
+    NgIf
   ]
 })
 export class FooterComponent {
@@ -19,9 +21,7 @@ export class FooterComponent {
     email: new FormControl('',
       [
         Validators.required,
-        Validators.pattern(/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/),
-        Validators.minLength(2),
-        Validators.maxLength(30)
+        Validators.pattern(/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/)
       ])
   })
 

@@ -5,7 +5,7 @@ import {MatIconModule} from "@angular/material/icon";
 import {MatTableModule} from "@angular/material/table";
 import {Category} from "../../../models/category";
 import {RequestService} from "../../../services/request.service";
-import {environment} from "../../../environment/environment";
+import {environment} from "../../../../environment/environment";
 import {NgIf} from "@angular/common";
 import {DialogPostsComponent} from "../dialog_components/dialog-posts/dialog-posts.component";
 import {DialogCategoryComponent} from "../dialog_components/dialog-category/dialog-category.component";

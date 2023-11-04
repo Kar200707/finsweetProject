@@ -53,7 +53,7 @@
       "image": "assets/Images/stained-glass.png",
       "shortDescription": "2 Figma design systems that you can download for free today.",
       "description": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.",
-      "id": "1"
+      "id": 1
     },
     {
       "user_id": 4,
@@ -64,7 +64,7 @@
       "image": "assets/Images/featured-Post_image.png",
       "shortDescription": "5 Figma design systems that you can download for free today.",
       "description": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.",
-      "id": "3"
+      "id": 2
     },
     {
       "user_id": 5,
@@ -75,7 +75,7 @@
       "image": "assets/Images/stained-glass.png",
       "shortDescription": "6 Figma design systems that you can download for free today.",
       "description": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.",
-      "id": "4"
+      "id": 3
     },
     {
       "user_id": 3,
@@ -86,7 +86,7 @@
       "image": "assets/Images/stained-glass.png",
       "shortDescription": "7 Figma design systems that you can download for free today.",
       "description": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.",
-      "id": "5"
+      "id": 4
     },
     {
       "user_id": 1,
@@ -97,7 +97,7 @@
       "image": "assets/Images/stained-glass.png",
       "shortDescription": "8 Figma design systems that you can download for free today.",
       "description": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.",
-      "id": "6"
+      "id": 5
     },
     {
       "user_id": 2,
@@ -144,6 +144,21 @@
       "message": "Hello test helooooooo",
       "county": "Erevan",
       "id": 4
+    },
+    {
+      "email": "sdf@gmail.com",
+      "id": 5
+    },
+    {
+      "email": "karen@gmail.com",
+      "id": 6
+    },
+    {
+      "f_name": "Karen",
+      "email": "harutyunyan2007karen@gmail.com",
+      "message": "Kadgfdfgdfgfg",
+      "county": "Erevan",
+      "id": 7
     }
   ],
   "privacy-policy": {

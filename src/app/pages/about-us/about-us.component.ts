@@ -7,7 +7,7 @@ import {LoaderBarComponent} from "../../components/loader-bar/loader-bar.compone
 import {HttpClient, HttpClientModule} from "@angular/common/http";
 import {RequestService} from "../../services/request.service";
 import {Posts} from "../../models/posts";
-import {environment} from "../../environment/environment";
+import {environment} from "../../../environment/environment";
 
 @Component({
   selector: 'app-about-us',

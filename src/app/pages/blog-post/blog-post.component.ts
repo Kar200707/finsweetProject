@@ -1,11 +1,13 @@
 import {Component, OnInit} from '@angular/core';
 import {JoinOurTeamComponent} from "../../components/join-our-team/join-our-team.component";
-import {ActivatedRoute} from "@angular/router";
+import {ActivatedRoute, RouterLink} from "@angular/router";
 import {RequestService} from "../../services/request.service";
 import {Authors} from "../../models/authors";
-import {environment} from "../../environment/environment";
+import {environment} from "../../../environment/environment";
 import {Posts} from "../../models/posts";
-import {NgIf} from "@angular/common";
+import {NgForOf, NgIf} from "@angular/common";
+import {catchError} from "rxjs";
+import {HttpErrorResponse} from "@angular/common/http";
 
 @Component({
   selector: 'app-blog-post',
@@ -18,12 +20,17 @@ import {NgIf} from "@angular/common";
   imports: [
     JoinOurTeamComponent,
     NgIf,
+    NgForOf,
+    RouterLink,
   ]
 })
 export class BlogPostComponent implements OnInit{
   id:number = 1;
   dataAuthor!: Authors;
   dataPosts!: Posts;
+  dataPostsMorePosts!: Posts[];
+  dataAuthorsMorePosts!: Authors[];
+  isTruePage: boolean = false;
 
   constructor(private route: ActivatedRoute, private reqServ: RequestService) {  }
 
@@ -36,9 +43,21 @@ export class BlogPostComponent implements OnInit{
       .subscribe((data:Posts):void=>{
         this.dataPosts = data
         this.reqServ.getData<Authors>(environment.author.get + '/' + (this.dataPosts.user_id))
-          .subscribe((author:Authors):void=>{
-            this.dataAuthor = author;
-          })
+          .subscribe((author:Authors):void => {
+              this.dataAuthor = author;
+              this.isTruePage = true;
+            }
+          )
+      })
+
+    this.reqServ.getData<Posts[]>(environment.posts.get)
+      .subscribe((data:Posts[]):void => {
+        this.dataPostsMorePosts = data;
+      })
+
+    this.reqServ.getData<Authors[]>(environment.author.get)
+      .subscribe((data:Authors[]):void => {
+        this.dataAuthorsMorePosts = data;
       })
   }
 }

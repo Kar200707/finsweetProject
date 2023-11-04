@@ -2,7 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {RequestService} from "../../services/request.service";
 import {PrivacyPolicy} from "../../models/privacy-policy";
 import {Category} from "../../models/category";
-import {environment} from "../../environment/environment";
+import {environment} from "../../../environment/environment";
 
 @Component({
   selector: 'app-privacy-policy',

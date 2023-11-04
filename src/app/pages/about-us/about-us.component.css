@@ -286,6 +286,7 @@
   display: flex;
   gap: 25px;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .list_of_authors_block > .container > h2 {
@@ -297,12 +298,6 @@
   line-height: 48px;
   letter-spacing: -2px;
   text-align: center;
-}
-
-@media screen and (max-width: 1331px) {
-  .list-authors_block {
-    flex-direction: column;
-  }
 }
 
 @media screen and (max-width: 700px) {

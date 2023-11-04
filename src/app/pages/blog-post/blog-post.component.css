@@ -175,7 +175,8 @@
 .what_to_read_next_box > div > img {
   display: block;
   object-fit: cover;
-  width: 100%;
+  width: 405px;
+  height: 318px;
 }
 
 .what_to_read_next_box > div > p {
@@ -188,16 +189,17 @@
   margin-top: 32px;
 }
 
-.what_to_read_next_box > div > p > span {
+.what_to_read_next_box > div > p > a {
   color: #592EA9;
   font-family: Inter;
   font-size: 14px;
   font-style: normal;
   font-weight: 500;
   line-height: 20px;
+  text-decoration: none;
 }
 
-.what_to_read_next_box > div > h3 {
+.what_to_read_next_box > div > a {
   color: #232536;
   font-family: Sen;
   font-size: 28px;
@@ -206,6 +208,8 @@
   line-height: 40px;
   letter-spacing: -1px;
   margin: 16px 0;
+  display: block;
+  text-decoration: none;
 }
 
 .what_to_read_next_box > div > span {
@@ -224,4 +228,26 @@
   opacity: 0.3;
   background: #6D6E76;
   margin-top: 64px;
+}
+
+.post-not {
+  margin: 60px;
+}
+
+.post-not > h6 {
+  font-size: 30px;
+  text-align: center;
+  color: #ce0e0e;
+}
+
+@media screen and (max-width: 1325px) {
+  .what_to_read_next_box > div > img {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 800px){
+  .post-img {
+    height: 250px;
+  }
 }

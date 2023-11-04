@@ -24,7 +24,7 @@
   align-items: center;
 }
 
-.category_box > h3 {
+.category_box > a {
   color: #232536;
   font-family: Sen;
   font-size: 28px;
@@ -33,6 +33,11 @@
   line-height: 40px;
   letter-spacing: -1px;
   margin-top: 16px;
+  text-decoration: none;
+}
+
+.category_box > a:hover {
+  color: #592EA9;
 }
 
 .category_box > p {
@@ -49,11 +54,6 @@
   .catagory_block {
     flex-wrap: wrap;
   }
-
-  .category_box {
-    margin: 0 20px;
-    margin-top: 20px;
-  }
 }
 
 @media screen and (max-width: 1047px) {
@@ -63,11 +63,6 @@
 }
 
 @media screen and (max-width: 743px) {
-  .category_box {
-    margin: 0;
-    margin-top: 20px;
-  }
-
   .catagory_block {
     flex-direction: column;
   }

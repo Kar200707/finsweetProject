@@ -5,7 +5,7 @@ import {RequestService} from "../../../services/request.service";
 import {Posts} from "../../../models/posts";
 import {MatButtonModule} from "@angular/material/button";
 import {MatIconModule} from "@angular/material/icon";
-import {environment} from "../../../environment/environment";
+import {environment} from "../../../../environment/environment";
 import {MatDialog, MatDialogModule} from "@angular/material/dialog";
 import {DialogPostsComponent} from "../dialog_components/dialog-posts/dialog-posts.component";
 import {DialoginputValueService} from "../../../services/dialoginput-value.service";

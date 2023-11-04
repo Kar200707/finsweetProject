@@ -7,7 +7,7 @@ import {NgIf} from "@angular/common";
 import {MatIconModule} from "@angular/material/icon";
 import {MatButtonModule} from "@angular/material/button";
 import {Router} from "@angular/router";
-import {environment} from "../../environment/environment";
+import {environment} from "../../../environment/environment";
 
 @Component({
   selector: 'app-login',

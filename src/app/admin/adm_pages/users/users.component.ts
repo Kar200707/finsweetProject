@@ -6,7 +6,7 @@ import {MatTableModule} from "@angular/material/table";
 import {Category} from "../../../models/category";
 import {RequestService} from "../../../services/request.service";
 import {DialoginputValueService} from "../../../services/dialoginput-value.service";
-import {environment} from "../../../environment/environment";
+import {environment} from "../../../../environment/environment";
 import {DialogCategoryComponent} from "../dialog_components/dialog-category/dialog-category.component";
 import {Authors} from "../../../models/authors";
 import {DialogUsersComponent} from "../dialog_components/dialog-users/dialog-users.component";

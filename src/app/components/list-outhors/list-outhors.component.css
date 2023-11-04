@@ -33,6 +33,11 @@
   letter-spacing: -1px;
   margin-top: 20px;
   text-align: center;
+  text-decoration: none;
+}
+
+.user_full_name:hover {
+  color: #592EA9;
 }
 
 .user_info_block > p {
@@ -50,11 +55,4 @@
   justify-content: space-between;
   width: 112px;
   margin-top: 20px;
-}
-
-@media screen and (max-width: 1331px) {
-  .user_info_block {
-    margin-top: 30px;
-    width: 100%;
-  }
 }

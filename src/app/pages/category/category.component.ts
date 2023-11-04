@@ -7,7 +7,7 @@ import {LoaderBarComponent} from "../../components/loader-bar/loader-bar.compone
 import {FeaturedPostList} from "../../models/featured-post-list";
 import {Category} from "../../models/category";
 import {RequestService} from "../../services/request.service";
-import {environment} from "../../environment/environment";
+import {environment} from "../../../environment/environment";
 import {ActivatedRoute, NavigationEnd, Router} from "@angular/router";
 import {Authors} from "../../models/authors";
 
@@ -28,7 +28,6 @@ import {Authors} from "../../models/authors";
 })
 export class CategoryComponent implements OnInit{
   dataPosts!: Posts[];
-  dataAuthor!: Authors[];
   dataCategory!: Category[];
   isSelectCategory:any = [];
   title: string = 'loading...';
@@ -73,20 +72,6 @@ export class CategoryComponent implements OnInit{
                   })
             }
           })
-        }
-      )
-
-    this.reqServ.getData<Posts[]>(environment.posts.get)
-      .subscribe(
-        (data: Posts[]):void => {
-          this.dataPosts = data;
-        }
-      )
-
-    this.reqServ.getData<Authors[]>(environment.author.get)
-      .subscribe(
-        (data: Authors[]):void => {
-          this.dataAuthor = data;
         }
       )
   }

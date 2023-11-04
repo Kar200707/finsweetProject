@@ -148,7 +148,7 @@
 }
 
 .contact_page_block > .inputs_block > .inputs_box
-> form >  div > span {
+> form > span {
   color: red;
 }
 
@@ -216,8 +216,7 @@
 .contact_page_block > .inputs_block > .inputs_box > form > div > select:focus,
 .contact_page_block > .inputs_block > .inputs_box > form > input:focus,
 .contact_page_block > .inputs_block > .inputs_box > form > textarea:focus {
-  font-size: 16px;
-  border: 2px solid #592EA9;
+  border: 1px solid #592EA9;
 }
 
 .contact_page_block > .inputs_block > .inputs_box > form > textarea::placeholder {
