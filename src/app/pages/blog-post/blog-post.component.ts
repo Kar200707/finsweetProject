@@ -6,8 +6,6 @@ import {Authors} from "../../models/authors";
 import {environment} from "../../../environment/environment";
 import {Posts} from "../../models/posts";
 import {NgForOf, NgIf} from "@angular/common";
-import {catchError} from "rxjs";
-import {HttpErrorResponse} from "@angular/common/http";
 
 @Component({
   selector: 'app-blog-post',

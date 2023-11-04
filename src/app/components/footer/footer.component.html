@@ -32,6 +32,10 @@
             </div>
             <button [disabled]="form.invalid" style="border: none;" class="global_button">Subscribe</button>
           </form>
+          <span
+            class="send-successfully"
+            *ngIf="isSendSuccessfully"
+          >Send Successfully &#10004;</span>
         </div>
       </div>
       <div class="finstreet_and_social_sites">

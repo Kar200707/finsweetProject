@@ -18,6 +18,9 @@ import {environment} from "../../../environment/environment";
   ]
 })
 export class ContactComponent {
+  isSentSuccessfully: boolean = true;
+  isSentSuccessfullyTimeOut: boolean = false;
+
   form: FormGroup = new FormGroup({
       f_name: new FormControl('', [
         Validators.required,
@@ -37,11 +40,24 @@ export class ContactComponent {
 
   constructor(private reqServ: RequestService) {  }
 
+  timeOutSentSuccessfully():void {
+    this.isSentSuccessfullyTimeOut = true;
+
+    setTimeout(()=>{
+      this.isSentSuccessfullyTimeOut = false;
+      setTimeout(()=>{
+        this.isSentSuccessfully = false;
+      }, 300)
+    }, 3000)
+  }
+
   save ():void {
     this.reqServ.addData(
       environment.contactUs.get,
       this.form.value
-    ).subscribe(():void=> {})
+    ).subscribe(():void=> {
+      this.timeOutSentSuccessfully();
+    })
 
     this.form.reset()
   }

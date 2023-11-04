@@ -1,11 +1,15 @@
-<div class="business_block">
+<div *ngIf="isNotPage" class="business_block">
   <h2>{{ title }}</h2>
   <p>{{ description }}</p>
   <span>Blog > {{ title }}</span>
 </div>
 <div class="informations_block_categories_page">
   <div class="container">
-    <div class="infromations_block">
+    <div *ngIf="!isNotPage" class="not-page">
+      <h2>This category does not exist or not contection</h2>
+      <a href="/">back Home</a>
+    </div>
+    <div *ngIf="isNotPage" class="infromations_block">
       <app-loader-bar
         *ngIf="dataPosts == undefined"
         style="display: block; width: 100%; margin-top: 32px; padding-right: 20px"

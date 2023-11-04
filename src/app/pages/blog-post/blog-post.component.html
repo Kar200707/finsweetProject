@@ -7,7 +7,9 @@
       <div class="user_info_block">
         <img [src]="dataAuthor === undefined ? '' : dataAuthor.image" alt="this is user image">
         <div class="user_text_block">
-          <h3>{{ dataAuthor === undefined ? 'loading...' : dataAuthor.name }}</h3>
+          <a [routerLink]="['/author', dataPosts.user_id]">
+            {{ dataAuthor === undefined ? 'loading...' : dataAuthor.name }}
+          </a>
           <p>Posted on {{ dataPosts === undefined ? 'loading...' : dataPosts.created_date }}</p>
         </div>
       </div>

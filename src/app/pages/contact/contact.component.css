@@ -268,3 +268,25 @@
 .contact_page_block > .inputs_block > .inputs_box > form > button:hover {
   background: #fff8b7;
 }
+
+.sent-successfully {
+  padding: 30px;
+  background: rgba(77, 77, 77, 0.63);
+  position: fixed;
+  left: 38%;
+  top: 10px;
+  z-index: 999;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  width: 300px;
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  transition: top .3s;
+}
+
+.sent-successfully > p {
+  color: #0cbd37;
+  text-align: center;
+  font-weight: bolder;
+  font-size: 25px;
+}

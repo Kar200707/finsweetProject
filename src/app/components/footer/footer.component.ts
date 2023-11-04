@@ -17,6 +17,8 @@ import {NgIf} from "@angular/common";
   ]
 })
 export class FooterComponent {
+  isSendSuccessfully:boolean = false;
+
   form: FormGroup = new FormGroup({
     email: new FormControl('',
       [
@@ -27,14 +29,22 @@ export class FooterComponent {
 
   constructor(private reqServ: RequestService) {  }
 
+  timeOutSendSuccessfully ():void {
+    this.isSendSuccessfully = true;
+
+    setTimeout(():void =>{
+      this.isSendSuccessfully = false;
+    }, 3000)
+  }
+
   save ():void {
     this.reqServ.addData(
       environment.contactUs.get,
       this.form.value
-    ).subscribe(():void=> {})
-
-    this.form.disable()
-
+    ).subscribe(():void=> {
+      this.timeOutSendSuccessfully();
+    })
+    
     this.form.reset()
   }
 }

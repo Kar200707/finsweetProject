@@ -146,6 +146,7 @@
   font-weight: 700;
   line-height: 24px;
   transition: .2s background-color;
+  cursor: pointer;
 }
 
 .btn_sub_header:hover {

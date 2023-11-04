@@ -13,6 +13,7 @@ import {RouterModule} from "@angular/router";
 export class HeaderComponent {
   scrollToElement(): void {
     let footer:HTMLElement = document.getElementsByTagName('footer')[0];
+
     footer.scrollIntoView({behavior: "smooth", block: "end", inline: "nearest"});
   }
 }

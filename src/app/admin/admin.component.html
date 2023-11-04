@@ -13,7 +13,7 @@
       <img [src]="userData.image" alt="author" class="author-image">
     </div>
   </mat-toolbar>
-  <mat-drawer-container [style.height]="window.innerHeight - 64 + 'px'" class="container">
+  <mat-drawer-container appAdminHeight class="container">
     <mat-drawer class="mat-drawer" mode="side" opened>
       <button routerLinkActive="active-rout" [routerLinkActiveOptions]="{exact: true}" routerLink="/admin/" class="nav-btn" color="primary" mat-button>
         <mat-icon>dashboard</mat-icon>

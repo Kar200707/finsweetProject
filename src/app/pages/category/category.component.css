@@ -8,6 +8,17 @@
   justify-content: center;
 }
 
+.not-page > h2 {
+  color: red;
+}
+
+.not-page > a {
+  color: #1e2352;
+  font-weight: bolder;
+  margin-top: 10px;
+  display: block;
+}
+
 .category-image {
   width: 23px;
   height: 23px;

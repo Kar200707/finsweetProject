@@ -2,12 +2,11 @@ import {Component, OnInit} from '@angular/core';
 import {Posts} from "../../models/posts";
 import {NgFor, NgIf} from "@angular/common";
 import {PostsComponent} from "../../components/posts/posts.component";
-import {HttpClient, HttpClientModule} from "@angular/common/http";
 import {LoaderBarComponent} from "../../components/loader-bar/loader-bar.component";
 import {RequestService} from "../../services/request.service";
 import {environment} from "../../../environment/environment";
 import {Authors} from "../../models/authors";
-import {ActivatedRoute, Params, RouterLinkActive} from "@angular/router";
+import {ActivatedRoute} from "@angular/router";
 
 @Component({
   selector: 'app-author',
@@ -54,7 +53,8 @@ export class AuthorComponent implements OnInit{
           this.authorFaceBook = data.facebook;
           this.authorTwitter = data.twitter;
           this.authorInsta = data.instagram;
-          this.authorLinkedin = data.linkedin
+          this.authorLinkedin = data.linkedin;
+
           this.reqServ.getData<Posts[]>(environment.posts.get + '?user_id=' + data.id)
             .subscribe((posts:Posts[]):void => {
               this.dataPosts = posts;

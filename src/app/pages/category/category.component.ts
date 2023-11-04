@@ -1,15 +1,12 @@
-import {AfterViewInit, Component, Input, OnInit} from '@angular/core';
+import { Component, OnInit} from '@angular/core';
 import {Posts} from "../../models/posts";
 import {NgFor, NgIf} from "@angular/common";
 import {PostsComponent} from "../../components/posts/posts.component";
-import {HttpClient, HttpClientModule} from "@angular/common/http";
 import {LoaderBarComponent} from "../../components/loader-bar/loader-bar.component";
-import {FeaturedPostList} from "../../models/featured-post-list";
 import {Category} from "../../models/category";
 import {RequestService} from "../../services/request.service";
 import {environment} from "../../../environment/environment";
-import {ActivatedRoute, NavigationEnd, Router} from "@angular/router";
-import {Authors} from "../../models/authors";
+import {ActivatedRoute} from "@angular/router";
 
 @Component({
   selector: 'app-category',
@@ -34,6 +31,7 @@ export class CategoryComponent implements OnInit{
   description: string = 'loading...';
   id:number = 0;
   apicategory: string = '';
+  isNotPage: boolean = false;
 
   constructor(private reqServ: RequestService, private api: ActivatedRoute) {  }
 
@@ -61,6 +59,7 @@ export class CategoryComponent implements OnInit{
         (data: Category):void => {
           this.title = data.title
           this.description = data.description
+          this.isNotPage = true;
 
           this.isSelectCategory.forEach((item: any, index: number):void => {
             if (this.title == item.cat) {

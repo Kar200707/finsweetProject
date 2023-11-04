@@ -40,7 +40,7 @@
 }
 
 .step_by_step_block > .container > div > .user_info_block
-> .user_text_block > h3 {
+> .user_text_block > a {
   color: #592ea9d2;
   font-family: Sen;
   font-size: 28px;
@@ -48,6 +48,7 @@
   font-weight: 700;
   line-height: 40px;
   letter-spacing: -1px;
+  text-decoration: none;
 }
 
 .step_by_step_block > .container > div > .user_info_block

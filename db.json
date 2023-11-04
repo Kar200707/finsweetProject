@@ -139,14 +139,11 @@
       "id": 3
     },
     {
-      "f_name": "testo",
-      "email": "test@gmail.ocm",
-      "message": "Hello test helooooooo",
-      "county": "Erevan",
+      "email": "karen@gmail.com",
       "id": 4
     },
     {
-      "email": "sdf@gmail.com",
+      "email": "karen@gmail.com",
       "id": 5
     },
     {
@@ -154,11 +151,15 @@
       "id": 6
     },
     {
-      "f_name": "Karen",
-      "email": "harutyunyan2007karen@gmail.com",
-      "message": "Kadgfdfgdfgfg",
-      "county": "Erevan",
+      "email": "karen@gmail.com",
       "id": 7
+    },
+    {
+      "f_name": "Karen",
+      "email": "harutyun@gmail.com",
+      "message": "sdfdsfdsfsdfsdffffffffffffffffffffffffffffffff",
+      "county": "Coutry",
+      "id": 8
     }
   ],
   "privacy-policy": {

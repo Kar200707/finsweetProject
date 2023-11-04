@@ -1,3 +1,9 @@
+<div
+  *ngIf="isSentSuccessfully"
+  [style.top]="isSentSuccessfullyTimeOut ? '10px' : '-100px'"
+  class="sent-successfully">
+  <p>sent successfully &#10004;</p>
+</div>
 <div class="container">
   <div class="contact_page_block">
     <span>Contact us</span>
