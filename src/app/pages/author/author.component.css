@@ -3,6 +3,14 @@
   margin: auto;
 }
 
+.not-page {
+  color: red;
+  text-align: center;
+  margin: 50px 0;
+  display: block;
+  font-size: 50px;
+}
+
 .user_block_author_page {
   display: flex;
   flex-direction: column;

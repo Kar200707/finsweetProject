@@ -31,7 +31,7 @@ export class CategoryComponent implements OnInit{
   description: string = 'loading...';
   id:number = 0;
   apicategory: string = '';
-  isNotPage: boolean = false;
+  isNotPage: boolean = true;
 
   constructor(private reqServ: RequestService, private api: ActivatedRoute) {  }
 
@@ -71,6 +71,9 @@ export class CategoryComponent implements OnInit{
                   })
             }
           })
+        },
+        ():void =>{
+            this.isNotPage = false;
         }
       )
   }

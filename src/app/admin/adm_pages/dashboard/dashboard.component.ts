@@ -10,6 +10,8 @@ import {MatButtonModule} from "@angular/material/button";
 import {Posts} from "../../../models/posts";
 import {NgForOf, NgIf} from "@angular/common";
 import {Contact} from "../../../models/contact";
+import {Authors} from "../../../models/authors";
+import {Subscribe} from "../../../models/subscribe";
 
 @Component({
   selector: 'app-dashboard',
@@ -29,9 +31,10 @@ import {Contact} from "../../../models/contact";
 
 export class DashboardComponent implements OnInit{
   dataCategory!: Category[];
-  dataLogos!: string[];
+  dataSubscribe!: Subscribe[];
   dataPosts!: Posts[];
   dataContact!: Contact[];
+  userData: Authors = JSON.parse(localStorage.getItem('userData') ?? 'null').user;
   constructor(public reqServ: RequestService) {  }
   ngOnInit():void {
     this.reqServ.getData<Contact[]>(environment.contactUs.get)
@@ -44,12 +47,16 @@ export class DashboardComponent implements OnInit{
         this.dataCategory = data
       })
 
-    this.reqServ.getData<string[]>(environment.logos.get)
-      .subscribe((data:string[]):void =>{
-        this.dataLogos = data
+    this.reqServ.getData<Subscribe[]>(environment.subscribe.get)
+      .subscribe((data:Subscribe[]):void =>{
+        this.dataSubscribe = data
       })
 
-    this.reqServ.getData<Posts[]>(environment.posts.get)
+    this.reqServ.getData<Posts[]>(
+      this.userData.superAdmin === 'true'
+        ? environment.posts.get
+        : environment.posts.get + '?user_id=' + this.userData.id
+    )
       .subscribe((data:Posts[]):void =>{
         this.dataPosts = data
       })

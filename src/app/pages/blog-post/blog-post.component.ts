@@ -28,7 +28,7 @@ export class BlogPostComponent implements OnInit{
   dataPosts!: Posts;
   dataPostsMorePosts!: Posts[];
   dataAuthorsMorePosts!: Authors[];
-  isTruePage: boolean = false;
+  isNotPage: boolean = true;
 
   constructor(private route: ActivatedRoute, private reqServ: RequestService) {  }
 
@@ -40,12 +40,15 @@ export class BlogPostComponent implements OnInit{
     this.reqServ.getData<Posts>(environment.posts.get + '/' + this.id)
       .subscribe((data:Posts):void=>{
         this.dataPosts = data
+        this.isNotPage = true;
         this.reqServ.getData<Authors>(environment.author.get + '/' + (this.dataPosts.user_id))
           .subscribe((author:Authors):void => {
               this.dataAuthor = author;
-              this.isTruePage = true;
             }
           )
+      },
+      ():void =>{
+        this.isNotPage = false;
       })
 
     this.reqServ.getData<Posts[]>(environment.posts.get)

@@ -24,6 +24,7 @@ import {environment} from "../../../environment/environment";
   standalone: true
 })
 export class LoginComponent {
+  isFalseLogin:boolean = false;
 
   form: FormGroup = new FormGroup({
     email: new FormControl('', [
@@ -34,23 +35,23 @@ export class LoginComponent {
     password: new FormControl('', [
       Validators.required,
       Validators.minLength(3),
-      Validators.pattern(/^[a-z]{4,16}$/)
     ]),
   })
 
   constructor(private reqServ: RequestService, private router: Router) {  }
 
   save():void {
-    let obj = {
-      email: this.form.get('email')?.value,
-      password: this.form.get('password')?.value,
+    if (this.form.valid) {
+      this.reqServ.addData<any>(environment.host.get + 'login', this.form.value)
+          .subscribe((data):void=>{
+            localStorage.setItem('token', data.accessToken)
+            localStorage.setItem('userData', JSON.stringify(data))
+            this.router.navigate(['/admin'])
+          },(error):void =>{
+            if (error.status === 400) {
+              this.isFalseLogin = true;
+            }
+          })
     }
-
-    this.reqServ.addData<any>(environment.host.get + 'login', obj)
-      .subscribe((data):void=>{
-        localStorage.setItem('token', data.accessToken)
-        localStorage.setItem('userData', JSON.stringify(data))
-        this.router.navigate(['/admin'])
-      })
   }
 }

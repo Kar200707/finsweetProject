@@ -2,15 +2,15 @@
   <mat-toolbar class="mat-toolbar">
     <span><span style="color:#301ac2;">FinsWeet {{ userData.superAdmin === "true" ? 'super' : '' }}</span> Admin Panel</span>
     <div *ngIf="userData !== undefined" class="authors-details">
-      <button (click)="logOut()" class="logout-btn" color="warn" mat-button>
-        <mat-icon>logout</mat-icon>
-        LogOut
-      </button>
       <div style="display: flex; flex-direction: column; align-items: flex-end; margin-right: 10px">
         <span class="user-name">{{ userData.name }}</span>
         <span class="user-email">{{ userData.email }}</span>
       </div>
       <img [src]="userData.image" alt="author" class="author-image">
+      <button (click)="logOut()" class="logout-btn" color="warn" mat-button>
+        <mat-icon>logout</mat-icon>
+        LogOut
+      </button>
     </div>
   </mat-toolbar>
   <mat-drawer-container appAdminHeight class="container">
@@ -23,23 +23,23 @@
         <mat-icon>assignment</mat-icon>
         Blog
       </button>
-      <button routerLinkActive="active-rout" routerLink="/admin/category" class="nav-btn" color="primary" mat-button>
+      <button *ngIf="userData.superAdmin === 'true'" routerLinkActive="active-rout" routerLink="/admin/category" class="nav-btn" color="primary" mat-button>
         <mat-icon>category</mat-icon>
         Category
       </button>
-      <button routerLinkActive="active-rout" routerLink="/admin/logos" class="nav-btn" color="primary" mat-button>
-        <mat-icon>extension</mat-icon>
-        Logos
-      </button>
-      <button routerLinkActive="active-rout" routerLink="/admin/contact" class="nav-btn" color="primary" mat-button>
+      <button *ngIf="userData.superAdmin === 'true'" routerLinkActive="active-rout" routerLink="/admin/contact" class="nav-btn" color="primary" mat-button>
         <mat-icon>account_circle</mat-icon>
         Contact-us
       </button>
-      <button routerLinkActive="active-rout" routerLink="/admin/privacy-policy" class="nav-btn" color="primary" mat-button>
+      <button *ngIf="userData.superAdmin === 'true'" routerLinkActive="active-rout" routerLink="/admin/subscribe" class="nav-btn" color="primary" mat-button>
+        <mat-icon>subscriptions</mat-icon>
+        Subscribe
+      </button>
+      <button *ngIf="userData.superAdmin === 'true'" routerLinkActive="active-rout" routerLink="/admin/privacy-policy" class="nav-btn" color="primary" mat-button>
         <mat-icon>help</mat-icon>
         Privacy-Policy
       </button>
-      <button routerLinkActive="active-rout" routerLink="/admin/register" class="nav-btn" color="primary" mat-button>
+      <button *ngIf="userData.superAdmin === 'true'" routerLinkActive="active-rout" routerLink="/admin/register" class="nav-btn" color="primary" mat-button>
         <mat-icon>how_to_reg</mat-icon>
         Register
       </button>

@@ -3,6 +3,11 @@
     border-radius: 16px;
 }
 
+.not-post > h3 {
+  color: #ffffff;
+  font-size: 30px;
+}
+
 .card-category {
     width: 42%;
     border-radius: 16px;

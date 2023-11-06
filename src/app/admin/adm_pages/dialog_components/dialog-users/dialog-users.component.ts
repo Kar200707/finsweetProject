@@ -140,24 +140,10 @@ export class DialogUsersComponent implements OnInit {
 
   save ():void {
     if (this.form.valid) {
-      const obj = {
-        email: this.form.get('email')?.value,
-        password: this.form.get('password')?.value,
-        image: this.form.get('image')?.value,
-        name: this.form.get('name')?.value,
-        title: this.form.get('title')?.value,
-        description: this.form.get('description')?.value,
-        bio: this.form.get('bio')?.value,
-        facebook: this.form.get('facebook')?.value,
-        twitter: this.form.get('twitter')?.value,
-        instagram: this.form.get('instagram')?.value,
-        linkedin: this.form.get('linkedin')?.value,
-        superAdmin: this.form.get('superAdmin')?.value
-      }
-
-      this.reqServ.editData(environment.author.get + '/' + this.dialogDetails.idUser, obj)
+      this.reqServ.editData(environment.author.get + '/' + this.dialogDetails.idUser, this.form.value)
         .subscribe(():void => {
           this.dialog.closeAll();
+          alert('user registered');
         })
     }
   }

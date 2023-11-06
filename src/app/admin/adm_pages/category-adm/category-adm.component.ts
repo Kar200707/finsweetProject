@@ -7,7 +7,6 @@ import {Category} from "../../../models/category";
 import {RequestService} from "../../../services/request.service";
 import {environment} from "../../../../environment/environment";
 import {NgIf} from "@angular/common";
-import {DialogPostsComponent} from "../dialog_components/dialog-posts/dialog-posts.component";
 import {DialogCategoryComponent} from "../dialog_components/dialog-category/dialog-category.component";
 import {DialoginputValueService} from "../../../services/dialoginput-value.service";
 import {Authors} from "../../../models/authors";
@@ -63,12 +62,17 @@ export class CategoryAdmComponent implements OnInit{
   }
 
   openEditDialog (id: any):void {
+    let isOpened: boolean = true;
+
     this.dialog.open(DialogCategoryComponent, {
       width: '520px',
     })
 
     this.dialog.afterAllClosed.subscribe(() => {
-      this.getPosts();
+      if (isOpened) {
+        this.getPosts();
+        isOpened = false;
+      }
     })
 
     this.dialogDetails.idCatgory = id;
@@ -76,12 +80,17 @@ export class CategoryAdmComponent implements OnInit{
   }
 
   openAddDialog ():void {
+    let isOpened: boolean = true;
+
     this.dialog.open(DialogCategoryComponent, {
       width: '520px',
     })
 
     this.dialog.afterAllClosed.subscribe(() => {
-      this.getPosts();
+      if (isOpened) {
+        this.getPosts();
+        isOpened = false;
+      }
     })
 
     this.dialogDetails.isCalledCategory = 'categoryAdd'

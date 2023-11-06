@@ -3,11 +3,9 @@ import {MatButtonModule} from "@angular/material/button";
 import {MatDialog, MatDialogModule} from "@angular/material/dialog";
 import {MatIconModule} from "@angular/material/icon";
 import {MatTableModule} from "@angular/material/table";
-import {Category} from "../../../models/category";
 import {RequestService} from "../../../services/request.service";
 import {DialoginputValueService} from "../../../services/dialoginput-value.service";
 import {environment} from "../../../../environment/environment";
-import {DialogCategoryComponent} from "../dialog_components/dialog-category/dialog-category.component";
 import {Authors} from "../../../models/authors";
 import {DialogUsersComponent} from "../dialog_components/dialog-users/dialog-users.component";
 
@@ -60,12 +58,17 @@ export class UsersComponent {
   }
 
   openEditDialog (id: any):void {
+    let isOpened: boolean = true;
+
     this.dialog.open(DialogUsersComponent, {
       width: '520px',
     })
 
     this.dialog.afterAllClosed.subscribe(() => {
-      this.getPosts();
+      if (isOpened) {
+        this.getPosts();
+        isOpened = false;
+      }
     })
 
     this.dialogDetails.idUser = id;

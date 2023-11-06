@@ -39,12 +39,12 @@ export class FooterComponent {
 
   save ():void {
     this.reqServ.addData(
-      environment.contactUs.get,
+      environment.subscribe.get,
       this.form.value
     ).subscribe(():void=> {
       this.timeOutSendSuccessfully();
     })
-    
+
     this.form.reset()
   }
 }

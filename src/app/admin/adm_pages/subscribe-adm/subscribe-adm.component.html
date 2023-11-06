@@ -1,0 +1,11 @@
+<mat-card *ngFor="let subscribe of dataSubscribe">
+  <mat-card-content>
+    <div class="subscribe-box">
+      <span>Email</span>
+      <span>{{ subscribe.email }}</span>
+      <a [href]="'mailto:' + subscribe.email">
+        <mat-icon>email</mat-icon>
+      </a>
+    </div>
+  </mat-card-content>
+</mat-card>

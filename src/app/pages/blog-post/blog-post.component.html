@@ -1,7 +1,7 @@
-<div class="post-not" *ngIf="!isTruePage">
+<div class="post-not" *ngIf="!isNotPage">
   <h6>404 This post doesn't exist or not connection</h6>
 </div>
-<div *ngIf="isTruePage" class="step_by_step_block">
+<div *ngIf="isNotPage && dataPosts != undefined" class="step_by_step_block">
   <div class="container">
     <div>
       <div class="user_info_block">

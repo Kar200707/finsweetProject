@@ -1,5 +1,5 @@
 <div style="display: flex; align-items: center; justify-content: space-between">
-  <mat-card *ngIf="dataCategory !== undefined" class="card-category">
+  <mat-card *ngIf="dataCategory !== undefined && userData.superAdmin === 'true'" class="card-category">
     <mat-card-content>
       <div class="text-box">
         <span>Categories</span>
@@ -14,7 +14,10 @@
       </div>
     </mat-card-content>
   </mat-card>
-  <mat-card *ngIf="dataContact !== undefined" class="card-cantact">
+  <mat-card
+    *ngIf="dataContact !== undefined && userData.superAdmin === 'true'"
+    class="card-cantact"
+  >
     <mat-card-content>
       <div class="text-box">
         <span>Contact</span>
@@ -30,47 +33,60 @@
     </mat-card-content>
   </mat-card>
 </div>
-<mat-card *ngIf="dataPosts !== undefined" class="card-posts">
+<div *ngIf="dataPosts !== undefined && dataPosts.length === 0" class="not-post">
+  <h3>Not Posts</h3>
+  <a routerLink="/admin/posts">switch for posts</a>
+</div>
+<mat-card *ngIf="dataPosts !== undefined && dataPosts.length != 0" class="card-posts">
   <mat-card-content>
     <div class="posts-text-block">
       <h3 class="posts-text">
         POSTS
-        <mat-icon color="primary" style="margin-left: 10px">assignment</mat-icon>
+        <mat-icon
+          color="primary"
+          style="margin-left: 10px;"
+        >assignment</mat-icon>
       </h3>
       <h4>Shared posts {{ dataPosts.length }}/#</h4>
     </div>
     <ng-container>
       <div class="posts-card-parent">
-        <img class="post-img" [src]="dataPosts[1].image">
+        <img class="post-img" [src]="dataPosts[0].image">
         <div class="text-box-posts-card">
-          <span>{{ dataPosts[1].title }}</span>
+          <span>{{ dataPosts[0].title }}</span>
           <div>
-            <img [src]="dataPosts[1].category_icon"/>
-            <span>{{ dataPosts[1].category }}</span>
+            <img [src]="dataPosts[0].category_icon"/>
+            <span>{{ dataPosts[0].category }}</span>
           </div>
-          <p>{{ dataPosts[1].description }}</p>
-          <button routerLink="/admin/posts" mat-button>open <mat-icon>assignment</mat-icon></button>
+          <p>{{ dataPosts[0].description }}</p>
+          <button
+            routerLink="/admin/posts"
+            mat-button
+            style="position: absolute; right: 15px; bottom: 15px"
+          >
+            open <mat-icon>assignment</mat-icon>
+          </button>
         </div>
       </div>
     </ng-container>
   </mat-card-content>
 </mat-card>
 <div style="display: flex; align-items: center; justify-content: space-between">
-  <mat-card *ngIf="dataCategory !== undefined" class="card-logos">
+  <mat-card *ngIf="dataCategory !== undefined && userData.superAdmin === 'true'" class="card-logos">
     <mat-card-content>
       <div class="text-box">
-        <span>Logos</span>
-        <div *ngIf="dataLogos !== undefined">
-          <span>Activated {{ dataLogos.length }}/#</span>
+        <span>Subscriptions</span>
+        <div *ngIf="dataSubscribe !== undefined">
+          <span>Activated {{ dataSubscribe.length }}/#</span>
         </div>
       </div>
       <div class="edit-icon-box">
-        <mat-icon routerLink="/admin/logos">edit_note</mat-icon>
-        <mat-icon>extension</mat-icon>
+        <mat-icon routerLink="/admin/subscribe">edit_note</mat-icon>
+        <mat-icon>subscriptions</mat-icon>
       </div>
     </mat-card-content>
   </mat-card>
-  <mat-card *ngIf="dataContact !== undefined" class="card-privacy-policy">
+  <mat-card *ngIf="dataContact !== undefined && userData.superAdmin === 'true'" class="card-privacy-policy">
     <mat-card-content>
       <div class="text-box">
         <span>Privacy</span>

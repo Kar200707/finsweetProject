@@ -34,6 +34,8 @@ export class AuthorComponent implements OnInit{
   authorTwitter!: string;
   authorInsta!: string;
   authorLinkedin!: string;
+  isNotPage: boolean = true;
+
   constructor(private reqServ: RequestService, private route: ActivatedRoute) {
 
   }
@@ -59,6 +61,9 @@ export class AuthorComponent implements OnInit{
             .subscribe((posts:Posts[]):void => {
               this.dataPosts = posts;
             })
+        },
+        ():void =>{
+           this.isNotPage = false;
         }
       )
   }

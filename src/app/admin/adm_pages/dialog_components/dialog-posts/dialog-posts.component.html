@@ -1,5 +1,5 @@
 <mat-card>
-  <mat-card-content *ngIf="form != undefined && valuePost != undefined">
+  <mat-card-content>
     <form [formGroup]="form" (ngSubmit)="save()" class="example-form">
       <mat-form-field class="example-full-width">
         <mat-label>Title</mat-label>
@@ -19,16 +19,36 @@
           title is <strong>required</strong>
         </mat-error>
       </mat-form-field>
-      <mat-form-field style="width: 100%">
-        <mat-label>Category</mat-label>
-        <mat-select formControlName="category">
-          <ng-container *ngFor="let category of dataCategory">
-            <mat-option [value]="category.title.toUpperCase()">
-              {{ category.title }}
-            </mat-option>
-          </ng-container>
-        </mat-select>
-      </mat-form-field>
+      <div style="display: flex; align-items: center; justify-content: space-between">
+        <mat-form-field [style.width]="userData.superAdmin === 'true' ? '49%' : '100%'">
+          <mat-label>Category</mat-label>
+          <mat-select formControlName="category">
+            <ng-container *ngFor="let category of dataCategory">
+              <mat-option [value]="category.title.toUpperCase()">
+                {{ category.title }}
+              </mat-option>
+            </ng-container>
+          </mat-select>
+        </mat-form-field>
+        <mat-form-field *ngIf="userData.superAdmin === 'true'" style="width: 49%">
+          <mat-label>User</mat-label>
+          <mat-select formControlName="userId">
+            <ng-container *ngFor="let author of dataAuthor">
+              <mat-option [value]="author.id">
+                <div style="display: flex; align-items: center;">
+                  <img
+                    class="select_author_img"
+                    [src]="author.image"
+                    style="margin-right: 20px"
+                    alt="image"
+                  >
+                  {{ author.name }}
+                </div>
+              </mat-option>
+            </ng-container>
+          </mat-select>
+        </mat-form-field>
+      </div>
       <mat-form-field style="width: 100%">
         <mat-label>Image</mat-label>
         <input

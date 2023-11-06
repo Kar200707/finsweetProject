@@ -1,10 +1,10 @@
 {
   "category": [
     {
-      "image": "assets/Images/icons/business.png",
       "title": "Business",
-      "shortDescription": "this is category business\n",
+      "image": "assets/Images/icons/business.png",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.",
+      "shortDescription": "this is category business\n",
       "id": "1"
     },
     {
@@ -45,32 +45,32 @@
   },
   "posts": [
     {
-      "user_id": 6,
+      "user_id": 4,
       "category": "INJINER",
       "category_icon": "https://cdn-icons-png.flaticon.com/512/3700/3700845.png",
-      "created_date": "Oct 22, 2023",
-      "title": "Kont sizes in UI design: The complete guide to follow..........",
+      "created_date": "Nov 6, 2023",
+      "title": "Kont sizes in UI design: The complete guide to follow",
       "image": "assets/Images/stained-glass.png",
       "shortDescription": "2 Figma design systems that you can download for free today.",
       "description": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.",
       "id": 1
     },
     {
-      "user_id": 4,
+      "user_id": 2,
       "category": "BUSINESS",
       "category_icon": "assets/Images/icons/business.png",
-      "created_date": "Oct 22, 2023",
+      "created_date": "Nov 6, 2023",
       "title": "Font sizes in UI design: The complete guide to follow..........",
       "image": "assets/Images/featured-Post_image.png",
-      "shortDescription": "5 Figma design systems that you can download for free today.",
+      "shortDescription": "12 Figma design systems that you can download for free today.",
       "description": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.",
       "id": 2
     },
     {
-      "user_id": 5,
+      "user_id": 7,
       "category": "ECONOMY",
       "category_icon": "assets/Images/icons/economy.png",
-      "created_date": "Oct 22, 2023",
+      "created_date": "Nov 6, 2023",
       "title": "Font sizes in UI design: The complete guide to follow......",
       "image": "assets/Images/stained-glass.png",
       "shortDescription": "6 Figma design systems that you can download for free today.",
@@ -120,46 +120,50 @@
       "shortDescription": "Test short description",
       "description": "test description\n",
       "id": "KCGNGBW"
+    },
+    {
+      "user_id": 8,
+      "category": "TECHNOLOGY",
+      "category_icon": "assets/Images/icons/technology.png",
+      "created_date": "Nov 6, 2023",
+      "title": "test New post",
+      "image": "https://www.industrialempathy.com/img/remote/ZiClJf-1920w.jpg",
+      "shortDescription": "saffdsafgfas",
+      "description": "sdfdsbfffggdfxzdsfbdd",
+      "id": 6
     }
   ],
   "contact-us": [
     {
-      "email": "logank@gmail.com",
-      "id": 1
-    },
-    {
-      "email": "karen@gmail.com",
-      "id": 2
-    },
-    {
-      "f_name": "Karen",
-      "email": "harutyunyna2007karen@gmail.com",
-      "message": "es Karenn em",
+      "f_name": "Test1",
+      "email": "name@gmail.com",
+      "message": "hellow sdfsdf",
       "county": "Gyumri",
       "id": 3
     },
     {
-      "email": "karen@gmail.com",
-      "id": 4
-    },
-    {
-      "email": "karen@gmail.com",
-      "id": 5
-    },
-    {
-      "email": "karen@gmail.com",
-      "id": 6
-    },
-    {
-      "email": "karen@gmail.com",
-      "id": 7
-    },
-    {
-      "f_name": "Karen",
-      "email": "harutyun@gmail.com",
+      "f_name": "Test2",
+      "email": "test@gmail.com",
       "message": "sdfdsfdsfsdfsdffffffffffffffffffffffffffffffff",
       "county": "Coutry",
       "id": 8
+    },
+    {
+      "f_name": "Test1234",
+      "email": "testo@gmail.com",
+      "message": "sfsdsafdsfasfdadfdadfdfsaddsdfsdfdsf",
+      "county": "Hrazdan",
+      "id": 9
+    }
+  ],
+  "subscribe": [
+    {
+      "email": "test1@gmail.com",
+      "id": 1
+    },
+    {
+      "email": "test2@gmail.com",
+      "id": 2
     }
   ],
   "privacy-policy": {
@@ -178,18 +182,18 @@
   },
   "users": [
     {
-      "email": "floydMiles@gmail.com",
-      "password": "$2a$10$PplhO1lhDc4kygYPXeMkA.NiMS3N44TsYzJcCXj9Cs0O/ISfbzJYK",
-      "image": "assets/Images/user_img.png",
       "name": "Floyd Miles",
-      "title": "Hey there, I’m Andrew Jonhson and welcome to my Blog",
+      "image": "assets/Images/user_img.png",
       "description": "Content Writer @Company",
+      "title": "Hey there, I’m Andrew Jonhson and welcome to my Blog",
+      "email": "floydMiles@gmail.com",
       "bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Non blandit massa enim nec. Scelerisque viverra mauris in aliquam sem. At risus viverra adipiscing at in tellus. ",
       "facebook": "https://www.google.com/",
       "twitter": "https://www.google.com/",
       "instagram": "https://www.google.com/",
       "linkedin": "https://www.google.com/",
       "superAdmin": "false",
+      "password": "$2a$10$L7mpLNwRwFG8UOFl3g/YSupbRdTCPUiIK3xboQ65rPpS9U7bzfEYW",
       "id": 1
     },
     {

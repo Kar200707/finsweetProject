@@ -2,7 +2,6 @@ import {Component, OnInit} from '@angular/core';
 import {MatInputModule} from "@angular/material/input";
 import {MatCardModule} from "@angular/material/card";
 import {MatSelectModule} from '@angular/material/select';
-import {MatOption} from "@angular/material/core";
 import {NgFor, NgIf} from "@angular/common";
 import {RequestService} from "../../../../services/request.service";
 import {Category} from "../../../../models/category";
@@ -12,6 +11,7 @@ import {Posts} from "../../../../models/posts";
 import {environment} from "../../../../../environment/environment";
 import {DialoginputValueService} from "../../../../services/dialoginput-value.service";
 import {FormControl, FormGroup, ReactiveFormsModule, Validators} from "@angular/forms";
+import {Authors} from "../../../../models/authors";
 
 @Component({
   selector: 'app-dialog-posts',
@@ -30,95 +30,93 @@ import {FormControl, FormGroup, ReactiveFormsModule, Validators} from "@angular/
 })
 export class DialogPostsComponent implements OnInit{
   dataCategory!: Category[];
+  dataAuthor!: Authors[];
   valuePost!: Posts;
+  userData: Authors = JSON.parse(localStorage.getItem('userData') ?? 'null').user;
 
-  form!: FormGroup;
+  form: FormGroup = new FormGroup({
+    title: new FormControl(
+      '',
+      [
+        Validators.required,
+        Validators.minLength(3),
+        Validators.maxLength(70),
+      ]
+    ),
+    category:  new FormControl(
+      '',
+      [
+        Validators.required,
+        Validators.minLength(3),
+        Validators.maxLength(53),
+      ]
+    ),
+    image: new FormControl(
+      '',
+      [
+        Validators.required,
+      ]
+    ),
+    description: new FormControl(
+      '',
+      [
+        Validators.required,
+        Validators.minLength(15),
+      ]
+    ),
+    shortDescription: new FormControl(
+      '',
+      [
+        Validators.required,
+        Validators.minLength(5),
+      ]
+    ),
+    userId: new FormControl(
+      this.userData.superAdmin == 'false' ? this.userData.id : '',
+      [
+        Validators.required,
+        Validators.minLength(5),
+      ]
+    ),
+  });
 
   constructor (
     private reqServ: RequestService,
-    private valueDetails: DialoginputValueService,
+    public valueDetails: DialoginputValueService,
     private dialog: MatDialog
   ) {  }
 
   ngOnInit():void {
+    this.reqServ.getData<Authors[]>(environment.author.get)
+      .subscribe((data: Authors[]):void=>{
+        this.dataAuthor = data;
+      })
+
     this.reqServ.getData<Category[]>(environment.category.get)
       .subscribe((data:Category[]):void=>{
         this.dataCategory = data;
       })
 
-    this.reqServ.getData<Posts>(
-      this.valueDetails.isCalled == 'postEdit' ?  environment.posts.get + '/' + this.valueDetails.dialogPostsValue
-        : environment.posts.get
-    )
-      .subscribe((data: Posts):void=>{
-        this.valuePost = data;
+    if (this.valueDetails.isCalled == 'postEdit') {
+      this.reqServ.getData<Posts>(environment.posts.get + '/' + this.valueDetails.dialogPostsValue)
+        .subscribe((data: Posts):void=>{
+          this.valuePost = data;
 
-        this.form = new FormGroup({
-          title: new FormControl(
-            (
-            this.valueDetails.isCalled == 'postEdit'
-              ? data.title.slice(0, 60) + '...'
-              : ''
-            ),
-            [
-              Validators.required,
-              Validators.minLength(3),
-              Validators.maxLength(70),
-            ]
-          ),
-          category:  new FormControl(
-            (
-              this.valueDetails.isCalled == 'postEdit'
-                ? data.category
-                : ''
-            ),
-            [
-              Validators.required,
-              Validators.minLength(3),
-              Validators.maxLength(53),
-            ]
-          ),
-          image: new FormControl(
-            (
-              this.valueDetails.isCalled == 'postEdit'
-                ? data.image
-                : ''
-            ),
-            [
-              Validators.required,
-            ]
-          ),
-          description: new FormControl(
-            (
-              this.valueDetails.isCalled == 'postEdit'
-                ? data.description
-                : ''
-            ),
-            [
-              Validators.required,
-              Validators.minLength(15),
-            ]
-          ),
-          shortDescription: new FormControl(
-            (
-              this.valueDetails.isCalled == 'postEdit'
-                ? data.shortDescription
-                : ''
-            ),
-            [
-              Validators.required,
-              Validators.minLength(5),
-            ]
-          ),
+          if (this.valueDetails.isCalled == 'postEdit') {
+            this.form.get('title')?.setValue(data.title);
+            this.form.get('category')?.setValue(data.category);
+            this.form.get('image')?.setValue(data.image);
+            this.form.get('description')?.setValue(data.description);
+            this.form.get('shortDescription')?.setValue(data.shortDescription);
+          }
         })
-      })
+    }
   }
 
   save ():void {
     if (this.form.valid) {
       if (this.valueDetails.isCalled == 'postEdit') {
         let date: Date = new Date();
-        let userData = JSON.parse(localStorage.getItem('userData') ?? 'null').user;
 
         let months: string[] = [
           "Jan",
@@ -141,7 +139,7 @@ export class DialogPostsComponent implements OnInit{
         )
           .subscribe((category: Category[]):void => {
             const obj = {
-              user_id: userData.id,
+              user_id: this.form.get('userId')?.value,
               category: this.form.get('category')?.value,
               category_icon: category[0].image,
               created_date: months[date.getMonth()] + ' ' + date.getDate() + ', ' + date.getFullYear(),
@@ -153,7 +151,8 @@ export class DialogPostsComponent implements OnInit{
 
             this.reqServ.editData(environment.posts.get + '/' + this.valueDetails.dialogPostsValue, obj)
               .subscribe((posts):void=>{
-                this.dialog.closeAll()
+                this.dialog.closeAll();
+                alert('post edited');
               })
           })
       } else {
@@ -181,7 +180,7 @@ export class DialogPostsComponent implements OnInit{
         )
           .subscribe((category: Category[]):void => {
             const obj = {
-              user_id: userData.id,
+              user_id: this.form.get('userId')?.value,
               category: this.form.get('category')?.value,
               category_icon: category[0].image,
               created_date: months[date.getMonth()] + ' ' + date.getDate() + ', ' + date.getFullYear(),
@@ -194,6 +193,7 @@ export class DialogPostsComponent implements OnInit{
             this.reqServ.addData(environment.posts.get, obj)
               .subscribe((posts):void=>{
                 this.dialog.closeAll();
+                alert('post created');
               })
           })
       }

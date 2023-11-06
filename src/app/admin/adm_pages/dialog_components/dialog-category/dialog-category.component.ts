@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import {Category} from "../../../../models/category";
-import {Posts} from "../../../../models/posts";
 import {FormControl, FormGroup, ReactiveFormsModule, Validators} from "@angular/forms";
 import {RequestService} from "../../../../services/request.service";
 import {DialoginputValueService} from "../../../../services/dialoginput-value.service";
@@ -28,10 +27,38 @@ import {MatButtonModule} from "@angular/material/button";
   ]
 })
 export class DialogCategoryComponent {
-  dataCategory!: Category[];
   valueCategory!: Category;
 
-  form!: FormGroup;
+  form: FormGroup = new FormGroup({
+    title: new FormControl(
+      (''),
+      [
+        Validators.required,
+        Validators.minLength(3),
+        Validators.maxLength(70),
+      ]
+    ),
+    image: new FormControl(
+      (''),
+      [
+        Validators.required,
+      ]
+    ),
+    description: new FormControl(
+      (''),
+      [
+        Validators.required,
+        Validators.minLength(15),
+      ]
+    ),
+    shortDescription: new FormControl(
+      (''),
+      [
+        Validators.required,
+        Validators.minLength(5),
+      ]
+    ),
+  });
 
   constructor (
     private reqServ: RequestService,
@@ -40,94 +67,34 @@ export class DialogCategoryComponent {
   ) {  }
 
   ngOnInit():void {
-    this.reqServ.getData<Category[]>(environment.category.get)
-      .subscribe((data:Category[]):void=>{
-        this.dataCategory = data;
-      })
+    if (this.valueDetails.isCalledCategory == 'categoryEdit') {
+      this.reqServ.getData<Category>(environment.category.get + '/' + this.valueDetails.idCatgory)
+        .subscribe((data: Category):void=>{
+          this.valueCategory = data;
 
-    this.reqServ.getData<Category>(
-      this.valueDetails.isCalledCategory == 'categoryEdit' ?  environment.category.get + '/' + this.valueDetails.idCatgory
-        : environment.category.get
-    )
-      .subscribe((data: Category):void=>{
-        this.valueCategory = data;
-
-        this.form = new FormGroup({
-          name: new FormControl(
-            (
-              this.valueDetails.isCalledCategory == 'categoryEdit'
-                ? data.title.slice(0, 60)
-                : ''
-            ),
-            [
-              Validators.required,
-              Validators.minLength(3),
-              Validators.maxLength(70),
-            ]
-          ),
-          icon: new FormControl(
-            (
-              this.valueDetails.isCalledCategory == 'categoryEdit'
-                ? data.image
-                : ''
-            ),
-            [
-              Validators.required,
-            ]
-          ),
-          description: new FormControl(
-            (
-              this.valueDetails.isCalledCategory == 'categoryEdit'
-                ? data.description
-                : ''
-            ),
-            [
-              Validators.required,
-              Validators.minLength(15),
-            ]
-          ),
-          shortDescription: new FormControl(
-            (
-              this.valueDetails.isCalledCategory == 'categoryEdit'
-                ? data.shortDescription
-                : ''
-            ),
-            [
-              Validators.required,
-              Validators.minLength(5),
-            ]
-          ),
+          if (this.valueDetails.isCalledCategory == 'categoryEdit') {
+            this.form.get('title')?.setValue(data.title);
+            this.form.get('image')?.setValue(data.image);
+            this.form.get('description')?.setValue(data.description);
+            this.form.get('shortDescription')?.setValue(data.shortDescription);
+          }
         })
-      })
+    }
   }
 
   save ():void {
     if (this.form.valid) {
       if (this.valueDetails.isCalledCategory == 'categoryEdit') {
-
-        const obj = {
-          image: this.form.get('icon')?.value,
-          title: this.form.get('name')?.value,
-          shortDescription: this.form.get('shortDescription')?.value,
-          description: this.form.get('description')?.value
-        }
-
-        this.reqServ.editData(environment.category.get + '/' + this.valueCategory.id, obj)
+        this.reqServ.editData(environment.category.get + '/' + this.valueCategory.id, this.form.value)
           .subscribe(():void => {
             this.dialog.closeAll();
+            alert('category edited');
           })
-
       } else {
-        const obj = {
-          image: this.form.get('icon')?.value,
-          title: this.form.get('name')?.value,
-          shortDescription: this.form.get('shortDescription')?.value,
-          description: this.form.get('description')?.value
-        }
-
-        this.reqServ.addData(environment.category.get, obj)
+        this.reqServ.addData(environment.category.get, this.form.value)
           .subscribe(():void => {
             this.dialog.closeAll();
+            alert('category created');
           })
       }
     }

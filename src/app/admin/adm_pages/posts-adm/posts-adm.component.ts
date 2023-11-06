@@ -52,31 +52,45 @@ export class PostsAdmComponent implements OnInit{
   }
 
   getPosts ():void {
-    this.reqServ.getData<Posts[]>(environment.posts.get + '?user_id=' + this.userData.id)
+    this.reqServ.getData<Posts[]>(
+      this.userData.superAdmin === 'true'
+      ? environment.posts.get
+      : environment.posts.get + '?user_id=' + this.userData.id
+    )
       .subscribe((data:Posts[]):void=>{
         this.dataPosts = data;
       })
   }
 
   openAddDialog ():void {
+    let isOpened: boolean = true;
+
     this.dialog.open(DialogPostsComponent, {
       width: '520px',
     })
 
     this.dialog.afterAllClosed.subscribe(() => {
-      this.getPosts();
+      if (isOpened) {
+        this.getPosts();
+        isOpened = false;
+      }
     })
 
     this.dialogDetails.isCalled = 'postAdd'
   }
 
   openEditDialog (id: any):void {
+    let isOpened: boolean = true;
+
     this.dialog.open(DialogPostsComponent, {
       width: '520px',
     })
 
     this.dialog.afterAllClosed.subscribe(():void => {
-      this.getPosts();
+      if (isOpened) {
+        this.getPosts();
+        isOpened = false;
+      }
     })
 
     this.dialogDetails.dialogPostsValue = id;
