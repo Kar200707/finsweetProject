@@ -25,6 +25,7 @@ import {environment} from "../../../environment/environment";
 })
 export class LoginComponent {
   isFalseLogin:boolean = false;
+  hide:boolean = true;
 
   form: FormGroup = new FormGroup({
     email: new FormControl('', [

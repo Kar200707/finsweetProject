@@ -7,7 +7,9 @@
           <mat-label>Email</mat-label>
           <input class="input-email" formControlName="email" name="email" type="email" matInput
                  placeholder="ex@example.com">
-          <mat-hint *ngIf="form.get('email')?.touched" class="valid-text"><mat-icon>checked</mat-icon></mat-hint>
+          <mat-hint *ngIf="form.get('email')?.touched" class="valid-text">
+            <mat-icon>checked</mat-icon>
+          </mat-hint>
           <mat-error *ngIf="form.get('email')?.hasError('email') && !form.get('email')?.hasError('required')">
             Please enter a valid email address
           </mat-error>
@@ -17,9 +19,25 @@
         </mat-form-field>
         <mat-form-field style="margin-top: 10px" class="full-width">
           <mat-label>Password</mat-label>
-          <input class="input-email" formControlName="password" name="email" type="password" matInput
-                 placeholder="******">
-          <mat-hint *ngIf="form.get('password')?.touched" class="valid-text"><mat-icon>checked</mat-icon></mat-hint>
+          <input
+            [type]="hide ? 'password' : 'text'"
+            class="input-email"
+            formControlName="password"
+            name="email"
+            matInput
+            placeholder="******"
+          >
+          <button
+            mat-icon-button matSuffix
+            (click)="hide = !hide"
+            [attr.aria-label]="'Hide password'"
+            [attr.aria-pressed]="hide"
+          >
+            <mat-icon color="primary">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+          </button>
+          <mat-hint *ngIf="form.get('password')?.touched" class="valid-text">
+            <mat-icon>checked</mat-icon>
+          </mat-hint>
           <mat-error *ngIf="form.get('password')?.hasError('pattern') && !form.get('password')?.hasError('required')">
             Please enter a valid password
           </mat-error>
