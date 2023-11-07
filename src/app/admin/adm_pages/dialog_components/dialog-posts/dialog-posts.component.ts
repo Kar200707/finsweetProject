@@ -12,6 +12,7 @@ import {environment} from "../../../../../environment/environment";
 import {DialoginputValueService} from "../../../../services/dialoginput-value.service";
 import {FormControl, FormGroup, ReactiveFormsModule, Validators} from "@angular/forms";
 import {Authors} from "../../../../models/authors";
+import {MatSnackBar, MatSnackBarModule} from "@angular/material/snack-bar";
 
 @Component({
   selector: 'app-dialog-posts',
@@ -26,6 +27,7 @@ import {Authors} from "../../../../models/authors";
     MatButtonModule,
     NgIf,
     ReactiveFormsModule,
+    MatSnackBarModule
   ]
 })
 export class DialogPostsComponent implements OnInit{
@@ -83,7 +85,8 @@ export class DialogPostsComponent implements OnInit{
   constructor (
     private reqServ: RequestService,
     public valueDetails: DialoginputValueService,
-    private dialog: MatDialog
+    private dialog: MatDialog,
+    private matSnackBar: MatSnackBar
   ) {  }
 
   ngOnInit():void {
@@ -105,6 +108,7 @@ export class DialogPostsComponent implements OnInit{
           if (this.valueDetails.isCalled == 'postEdit') {
             this.form.get('title')?.setValue(data.title);
             this.form.get('category')?.setValue(data.category);
+            this.form.get('userId')?.setValue(data.user_id);
             this.form.get('image')?.setValue(data.image);
             this.form.get('description')?.setValue(data.description);
             this.form.get('shortDescription')?.setValue(data.shortDescription);
@@ -152,7 +156,10 @@ export class DialogPostsComponent implements OnInit{
             this.reqServ.editData(environment.posts.get + '/' + this.valueDetails.dialogPostsValue, obj)
               .subscribe((posts):void=>{
                 this.dialog.closeAll();
-                alert('post edited');
+
+                this.matSnackBar.open('post edited', 'close', {
+                  duration: 3000
+                })
               })
           })
       } else {
@@ -193,7 +200,10 @@ export class DialogPostsComponent implements OnInit{
             this.reqServ.addData(environment.posts.get, obj)
               .subscribe((posts):void=>{
                 this.dialog.closeAll();
-                alert('post created');
+
+                this.matSnackBar.open('post created', 'close', {
+                  duration: 3000
+                })
               })
           })
       }

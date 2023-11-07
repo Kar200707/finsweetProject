@@ -72,7 +72,13 @@
   </mat-card-content>
 </mat-card>
 <div style="display: flex; align-items: center; justify-content: space-between">
-  <mat-card *ngIf="dataCategory !== undefined && userData.superAdmin === 'true'" class="card-logos">
+  <mat-card
+    [matBadge]="dataSubscribe.length"
+    matBadgeColor="warn"
+    style="padding-bottom: 20px"
+    *ngIf="dataCategory !== undefined && userData.superAdmin === 'true'"
+    class="card-logos"
+  >
     <mat-card-content>
       <div class="text-box">
         <span>Subscriptions</span>

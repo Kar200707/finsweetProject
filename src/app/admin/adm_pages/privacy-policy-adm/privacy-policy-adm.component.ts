@@ -4,10 +4,11 @@ import {environment} from "../../../../environment/environment";
 import {MatCardModule} from "@angular/material/card";
 import {FormControl, FormGroup, FormsModule, ReactiveFormsModule, Validators} from "@angular/forms";
 import {MatInputModule} from "@angular/material/input";
-import {MatFormFieldControl, MatFormFieldModule} from "@angular/material/form-field";
+import {MatFormFieldModule} from "@angular/material/form-field";
 import {PrivacyPolicy} from "../../../models/privacy-policy";
 import {NgIf} from "@angular/common";
 import {MatButtonModule} from "@angular/material/button";
+import {MatSnackBar, MatSnackBarModule} from "@angular/material/snack-bar";
 
 @Component({
   selector: 'app-privacy-policy-adm',
@@ -21,7 +22,8 @@ import {MatButtonModule} from "@angular/material/button";
     MatFormFieldModule,
     ReactiveFormsModule,
     NgIf,
-    MatButtonModule
+    MatButtonModule,
+    MatSnackBarModule
   ]
 })
 export class PrivacyPolicyAdmComponent implements OnInit{
@@ -29,7 +31,7 @@ export class PrivacyPolicyAdmComponent implements OnInit{
 
   form!: FormGroup;
 
-  constructor(private reqServ: RequestService) {  }
+  constructor(private reqServ: RequestService, private matSnackBar: MatSnackBar) {  }
 
   ngOnInit():void {
     this.reqServ.getData<PrivacyPolicy>(environment.privacyPolicy.get)
@@ -81,6 +83,10 @@ export class PrivacyPolicyAdmComponent implements OnInit{
 
     console.log(this.form.value)
     this.reqServ.editData(environment.privacyPolicy.get, obj)
-      .subscribe(()=>{})
+      .subscribe(():void =>{
+        this.matSnackBar.open('message saved', 'close', {
+          duration: 3000
+        })
+      })
   }
 }

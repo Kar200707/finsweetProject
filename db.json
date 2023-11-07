@@ -48,8 +48,8 @@
       "user_id": 4,
       "category": "INJINER",
       "category_icon": "https://cdn-icons-png.flaticon.com/512/3700/3700845.png",
-      "created_date": "Nov 6, 2023",
-      "title": "Kont sizes in UI design: The complete guide to follow",
+      "created_date": "Nov 7, 2023",
+      "title": "Font sizes in UI design: The complete guide to follow",
       "image": "assets/Images/stained-glass.png",
       "shortDescription": "2 Figma design systems that you can download for free today.",
       "description": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.",
@@ -167,7 +167,7 @@
     }
   ],
   "privacy-policy": {
-    "last_update": "18 October, 2023",
+    "last_update": "7 November, 2023",
     "texts": [
       {
         "title": "Lorem ipsum dolor sit amet 3",
@@ -193,7 +193,7 @@
       "instagram": "https://www.google.com/",
       "linkedin": "https://www.google.com/",
       "superAdmin": "false",
-      "password": "$2a$10$L7mpLNwRwFG8UOFl3g/YSupbRdTCPUiIK3xboQ65rPpS9U7bzfEYW",
+      "password": "$2a$10$k.TUP6X2SoNk.ZlGaYudsue0UgtkG6tcxE526xfqvddsjJOZCnewy",
       "id": 1
     },
     {

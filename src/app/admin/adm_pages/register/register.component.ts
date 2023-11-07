@@ -7,10 +7,10 @@ import {MatInputModule} from "@angular/material/input";
 import {NgIf} from "@angular/common";
 import {Category} from "../../../models/category";
 import {RequestService} from "../../../services/request.service";
-import {DialoginputValueService} from "../../../services/dialoginput-value.service";
-import {MatDialog} from "@angular/material/dialog";
 import {environment} from "../../../../environment/environment";
-import {Authors} from "../../../models/authors";
+import {MatSelectModule} from "@angular/material/select";
+import {MatSnackBar, MatSnackBarModule} from "@angular/material/snack-bar";
+import {log} from "@nguniversal/builders/src/ssr-dev-server";
 
 @Component({
   selector: 'app-register',
@@ -23,13 +23,14 @@ import {Authors} from "../../../models/authors";
     MatFormFieldModule,
     MatInputModule,
     NgIf,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatSelectModule,
+    MatSnackBarModule
   ],
   standalone: true,
 })
 export class RegisterComponent {
   dataCategory!: Category[];
-  isRegistred:boolean = false;
 
   form: FormGroup = new FormGroup({
     name: new FormControl(
@@ -82,6 +83,12 @@ export class RegisterComponent {
         Validators.minLength(3),
       ]
     ),
+    superAdmin: new FormControl(
+      'false',
+      [
+        Validators.required,
+      ]
+    ),
     facebook: new FormControl(
       '',
       [
@@ -108,32 +115,17 @@ export class RegisterComponent {
     ),
   });
 
-  constructor (private reqServ: RequestService) {  }
+  constructor (private reqServ: RequestService, private matSnackBar: MatSnackBar) {  }
 
   save ():void {
     if (this.form.valid) {
-      const obj = {
-        email: this.form.get('email')?.value,
-        password: this.form.get('password')?.value,
-        image: this.form.get('image')?.value,
-        name: this.form.get('name')?.value,
-        title: this.form.get('title')?.value,
-        description: this.form.get('description')?.value,
-        bio: this.form.get('bio')?.value,
-        facebook: this.form.get('facebook')?.value,
-        twitter: this.form.get('twitter')?.value,
-        instagram: this.form.get('instagram')?.value,
-        linkedin: this.form.get('linkedin')?.value,
-        superAdmin: false
-      }
-
-      this.reqServ.addData<any>(environment.host.get + 'register', obj)
+      this.reqServ.addData<any>(environment.host.get + 'register', this.form.value)
         .subscribe(():void =>{
-          this.isRegistred = true;
-          setTimeout(():void =>{
-            this.isRegistred = false;
-          }, 3000)
+            this.matSnackBar.open('user registered', 'close', {
+              duration: 3000
+            })
         })
+      this.form.reset();
     }
   }
 }

@@ -69,8 +69,14 @@
             description is <strong>required</strong>
           </mat-error>
         </mat-form-field>
+        <mat-form-field class="example-full-width">
+          <mat-label>Super Admin</mat-label>
+          <mat-select formControlName="superAdmin">
+            <mat-option value="true">true</mat-option>
+            <mat-option value="false">false</mat-option>
+          </mat-select>
+        </mat-form-field>
         <button color="primary" mat-raised-button>SAVE</button>
-        <strong *ngIf="isRegistred" style="color: #0cbd37; margin-left: 20px">Rigestered</strong>
       </div>
       <div style="width: 49%">
         <mat-form-field class="example-full-width">

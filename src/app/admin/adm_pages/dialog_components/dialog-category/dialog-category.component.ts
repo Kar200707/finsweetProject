@@ -10,6 +10,7 @@ import {MatCardModule} from "@angular/material/card";
 import {MatSelectModule} from "@angular/material/select";
 import {NgFor, NgIf} from "@angular/common";
 import {MatButtonModule} from "@angular/material/button";
+import {MatSnackBar, MatSnackBarModule} from "@angular/material/snack-bar";
 
 @Component({
   selector: 'app-dialog-category',
@@ -24,6 +25,7 @@ import {MatButtonModule} from "@angular/material/button";
     MatButtonModule,
     NgIf,
     ReactiveFormsModule,
+    MatSnackBarModule
   ]
 })
 export class DialogCategoryComponent {
@@ -63,7 +65,8 @@ export class DialogCategoryComponent {
   constructor (
     private reqServ: RequestService,
     private valueDetails: DialoginputValueService,
-    private dialog: MatDialog
+    private dialog: MatDialog,
+    private snackBar: MatSnackBar
   ) {  }
 
   ngOnInit():void {
@@ -88,13 +91,20 @@ export class DialogCategoryComponent {
         this.reqServ.editData(environment.category.get + '/' + this.valueCategory.id, this.form.value)
           .subscribe(():void => {
             this.dialog.closeAll();
-            alert('category edited');
+
+            this.snackBar.open('category edited', 'close', {
+              duration: 3000,
+              panelClass: ['success-snackbar']
+            })
           })
       } else {
         this.reqServ.addData(environment.category.get, this.form.value)
           .subscribe(():void => {
             this.dialog.closeAll();
-            alert('category created');
+
+            this.snackBar.open('category created', 'close', {
+              duration: 3000
+            })
           })
       }
     }

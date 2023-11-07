@@ -12,6 +12,7 @@ import {NgForOf, NgIf} from "@angular/common";
 import {Contact} from "../../../models/contact";
 import {Authors} from "../../../models/authors";
 import {Subscribe} from "../../../models/subscribe";
+import {MatBadgeModule} from "@angular/material/badge";
 
 @Component({
   selector: 'app-dashboard',
@@ -25,7 +26,8 @@ import {Subscribe} from "../../../models/subscribe";
     RouterLink,
     MatButtonModule,
     NgIf,
-    NgForOf
+    NgForOf,
+    MatBadgeModule
   ]
 })
 

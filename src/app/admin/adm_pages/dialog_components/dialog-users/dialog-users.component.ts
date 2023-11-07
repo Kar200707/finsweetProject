@@ -15,6 +15,7 @@ import {Authors} from "../../../../models/authors";
 import {MatDialog} from "@angular/material/dialog";
 import {MatOptionModule} from "@angular/material/core";
 import {MatSelectModule} from "@angular/material/select";
+import {MatSnackBar, MatSnackBarModule} from "@angular/material/snack-bar";
 
 @Component({
   selector: 'app-dialog-users',
@@ -33,7 +34,8 @@ import {MatSelectModule} from "@angular/material/select";
     ReactiveFormsModule,
     MatOptionModule,
     MatSelectModule,
-    NgForOf
+    NgForOf,
+    MatSnackBarModule
   ]
 })
 export class DialogUsersComponent implements OnInit {
@@ -45,7 +47,8 @@ export class DialogUsersComponent implements OnInit {
   constructor (
     private reqServ: RequestService,
     private dialogDetails: DialoginputValueService,
-    private dialog: MatDialog
+    private dialog: MatDialog,
+    private matSnackBar: MatSnackBar
   ) {  }
 
   ngOnInit():void {
@@ -143,7 +146,10 @@ export class DialogUsersComponent implements OnInit {
       this.reqServ.editData(environment.author.get + '/' + this.dialogDetails.idUser, this.form.value)
         .subscribe(():void => {
           this.dialog.closeAll();
-          alert('user registered');
+
+          this.matSnackBar.open('user edited', 'close', {
+            duration: 3000
+          })
         })
     }
   }
