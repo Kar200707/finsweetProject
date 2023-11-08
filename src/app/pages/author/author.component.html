@@ -2,7 +2,12 @@
 <div *ngIf="isNotPage" class="user_block_author_page">
   <div class="container_author">
     <div class="user_info_block">
-      <img src="{{ authorImage }}" alt="this is image">
+      <img
+        [src]="authorImage"
+        alt="this is image"
+        #img
+        (error)="img.src = './assets/Images/not_user.jpg'"
+      >
       <div class="user_info_text_block">
         <h1>{{ authorTitle }}</h1>
         <p>{{ authorBio }}</p>

@@ -1,5 +1,11 @@
 <div class="business_category_block_blog">
-  <img [class]="isPage" [src]="dataPosts.image" alt="this is image">
+  <img
+    [class]="isPage"
+    [src]="dataPosts.image"
+    alt="this is image"
+    #img
+    (error)="img.src = './assets/Images/not-image.jpeg'"
+  >
   <div class="text_block">
     <span>{{ dataPosts.category }}</span>
     <a [routerLink]="['/blog-post', dataPosts.id]">{{ dataPosts.title }}</a>

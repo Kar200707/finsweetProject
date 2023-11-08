@@ -1,6 +1,11 @@
 <div>
   <div class="user_info_block">
-    <img [src]="dataAuthors.image" alt="this is user image">
+    <img
+      #img
+      (error)="img.src = './assets/Images/not_user.jpg'"
+      [src]="dataAuthors.image"
+      alt="this is user image"
+    >
     <a [routerLink]="['/author', dataAuthors.id]" class="user_full_name">
       {{ dataAuthors.name }}
     </a>

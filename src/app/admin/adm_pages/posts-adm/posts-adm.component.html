@@ -19,7 +19,11 @@
     <ng-container matColumnDef="category">
       <th mat-header-cell *matHeaderCellDef> Category </th>
       <td class="category-td" mat-cell *matCellDef="let element">
-        <img [src]="element.category_icon">
+        <img
+          #img
+          (error)="img.src = 'assets/Images/not-image.jpeg'"
+          [src]="element.category_icon"
+        >
         {{element.category}}
       </td>
     </ng-container>
@@ -30,9 +34,9 @@
     <ng-container matColumnDef="image">
       <th mat-header-cell *matHeaderCellDef> image </th>
       <td class="image-td" mat-cell *matCellDef="let element">
-        <img [src]="element.image" alt="img">
+        <img #img [src]="element.image" (error)="img.src = 'assets/Images/not-image.jpeg'" alt="img">
         <div class="show-all-img">
-          <img [src]="element.image" alt="image">
+          <img #img [src]="element.image" (error)="img.src = 'assets/Images/not-image.jpeg'" alt="not image">
         </div>
       </td>
     </ng-container>

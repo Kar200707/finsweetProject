@@ -5,7 +5,12 @@
   <div class="container">
     <div>
       <div class="user_info_block">
-        <img [src]="dataAuthor === undefined ? '' : dataAuthor.image" alt="this is user image">
+        <img
+          [src]="dataAuthor === undefined ? '' : dataAuthor.image"
+          alt="this is user image"
+          #userImg
+          (error)="userImg.src = './assets/Images/not_user.jpg'"
+        >
         <div class="user_text_block">
           <a [routerLink]="['/author', dataPosts.user_id]">
             {{ dataAuthor === undefined ? 'loading...' : dataAuthor.name }}
@@ -15,11 +20,22 @@
       </div>
       <h1>{{ dataPosts === undefined ? 'loading...' : dataPosts.title }}</h1>
       <div class="category_box">
-        <img [src]="dataPosts === undefined ? '' : dataPosts.category_icon" alt="this image category">
+        <img
+          [src]="dataPosts === undefined ? '' : dataPosts.category_icon"
+          alt="this image category"
+          #categoryImg
+          (error)="categoryImg.src = './assets/Images/not-image.jpeg'"
+        >
         <h4>{{ dataPosts === undefined ? 'loading...' : dataPosts.category }}</h4>
       </div>
     </div>
-    <img class="post-img" [src]="dataPosts === undefined ? '' : dataPosts.image" alt="this is image">
+    <img
+      class="post-img"
+      [src]="dataPosts === undefined ? '' : dataPosts.image"
+      alt="this is image"
+      #img
+      (error)="img.src = './assets/Images/not-image.jpeg'"
+    >
     <div *ngIf="dataPosts != undefined" class="texts_block">
       <h2>{{ dataPosts.title }}</h2>
       <p>{{ dataPosts.description }}</p>
@@ -67,7 +83,12 @@
     <div *ngIf="dataPostsMorePosts != undefined" class="what_to_read_next_box">
       <ng-container *ngFor="let item of dataPostsMorePosts, let i = index">
         <div *ngIf="i < 3">
-          <img [src]="item.image" alt="this is image">
+          <img
+            [src]="item.image"
+            alt="this is image"
+            #postImg
+            (error)="postImg.src = './assets/Images/not-image.jpeg'"
+          >
           <p>
             By
             <a

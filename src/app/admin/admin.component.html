@@ -6,7 +6,13 @@
         <span class="user-name">{{ userData.name }}</span>
         <span class="user-email">{{ userData.email }}</span>
       </div>
-      <img [src]="userData.image" alt="author" class="author-image">
+      <img
+        [src]="userData.image"
+        alt="author"
+        class="author-image"
+        #img
+        (error)="img.src = './assets/Images/not_user.jpg'"
+      >
       <button (click)="logOut()" class="logout-btn" color="warn" mat-button>
         <mat-icon>logout</mat-icon>
         LogOut

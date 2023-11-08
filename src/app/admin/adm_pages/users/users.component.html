@@ -9,7 +9,12 @@
     <ng-container matColumnDef="image">
       <th mat-header-cell *matHeaderCellDef> Avatar </th>
       <td class="image-td" mat-cell *matCellDef="let element">
-        <img [src]="element.image" alt="img">
+        <img
+          [src]="element.image"
+          alt="img"
+          #img
+          (error)="img.src = './assets/Images/not_user.jpg'"
+        >
       </td>
     </ng-container>
     <ng-container matColumnDef="superAdmin">

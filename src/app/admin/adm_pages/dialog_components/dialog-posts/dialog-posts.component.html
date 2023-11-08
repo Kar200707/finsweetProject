@@ -41,6 +41,8 @@
                     [src]="author.image"
                     style="margin-right: 20px"
                     alt="image"
+                    #img
+                    (error)="img.src = './assets/Images/not_user.jpg'"
                   >
                   {{ author.name }}
                 </div>

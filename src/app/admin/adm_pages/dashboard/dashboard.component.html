@@ -51,7 +51,12 @@
     </div>
     <ng-container>
       <div class="posts-card-parent">
-        <img class="post-img" [src]="dataPosts[0].image">
+        <img
+          class="post-img"
+          [src]="dataPosts[0].image"
+          #img
+          (error)="img.src = './assets/Images/not-image.jpeg'"
+        >
         <div class="text-box-posts-card">
           <span>{{ dataPosts[0].title }}</span>
           <div>

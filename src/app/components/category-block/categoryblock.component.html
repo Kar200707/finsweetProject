@@ -1,6 +1,12 @@
 <div class="category_box">
   <div>
-    <img [src]="dataCategory.image" class="image-category" alt="this is icon business">
+    <img
+      [src]="dataCategory.image"
+      class="image-category"
+      alt="this is icon business"
+      #img
+      (error)="img.src = './assets/Images/not-image.jpeg'"
+    >
   </div>
   <a [routerLink]="['/category', dataCategory.id]">
     {{ dataCategory.title }}
