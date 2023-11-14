@@ -74,6 +74,9 @@
         <mat-error *ngIf="form.get('shortDescription')?.hasError('minlength')">
           min symbol is <strong>5</strong>
         </mat-error>
+        <mat-error *ngIf="form.get('shortDescription')?.hasError('maxlength')">
+          max symbol is <strong>36</strong>
+        </mat-error>
         <mat-error *ngIf="form.get('shortDescription')?.hasError('required')">
           title is <strong>required</strong>
         </mat-error>

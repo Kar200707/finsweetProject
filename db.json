@@ -29,10 +29,10 @@
       "id": "4"
     },
     {
-      "image": "https://cdn-icons-png.flaticon.com/512/3700/3700845.png",
       "title": "Injiner",
-      "shortDescription": "this is category injiner",
+      "image": "https://cdn-icons-png.flaticon.com/512/3700/3700845.png",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.\n\n",
+      "shortDescription": "this is category injiner",
       "id": "Vi5Q6vE"
     }
   ],
@@ -48,7 +48,7 @@
       "user_id": 4,
       "category": "INJINER",
       "category_icon": "https://cdn-icons-png.flaticon.com/512/3700/3700845.png",
-      "created_date": "Nov 8, 2023",
+      "created_date": "Nov 9, 2023",
       "title": "Font sizes in UI design: The complete guide to follow",
       "image": "https://dfstudio-d420.kxcdn.com/wordpress/wp-content/uploads/2019/06/digital_camera_photo-1080x675.jpg",
       "shortDescription": "2 Figma design systems that you can download for free today.",
@@ -115,11 +115,33 @@
       "category": "ECONOMY",
       "category_icon": "assets/Images/icons/economy.png",
       "created_date": "Nov 8, 2023",
-      "title": "Test Post",
+      "title": "This is post Title",
       "image": "https://media.sproutsocial.com/uploads/2017/02/10x-featured-social-media-image-size.png",
-      "shortDescription": "Test short description",
-      "description": "test description\n",
+      "shortDescription": "Test short descr",
+      "description": "test description\nccccccccccccccccccccvbxcvxcv",
       "id": "KCGNGBW"
+    },
+    {
+      "user_id": 6,
+      "category": "STARTUP",
+      "category_icon": "assets/Images/icons/startup.png",
+      "created_date": "Nov 9, 2023",
+      "title": "suro",
+      "image": "https://letsenhance.io/static/334225cab5be263aad8e3894809594ce/75c5a/MainAfter.jpg",
+      "shortDescription": "dfdredtrttttttttttt",
+      "description": "tttttttttttttttttttttttttttttttttttttttttttt\n\\",
+      "id": 6
+    },
+    {
+      "user_id": 1,
+      "category": "INJINER",
+      "category_icon": "https://cdn-icons-png.flaticon.com/512/3700/3700845.png",
+      "created_date": "Nov 9, 2023",
+      "title": "vahan",
+      "image": "https://img.freepik.com/free-photo/space-background-realistic-starry-night-cosmos-shining-stars-milky-way-stardust-color-galaxy_1258-154643.jpg",
+      "shortDescription": "sdvdsfsdfffff",
+      "description": "ffffffffffffffffffffffffff\n",
+      "id": 7
     }
   ],
   "contact-us": [
@@ -156,7 +178,7 @@
     }
   ],
   "privacy-policy": {
-    "last_update": "7 November, 2023",
+    "last_update": "8 November, 2023",
     "texts": [
       {
         "title": "Lorem ipsum dolor sit amet 3",

@@ -264,6 +264,7 @@
   width: 369px;
   text-decoration: none;
   text-underline-offset: 3px;
+  display: block;
 }
 
 .list_box > p + a:hover {
@@ -452,7 +453,7 @@
 .list-authors_block {
   display: flex;
   gap: 32px;
-  justify-content: center;
+  justify-content: flex-start;
   flex-wrap: wrap;
 }
 
@@ -646,6 +647,14 @@ img:active {
   }
 }
 
+@media screen and (max-width: 702px) {
+  .list-author-div {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+}
+
 @media screen and (max-width: 700px) {
   .choose-a-category-text {
     margin-top: 50px;
@@ -661,6 +670,8 @@ img:active {
     line-height: 40px;
   }
 }
+
+
 
 @media screen and (max-width: 410px) {
   .featured_post_color_box {
